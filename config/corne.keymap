@@ -70,13 +70,13 @@
 // |-------+---------+--------+--------+---------+---------|                          |-------+---------+---------+---------+----------+----------|
 // |  CTRL |    Z    |    X   |   C    |    V    |    B    |                          |   N   |    M    |    ,    |    .    |     /    |     )    |
 // '--------------------------+--------+---------+---------+                          |-------+---------+---------+-------------------------------'
-//                            |  GUI   |   CAPS  | RSE/SPC |                          | ENTER |   CAPS  |  BSPC   |
+//                            |  GUI   |   CAPS  | RSE/SPC |                          | ENTER |   BSPC  |   DEL   |
 //                            '--------+---------+---------'                          '-------+---------+---------'
                 bindings = <
 &kp ESC         &kp Q       &kp W    &kp E     &kp R         &kp T                    &kp Y          &kp U         &kp I      &kp O    &kp P          &kp LPAR
 &hm LSHIFT TAB  &kp A       &kp S    &kp D     &kp F         &kp G                    &kp H          &kp J         &kp K      &kp L    &kp SEMI       &hm RSHIFT SQT
 &kp LCTRL       &hm LALT Z  &kp X    &kp C     &kp V         &kp B                    &kp N          &kp M         &kp COMMA  &kp DOT  &hm RALT FSLH  &hm RCTRL RPAR 
-                                     &kp LWIN  &lt LWR CAPS  &lt RSE SPACE            &lt RSE ENTER  &lt LWR CAPS  &kp BSPC
+                                     &kp LWIN  &lt LWR CAPS  &lt RSE SPACE            &lt RSE ENTER  &lt LWR BSPC  &kp DEL 
                         >;
                 };
    
@@ -89,14 +89,14 @@
 // |-----------+--------+--------+--------+---------+---------|              |--------+--------+---------+--------+--------+-------|
 // |     `     |        |        |        |         |         |              |        |        |    [    |    <   |    \   |   {   |
 // '-----------------------------+--------+---------+---------+              |--------+--------+---------+-------------------------'
-//                               |        |         |   ADJ   |              |        |   DEL  |         |
+//                               |        |         |   ADJ   |              |        |        |         |
 //                               '--------+---------+---------'              '--------+--------+---------'
 
                         bindings = <
 &kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &kp N6                &kp N7    &kp N8     &kp N9    &kp N0  &kp MINUS  &kp PLUS
 &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &kp CARET             &kp AMPS  &kp STAR   &trans    &trans  &kp UNDER  &kp EQUAL   
 &kp GRAVE  &trans     &trans     &trans     &trans     &trans                &trans    &trans     &kp LBKT  &kp LT  &kp BSLH   &kp LBRC 
-                                 &trans     &trans     &mo ADJ               &trans    &kp DEL    &trans
+                                 &trans     &trans     &mo ADJ               &trans    &kp BSPC   &kp DEL
                         >;
                 };
   
