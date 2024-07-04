@@ -93,9 +93,9 @@
 //                              '--------+---------+---------'              '--------+--------+---------'
 
                         bindings = <
-&trans     &kp N1     &kp N2     &kp N3     &kp N4     &kp N5               &kp N6     &kp N7     &kp N8    &kp N9     &kp N0         &kp LBRC
+&trans     &kp N1     &kp N2     &kp N3     &kp N4     &kp N5               &kp N6     &kp N7     &kp N8    &kp N9     &kp N0         &kp LBKT
 &kp LSHIFT &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT            &kp CARET  &kp AMPS   &kp STAR  &kp MINUS  &kp EQUAL      &hm RSHIFT GRAVE   
-&kp LCTRL  &kp LALT   &trans     &trans     &trans     &trans               &trans     &trans     &trans    &trans     &hm RALT BSLH  &hm RCTRL RBRC 
+&kp LCTRL  &kp LALT   &trans     &trans     &trans     &trans               &trans     &trans     &trans    &trans     &hm RALT BSLH  &hm RCTRL RBKT 
                                  &trans     &trans     &mo ADJ              &trans     &trans     &trans 
                         >;
                 };
