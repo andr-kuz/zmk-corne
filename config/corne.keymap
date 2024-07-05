@@ -63,39 +63,39 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-// .-------------------------------------------------------.                          .-----------------------------------------------------------.
-// |  ESC  |    Q    |    W   |   E    |    R    |    T    |                          |   Y   |    U    |    I    |    O    |     P    |     (    |
-// |-------+---------+--------+--------+---------+---------|                          |-------+---------+---------+---------+----------+----------|
-// |  TAB  |    A    |    S   |   D    |    F    |    G    |                          |   H   |    J    |    K    |    L    |     ;    |     '    |
-// |-------+---------+--------+--------+---------+---------|                          |-------+---------+---------+---------+----------+----------|
-// |  CTRL |    Z    |    X   |   C    |    V    |    B    |                          |   N   |    M    |    ,    |    .    |     /    |     )    |
-// '--------------------------+--------+---------+---------+                          |-------+---------+---------+-------------------------------'
-//                            |   GUI  |   CAPS  | RSE/SPC |                          | ENTER |   BSPC  |   DEL   |
-//                            '--------+---------+---------'                          '-------+---------+---------'
+// .-------------------------------------------------------.                                .-----------------------------------------------------------.
+// |  ESC  |    Q    |    W   |   E    |    R    |    T    |                                |   Y   |    U    |    I    |    O    |     P    |     [    |
+// |-------+---------+--------+--------+---------+---------|                                |-------+---------+---------+---------+----------+----------|
+// |  TAB  |    A    |    S   |   D    |    F    |    G    |                                |   H   |    J    |    K    |    L    |     ;    |     '    |
+// |-------+---------+--------+--------+---------+---------|                                |-------+---------+---------+---------+----------+----------|
+// |  CTRL |    Z    |    X   |   C    |    V    |    B    |                                |   N   |    M    |    ,    |    .    |     /    |     ]    |
+// '--------------------------+--------+---------+---------+                                |-------+---------+---------+-------------------------------'
+//                            |   GUI  |   CAPS  | RSE/SPC |                                | ENTER |   BSPC  |   DEL   |
+//                            '--------+---------+---------'                                '-------+---------+---------'
                 bindings = <
-&kp ESC         &kp Q       &kp W    &kp E     &kp R         &kp T                    &kp Y          &kp U         &kp I      &kp O    &kp P          &kp LPAR
-&hm LSHIFT TAB  &kp A       &kp S    &kp D     &kp F         &kp G                    &kp H          &kp J         &kp K      &kp L    &kp SEMI       &hm RSHIFT SQT
-&kp LCTRL       &hm LALT Z  &kp X    &kp C     &kp V         &kp B                    &kp N          &kp M         &kp COMMA  &kp DOT  &hm RALT FSLH  &hm RCTRL RPAR 
-                                     &kp LWIN  &lt LWR CAPS  &lt RSE SPACE            &lt RSE ENTER  &lt LWR BSPC  &kp DEL 
+&kp ESC         &kp Q       &kp W       &kp E        &kp R         &kp T                    &kp Y          &kp U         &kp I        &kp O       &kp P          &kp LBKT
+&hm LSHIFT TAB  &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHIFT F  &kp G                    &kp H          &hm RSHIFT J  &hm RCTRL K  &hm RALT L  &hm RGUI SEMI  &hm RSHIFT SQT
+&kp LCTRL       &hm LALT Z  &kp X       &kp C        &kp V         &kp B                    &kp N          &kp M         &kp COMMA    &kp DOT     &hm RALT FSLH  &hm RCTRL RBKT 
+                                        &kp LWIN     &lt LWR CAPS  &lt RSE SPACE            &lt RSE ENTER  &lt LWR BSPC  &kp DEL 
                         >;
                 };
    
   
                 lower_layer {
 // .---------------------------------------------------------.              .-----------------------------------------------------.
-// |          |   1    |   2    |   3    |    4    |    5    |              |    6   |    7   |    8    |    9   |    0   |   [   |
+// |          |   1    |   2    |   3    |    4    |    5    |              |    6   |    7   |    8    |    9   |    0   |   (   |
 // |----------+--------+--------+--------+---------+---------|              |--------+--------+---------+--------+--------+-------|
 // |   SHIFT  |   !    |   @    |   #    |    $    |    %    |              |    ^   |    &   |    *    |    -   |    =   |   `   |
 // |----------+--------+--------+--------+---------+---------|              |--------+--------+---------+--------+--------+-------|
-// |    CTRL  |   ALT  |        |        |         |         |              |        |        |         |        |    \   |   ]   |
+// |    CTRL  |   ALT  |        |        |         |         |              |        |    ?   |         |        |    \   |   )   |
 // '----------------------------+--------+---------+---------+              |--------+--------+---------+-------------------------'
 //                              |        |         |   ADJ   |              |        |        |         |
 //                              '--------+---------+---------'              '--------+--------+---------'
 
                         bindings = <
-&trans     &kp N1     &kp N2     &kp N3     &kp N4     &kp N5               &kp N6     &kp N7     &kp N8    &kp N9     &kp N0         &kp LBKT
+&trans     &kp N1     &kp N2     &kp N3     &kp N4     &kp N5               &kp N6     &kp N7     &kp N8    &kp N9     &kp N0         &kp LPAR
 &kp LSHIFT &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT            &kp CARET  &kp AMPS   &kp STAR  &kp MINUS  &kp EQUAL      &hm RSHIFT GRAVE   
-&kp LCTRL  &kp LALT   &trans     &trans     &trans     &trans               &trans     &trans     &trans    &trans     &hm RALT BSLH  &hm RCTRL RBKT 
+&kp LCTRL  &kp LALT   &trans     &trans     &trans     &trans               &trans     &kp QMARK  &trans    &trans     &hm RALT BSLH  &hm RCTRL RPAR 
                                  &trans     &trans     &mo ADJ              &trans     &trans     &trans 
                         >;
                 };
