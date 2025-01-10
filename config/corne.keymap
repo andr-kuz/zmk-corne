@@ -42,7 +42,7 @@
             acceleration-exponent = <1>;
             time-to-max-speed-ms = <900>;
             delay-ms = <0>;
-        }
+        };
     };
 };
 
