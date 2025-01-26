@@ -83,19 +83,19 @@
   
                 lower_layer {
 // .---------------------------------------------------------.              .-----------------------------------------------------.
-// |    `     |   1    |   2    |   3    |    4    |    5    |              |    6   |    7   |    8    |    9   |    0   |   (   |
+// |    `     |   1    |   2    |   3    |    4    |    5    |              |    6   |    7   |    8    |    9   |    0   |       |
 // |----------+--------+--------+--------+---------+---------|              |--------+--------+---------+--------+--------+-------|
 // |          |        | M_RCLK | M_MCLK | M_LCLK  |         |              | M_LEFT | M_DOWN |  M_UP   | M_RIGHT|    -   |   =   |
 // |----------+--------+--------+--------+---------+---------|              |--------+--------+---------+--------+--------+-------|
-// |          |        |        |        |         |         |              |        |        |         |        |    \   |   )   |
+// |          |        |        |        |         |         |              |        |        |         |        |    \   |       |
 // '----------------------------+--------+---------+---------+              |--------+--------+---------+-------------------------'
 //                              |        |         |   ADJ   |              |   ADJ  |        |         |
 //                              '--------+---------+---------'              '--------+--------+---------'
 
                         bindings = <
-&kp GRAVE  &kp N1     &kp N2     &kp N3     &kp N4      &kp N5               &kp N6          &kp N7          &kp N8        &kp N9           &kp N0     &kp LPAR
+&kp GRAVE  &kp N1     &kp N2     &kp N3     &kp N4      &kp N5               &kp N6          &kp N7          &kp N8        &kp N9           &kp N0     &trans   
 &trans     &trans     &mkp RCLK  &mkp MCLK  &mkp LCLK   &trans               &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL          
-&trans     &trans     &trans     &trans     &trans      &trans               &trans          &trans          &trans        &trans           &kp BSLH   &kp RPAR 
+&trans     &trans     &trans     &trans     &trans      &trans               &trans          &trans          &trans        &trans           &kp BSLH   &trans   
                                  &trans     &trans      &mo ADJ              &mo ADJ         &trans          &trans 
                         >;
                 };
@@ -107,15 +107,15 @@
 // |---------+--------+--------+--------+--------+--------|            |--------+--------+--------+--------+--------+--------|
 // |         |  HOME  |        |        |        |   END  |            |  LEFT  |  DOWN  |   UP   |  RIGHT |   F11  |   F12  |
 // |---------+--------+--------+--------+--------+--------|            |--------+--------+--------+--------+--------+--------|
-// |         |        |        |        |        |        |            |        |  PG_DN |  PG_UP |        |        |        |
+// |         |  PG_DN |        |        |        |  PG_UP |            | SCRL_L | SCRL_D | SCRL_U | SCRL_R |        |        |
 // '---------------------------+--------+--------+--------+            |--------+--------+--------+--------------------------'
 //                             |        |   ADJ  |        |            |        |   ADJ  |        |
 //                             '--------+--------+--------'            '--------+--------+--------'
                         bindings = <
-&trans      &kp F1    &kp F2  &kp F3   &kp F4     &kp F5               &kp F6    &kp F7    &kp F8    &kp F9     &kp F10   &trans  
-&trans      &kp HOME  &trans  &trans   &trans     &kp END              &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp F11   &kp F12
-&trans      &trans    &trans  &trans   &trans     &trans               &trans    &kp PG_DN &kp PG_UP &trans     &trans    &trans   
-                              &trans   &mo ADJ    &trans               &trans    &mo ADJ   &trans
+&trans      &kp F1    &kp F2  &kp F3   &kp F4     &kp F5               &kp F6           &kp F7           &kp F8         &kp F9            &kp F10   &trans  
+&trans      &kp HOME  &trans  &trans   &trans     &kp END              &kp LEFT         &kp DOWN         &kp UP         &kp RIGHT         &kp F11   &kp F12
+&trans      &kp PG_DN &trans  &trans   &trans     &kp PG_UP            &msc SCRL_LEFT   &msc SCRL_DOWN   &msc SCRL_UP   &msc SCRL_RIGHT   &trans    &trans   
+                              &trans   &mo ADJ    &trans               &trans           &mo ADJ          &trans
                         >;
                 };
 
