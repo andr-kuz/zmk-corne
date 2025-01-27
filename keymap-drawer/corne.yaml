@@ -161,7 +161,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -170,5 +170,5 @@ layers:
   - {type: held}
   - {type: held}
   - {type: held alternate}
-  - {t: '$$mdi:volume-off$$', type: held}
+  - {type: held}
   - $$mdi:bluetooth-off$$
