@@ -26,16 +26,15 @@
 &lt { quick_tap_ms = <200>; };
 &mt { quick_tap_ms = <200>; };
 / {
-    macros {
+    behaviors {
+
         ctrl_space: ctrl_space {
             compatible = "zmk,behavior-macro";
-            bindings = <&macro_press &kp RCTRL>, <&macro_tap &kp SPACE>, <&macro_release &kp RCTRL>;
+            label = "CTRL_SPACE";
+            #binding-cells = <1>;
+            bindings = <&kp LCTRL>, <&kp SPACE>, <&kp LCTRL>;
         };
-    };
-};
 
-/ {
-    behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -60,10 +59,10 @@
 
                 default_layer {
                 bindings = <
-&kp ESC    &kp Q       &kp W       &kp E        &kp R               &kp T                 &kp Y           &kp U           &kp I         &kp O            &kp P          &kp LBKT
-&kp TAB    &hm LALT A  &hm LGUI S  &hm LCTRL D  &hm LSHIFT F        &kp G                 &kp H           &hm RSHIFT J    &hm RCTRL K   &hm LGUI L       &hm RALT SEMI  &kp SQT
-&kp GRAVE  &kp Z       &kp X       &kp C        &kp V               &kp B                 &kp N           &kp M           &kp COMMA     &kp DOT          &kp FSLH       &kp RBKT 
-                                   &kp K_CMENU  &hm LWR ctrl_space  &lt RSE SPACE         &lt RSE ENTER   &lt LWR BSPC    &kp DEL 
+&kp ESC    &kp Q       &kp W       &kp E        &kp R         &kp T                 &kp Y           &kp U           &kp I         &kp O            &kp P          &kp LBKT
+&kp TAB    &hm LALT A  &hm LGUI S  &hm LCTRL D  &hm LSHIFT F  &kp G                 &kp H           &hm RSHIFT J    &hm RCTRL K   &hm LGUI L       &hm RALT SEMI  &kp SQT
+&kp GRAVE  &kp Z       &kp X       &kp C        &kp V         &kp B                 &kp N           &kp M           &kp COMMA     &kp DOT          &kp FSLH       &kp RBKT 
+                                   &kp K_CMENU  &ctrl_space   &lt RSE SPACE         &lt RSE ENTER   &lt LWR BSPC    &kp DEL 
                         >;
                 };
    
