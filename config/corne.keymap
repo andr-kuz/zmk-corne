@@ -44,7 +44,7 @@
             delay-ms = <0>;
         };
 
-        &ctrl_space {
+        ctrl_space {
             compatible = "zmk,behavior-macro";
             label = "CTRL_SPACE";
             bindings = <&kp RCTRL>, <&kp SPACE>, <&kp RCTRL>;
