@@ -38,7 +38,7 @@ layers:
   - {t: /, s: '?'}
   - {t: ']', s: '}'}
   - CMENU
-  - {t: CTRL SPACE, h: '1'}
+  - {t: CTRL SPACE, h: lower}
   - {t: '$$mdi:keyboard-space$$', h: raise}
   - {t: '$$mdi:keyboard-return$$', h: raise}
   - {t: '$$mdi:backspace$$', h: lower}
@@ -81,10 +81,10 @@ layers:
   - {t: \, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - adjust
-  - adjust
   - {type: held}
+  - adjust
+  - adjust
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   raise:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -167,7 +167,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
+  - {type: held}
   - {type: held}
   - {type: held alternate}
   - {type: held}
