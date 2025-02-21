@@ -43,6 +43,13 @@
             time-to-max-speed-ms = <900>;
             delay-ms = <0>;
         };
+
+        &macro_ctrl_space {
+            compatible = "zmk,behavior-macro";
+            label = "CTRL_SPACE";
+            bindings = <&kp RCTRL>, <&kp SPACE>, <&kp RCTRL>;
+        };
+
     };
 };
 
