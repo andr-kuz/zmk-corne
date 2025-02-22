@@ -38,7 +38,7 @@ layers:
   - {t: /, s: '?'}
   - {t: ']', s: '}'}
   - CMENU
-  - {t: '1', h: ctrl space}
+  - '&ctrl_space'
   - {t: '$$mdi:keyboard-space$$', h: raise}
   - {t: '$$mdi:keyboard-return$$', h: raise}
   - {t: '$$mdi:backspace$$', h: lower}
