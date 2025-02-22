@@ -31,11 +31,10 @@
         ctrl_space: ctrl_space {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings 
-                = <&macro_press &kp RCTRL>
+            bindings =
+                <&macro_press &kp RCTRL>
                 , <&macro_tap &kp SPACE>
                 , <&macro_release &kp RCTRL>
-                ;
             ;
         };
 
