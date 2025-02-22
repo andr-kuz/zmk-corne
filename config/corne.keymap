@@ -23,8 +23,8 @@
 #define RSE 2
 #define ADJ 3
 
-&lt { quick_tap_ms = <200>; };
-&mt { quick_tap_ms = <200>; };
+&lt { quick-tap-ms = <200>; };
+&mt { quick-tap-ms = <200>; };
 / {
     behaviors {
 
@@ -44,7 +44,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
-            bindings = <&to>, <&ctrl_space>;
+            bindings = <&mo>, <&ctrl_space>;
         };
 
         hm: homerow_mods {
