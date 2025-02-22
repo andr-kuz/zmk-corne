@@ -44,7 +44,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
-            bindings = <&layer>, <&ctrl_space>;
+            bindings = <&to>, <&ctrl_space>;
         };
 
         hm: homerow_mods {
