@@ -23,17 +23,35 @@
 #define RSE 2
 #define ADJ 3
 
-&lt { quick_tap_ms = <200>; };
-&mt { quick_tap_ms = <200>; };
-
+&lt { quick-tap-ms = <200>; };
+&mt { quick-tap-ms = <200>; };
 / {
     behaviors {
+
+        ctrl_space: ctrl_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press &kp RCTRL>
+                , <&macro_tap &kp SPACE>
+                , <&macro_release &kp RCTRL>
+            ;
+        };
+
+        ctrl_space_layer: ctrl_space_layer {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            bindings = <&mo>, <&ctrl_space>;
+        };
+
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick_tap_ms = <0>;
+            quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -43,13 +61,6 @@
             time-to-max-speed-ms = <900>;
             delay-ms = <0>;
         };
-
-        &ctrl_space {
-            compatible = "zmk,behavior-macro";
-            label = "CTRL_SPACE";
-            bindings = <&kp RCTRL>, <&kp SPACE>, <&kp RCTRL>;
-        };
-
     };
 };
 
@@ -59,13 +70,14 @@
 
                 default_layer {
                 bindings = <
-&kp ESC    &kp Q       &kp W       &kp E        &kp R               &kp T                 &kp Y           &kp U           &kp I         &kp O            &kp P          &kp LBKT
-&kp TAB    &hm LALT A  &hm LGUI S  &hm LCTRL D  &hm LSHIFT F        &kp G                 &kp H           &hm RSHIFT J    &hm RCTRL K   &hm LGUI L       &hm RALT SEMI  &kp SQT
-&kp GRAVE  &kp Z       &kp X       &kp C        &kp V               &kp B                 &kp N           &kp M           &kp COMMA     &kp DOT          &kp FSLH       &kp RBKT 
-                                   &kp K_CMENU  &hm LWR CTRL_SPACE  &lt RSE SPACE         &lt RSE ENTER   &lt LWR BSPC    &kp DEL 
+&kp ESC    &kp Q       &kp W       &kp E        &kp R                    &kp T                 &kp Y           &kp U           &kp I         &kp O            &kp P          &kp LBKT
+&kp TAB    &hm LALT A  &hm LGUI S  &hm LCTRL D  &hm LSHIFT F             &kp G                 &kp H           &hm RSHIFT J    &hm RCTRL K   &hm LGUI L       &hm RALT SEMI  &kp SQT
+&kp GRAVE  &kp Z       &kp X       &kp C        &kp V                    &kp B                 &kp N           &kp M           &kp COMMA     &kp DOT          &kp FSLH       &kp RBKT 
+                                   &kp K_CMENU  &ctrl_space_layer LWR 0  &lt RSE SPACE         &lt RSE ENTER   &lt LWR BSPC    &kp DEL 
                         >;
                 };
    
+
   
                 lower_layer {
                         bindings = <
