@@ -38,7 +38,7 @@ layers:
   - {t: /, s: '?'}
   - {t: ']', s: '}'}
   - CMENU
-  - {t: '$$mdi:apple-keyboard-caps$$', h: lower}
+  - {t: WIN+SPACE, h: lower}
   - {t: '$$mdi:keyboard-space$$', h: raise}
   - {t: '$$mdi:keyboard-return$$', h: raise}
   - {t: '$$mdi:backspace$$', h: lower}
