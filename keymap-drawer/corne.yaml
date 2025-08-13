@@ -166,9 +166,52 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: artsey, h: toggle}
   - {type: held}
   - {type: held}
   - {type: held alternate}
   - {type: held}
-  - $$mdi:bluetooth-off$$
+  - {t: artsey, h: toggle}
+  artsey:
+  - $$mdi:keyboard-esc$$
+  - {t: ',', s: <}
+  - '{'
+  - {t: '[', s: '{'}
+  - (
+  - {t: ;, s: ':'}
+  - {t: ;, s: ':'}
+  - (
+  - {t: '[', s: '{'}
+  - '{'
+  - {t: ',', s: <}
+  - $$mdi:keyboard-esc$$
+  - $$mdi:keyboard-tab$$
+  - S
+  - T
+  - R
+  - A
+  - {t: '''', s: '"'}
+  - {t: '''', s: '"'}
+  - A
+  - R
+  - T
+  - S
+  - $$mdi:keyboard-tab$$
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - O
+  - I
+  - Y
+  - E
+  - '#'
+  - '#'
+  - E
+  - Y
+  - I
+  - O
+  - {t: '`', s: '~'}
+  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
