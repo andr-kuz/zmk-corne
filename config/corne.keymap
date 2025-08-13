@@ -137,9 +137,10 @@
 /* // 24     25         26        27       28       29                           30       31         32        33       34        35 */
 /* &kp BSPC  &kp O      &kp I     &kp Y    &kp E    &kp HASH                     &kp HASH &kp E      &kp Y     &kp I    &kp O     &kp GRAVE */
 /* //                             36       37       38                           39       40         41 */
-/*                                &none    &none    &none                        &none    &none      &none */
+/*                                &kp DEL  &gui_space_layer LAYER 0     &kp SPACE                    &none    &none      &none */
 /*                     >; */
 /*                 }; */
+
          };
 };
 /**/
