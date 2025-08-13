@@ -133,11 +133,11 @@
 // 0      1          2         3        4        5                            6        7          8         9        10        11
 &kp ESC   &kp COMMA  &kp LBRC  &kp LBKT &kp LPAR &kp SEMI                     &kp SEMI &kp LPAR   &kp LBKT  &kp LBRC &kp COMMA &kp ESC
 // 12     13         14        15       16       17                           18       19         20        21       22        23
-&kp TAB   &lt ARL S  &kp T     &kp R    &kp A    &kp SQT                      &kp SQT  &lt A      &kp R     &kp T    &kp S     &kp TAB
+&kp TAB   &kp S      &kp T     &kp R    &kp A    &kp SQT                      &kp SQT  &kp A      &kp R     &kp T    &kp S     &kp TAB
 // 24     25         26        27       28       29                           30       31         32        33       34        35
 &kp BSPC  &kp O      &kp I     &kp Y    &kp E    &kp HASH                     &kp HASH &kp E      &kp Y     &kp I    &kp O     &kp GRAVE
 //                             36       37       38                           39       40         41
-                               &kp DEL  &trans   &kp SPACE                    &none    &none      &none
+                               &kp DEL  &trans   &kp SPACE                    &trans   &trans     &trans
                     >;
                 };
          };
@@ -151,7 +151,7 @@
 // 24     25         26        27       28       29                           30       31         32        33       34        35
 &kp BSPC  &kp O      &kp I     &kp Y    &kp E    &kp HASH                     &kp HASH &kp E      &kp Y     &kp I    &kp O     &kp GRAVE
 //                             36       37       38                           39       40         41
-                               &kp DEL  &trans   &kp SPACE                    &none    &none      &none
+                               &kp DEL  &trans   &kp SPACE                    &trans   &trans     &trans
                     >;
                 };
          };
