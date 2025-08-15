@@ -143,7 +143,7 @@
 // 24     25         26        27       28         29                   30       31         32        33       34        35
 &trans    &lt ARO O  &kp I     &kp Y    &lt ARS E  &kp FSLH             &trans   &trans     &trans    &trans   &trans    &trans
 //                             36       37         38                   39       40         41
-                               &none    &trans     &lt ARL 0            &trans   &trans     &trans
+                               &none    &trans     &mo ARL              &trans   &trans     &trans
                     >;
                 };
 
@@ -152,7 +152,7 @@
 &kp CAPS  &kp DOT    &kp RBRC  &kp RBKT &kp RPAR &kp SEMI             &trans   &trans     &trans    &trans   &trans    &trans
 &kp N5    &kp N4     &kp N3    &kp N2   &kp N1   &kp DQT              &trans   &trans     &trans    &trans   &trans    &trans
 &kp N0    &kp N9     &kp N8    &kp N7   &kp N6   &kp BSLH             &trans   &trans     &trans    &trans   &trans    &trans
-                               &trans   &trans   &trans               &trans   &trans     &trans
+                               &trans   &mo ADJ  &trans               &trans   &trans     &trans
                     >;
                 };
 
@@ -177,10 +177,10 @@
 
                 artsey_other_layer {
                     bindings = <
-&trans    &trans     &trans       &bt BT_SEL 1  &bt BT_SEL 0  &trans               &trans   &trans     &trans    &trans   &trans    &trans
-&trans    &trans     &kp C_PREV   &kp C_VOL_UP  &kp C_VOL_DN  &kp C_NEXT           &trans   &trans     &trans    &trans   &trans    &trans
-&trans    &trans     &trans       &kp C_PLAY    &kp C_MUTE    &trans               &trans   &trans     &trans    &trans   &trans    &trans
-                                  &trans        &trans        &trans               &trans   &trans     &trans
+&bt BT_CLR  &trans     &trans       &bt BT_SEL 1  &bt BT_SEL 0  &trans               &trans   &trans     &trans    &trans   &trans    &trans
+&trans      &trans     &kp C_PREV   &kp C_VOL_UP  &kp C_VOL_DN  &kp C_NEXT           &trans   &trans     &trans    &trans   &trans    &trans
+&trans      &trans     &trans       &kp C_PLAY    &kp C_MUTE    &trans               &trans   &trans     &trans    &trans   &trans    &trans
+                                    &trans        &trans        &trans               &trans   &trans     &trans
                     >;
                 };
                 artsey_special_layer {
@@ -195,7 +195,7 @@
 };
 
 /* 
-ENTER SHIFT CTRL ALT GUI
+SHIFT CTRL ALT GUI
                     bindings = <
 &trans    &trans     &trans    &trans   &trans   &trans               &trans   &trans     &trans    &trans   &trans    &trans
 &trans    &trans     &trans    &trans   &trans   &trans               &trans   &trans     &trans    &trans   &trans    &trans
@@ -208,6 +208,62 @@ ENTER SHIFT CTRL ALT GUI
 {
     combos {
         // ========== LEFT SIDE ==========
+        aoiy_clear: aoiy_clear {
+            key-positions = <13 14 15 16 25 26 27 28>;  // S T R E
+            bindings = <&clear_mods>;
+            layers = <&artsey_layer>;
+            require-pairs = true;
+        };
+
+        si_alt: si_alt {
+            key-positions = <13 26>;  // S I
+            bindings = <&kt LALT>;
+            layers = <&artsey_layer>;
+            require-pairs = true;
+        };
+
+        aoiy_gui: aoiy_gui {
+            key-positions = <13 27>;  // S Y
+            bindings = <&kt LGUI>;
+            layers = <&artsey_layer>;
+            require-pairs = true;
+        };
+
+        se_ctrl: se_ctrl {
+            key-positions = <13 28>;  // S E
+            bindings = <&kt LCTRL>;
+            layers = <&artsey_layer>;
+            require-pairs = true;
+        };
+
+        aoiy_shift: aoiy_shift {
+            key-positions = <13 14 15 28>;  // S T R E
+            bindings = <&kt LSHIFT>;
+            layers = <&artsey_layer>;
+            require-pairs = true;
+        };
+
+        stre_shift_once: stre_shift_once {
+            key-positions = <16 25 26 27>;  // A O I Y
+            bindings = <&sk LSHIFT>;
+            layers = <&artsey_layer>;
+            require-pairs = true;
+        };
+
+        rao_esc: rao_esc {
+            key-positions = <15 16 25>;  // R A O
+            bindings = <&kp ESC>;
+            layers = <&artsey_layer>;
+            require-pairs = true;
+        };
+
+        ae_enter: ae_enter {
+            key-positions = <16 28>;  // A E
+            bindings = <&kp ENTER>;
+            layers = <&artsey_layer>;
+            require-pairs = true;
+        };
+
         oiye_space: oiye_space {
             key-positions = <25 26 27 28>;  // O I Y E
             bindings = <&kp SPACE>;
