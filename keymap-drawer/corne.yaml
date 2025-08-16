@@ -186,10 +186,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:keyboard-tab$$
-  - S
-  - T
-  - R
   - A
+  - S
+  - D
+  - F
   - {t: '''', s: '"'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -198,10 +198,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: O, h: artsey_other}
-  - I
-  - Y
-  - {t: E, h: artsey_special}
+  - {t: E, h: artsey_other}
+  - L
+  - K
+  - {t: J, h: artsey_special}
   - {t: /, s: '?'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
