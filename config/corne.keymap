@@ -209,7 +209,7 @@ SHIFT CTRL ALT GUI
         // ========== LEFT SIDE ==========
         aoiy_clear: aoiy_clear {
             key-positions = <13 14 15 16 25 26 27 28>;  // S T R E
-            bindings = <&clear_mods>;
+            bindings = <&sys_reset>;
             layers = <&artsey_layer>;
         };
 
