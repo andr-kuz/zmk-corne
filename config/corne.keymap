@@ -295,112 +295,112 @@ SHIFT CTRL ALT GUI
         oiy_m: oiy_m {
             timeout-ms = <200>;
             key-positions = <25 26 27>;  // O I Y
-            bindings = <&kp m>;
+            bindings = <&kp M>;
             layers = <&artsey_layer>;
         };
 
         oe_b: oe_b {
             timeout-ms = <200>;
             key-positions = <25 28>;     // O E
-            bindings = <&kp b>;
+            bindings = <&kp B>;
             layers = <&artsey_layer>;
         };
 
         oi_n: oi_n {
             timeout-ms = <200>;
             key-positions = <25 26>;     // O I
-            bindings = <&kp n>;
+            bindings = <&kp N>;
             layers = <&artsey_layer>;
         };
 
         ye_c: ye_c {
             timeout-ms = <200>;
             key-positions = <27 28>;     // Y E
-            bindings = <&kp c>;
+            bindings = <&kp C>;
             layers = <&artsey_layer>;
         };
 
         oie_p: oie_p {
             timeout-ms = <200>;
             key-positions = <25 26 28>;  // O I E
-            bindings = <&kp p>;
+            bindings = <&kp P>;
             layers = <&artsey_layer>;
         };
 
         tra_d: tra_d {
             timeout-ms = <200>;
             key-positions = <14 15 16>;  // T R A
-            bindings = <&kp d>;
+            bindings = <&kp D>;
             layers = <&artsey_layer>;
         };
 
         sta_q: sta_q {
             timeout-ms = <200>;
             key-positions = <13 14 16>;  // S T A
-            bindings = <&kp q>;
+            bindings = <&kp Q>;
             layers = <&artsey_layer>;
         };
 
         ra_f: ra_f {
             timeout-ms = <200>;
             key-positions = <15 16>;     // R A
-            bindings = <&kp f>;
+            bindings = <&kp F>;
             layers = <&artsey_layer>;
         };
 
         iy_u: iy_u {
             timeout-ms = <200>;
             key-positions = <26 27>;     // I Y
-            bindings = <&kp u>;
+            bindings = <&kp U>;
             layers = <&artsey_layer>;
         };
 
         tr_g: tr_g {
             timeout-ms = <200>;
             key-positions = <14 15>;     // T R
-            bindings = <&kp g>;
+            bindings = <&kp G>;
             layers = <&artsey_layer>;
         };
 
         sr_v: sr_v {
             timeout-ms = <200>;
             key-positions = <13 15>;     // S R
-            bindings = <&kp v>;
+            bindings = <&kp V>;
             layers = <&artsey_layer>;
         };
 
         sa_w: sa_w {
             timeout-ms = <200>;
             key-positions = <13 16>;     // S A
-            bindings = <&kp w>;
+            bindings = <&kp W>;
             layers = <&artsey_layer>;
         };
 
         st_j: st_j {
             timeout-ms = <200>;
             key-positions = <13 14>;     // S T
-            bindings = <&kp j>;
+            bindings = <&kp J>;
             layers = <&artsey_layer>;
         };
 
         str_x: str_x {
             timeout-ms = <200>;
             key-positions = <13 14 15>;  // S T R
-            bindings = <&kp x>;
+            bindings = <&kp X>;
             layers = <&artsey_layer>;
         };
 
         stra_z: stra_z {
             timeout-ms = <200>;
             key-positions = <13 14 15 16>;  // S T R A
-            bindings = <&kp z>;
+            bindings = <&kp Z>;
             layers = <&artsey_layer>;
         };
 
         iye_l: iye_l {
             timeout-ms = <200>;
             key-positions = <26 27 28>;  // I Y E
-            bindings = <&kp x>;
+            bindings = <&kp X>;
             layers = <&artsey_layer>;
         };
     };
