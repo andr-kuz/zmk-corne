@@ -153,7 +153,7 @@
 &trans    &trans     &trans    &trans   &trans   &kp SEMI             &trans   &trans     &trans    &trans   &trans    &trans
 &trans    &trans     &kp N3    &kp N2   &kp N1   &kp DQT              &trans   &trans     &trans    &trans   &trans    &trans
 &trans    &trans     &kp N6    &kp N5   &kp N4   &kp BSLH             &trans   &trans     &trans    &trans   &trans    &trans
-                               &trans   &mo ADJ  &trans               &trans   &trans     &trans
+                               &trans   &trans   &trans               &trans   &trans     &trans
                     >;
                 };
 
