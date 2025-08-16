@@ -12,7 +12,7 @@ layers:
   - I
   - O
   - P
-  - LBKT kjkjkjkj
+  - {t: '[', s: '{'}
   - $$mdi:keyboard-tab$$
   - {t: A, h: '$$mdi:apple-keyboard-option$$'}
   - {t: S, h: LGUI}
