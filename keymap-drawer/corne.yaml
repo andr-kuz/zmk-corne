@@ -186,7 +186,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - B
-  - {t: L, h: toggle}
+  - {t: L, h: artsey_lower}
   - K
   - J
   - {t: H, h: artsey_brackets}
@@ -210,8 +210,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:backspace-reverse-outline$$
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - artsey_lower
+  - {t: '$$mdi:backspace$$', h: lower}
+  - raise
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -228,8 +228,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '5', s: '%'}
-  - {t: '4', s: $}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '3', s: '#'}
   - {t: '2', s: '@'}
   - {t: '1', s: '!'}
@@ -240,11 +240,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '0', s: )}
-  - {t: '9', s: (}
-  - {t: '8', s: '*'}
-  - {t: '7', s: '&'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '6', s: ^}
+  - {t: '5', s: '%'}
+  - {t: '4', s: $}
   - {t: \, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -254,7 +254,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - adjust
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -273,9 +273,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$', type: held}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$', type: held}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -286,7 +286,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:pan-left$$
-  - $$mdi:pan-up$$
+  - {t: '$$mdi:pan-up$$', type: held}
   - $$mdi:pan-down$$
   - $$mdi:pan-right$$
   - {t: '$$mdi:transfer$$', type: trans}
@@ -317,7 +317,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-up-bold$$
+  - {t: '$$mdi:arrow-up-bold$$', type: held}
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:transfer$$', type: trans}
@@ -328,9 +328,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - HOME
+  - {t: HOME, type: held}
   - PG UP
-  - PG DN
+  - {t: PG DN, type: held}
   - END
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -473,3 +473,91 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+combos:
+- p: [13, 14, 15, 16, 25, 26, 27, 28]
+  k: {t: '$$mdi:backup-restore$$', type: bootloader}
+  l: [artsey]
+- p: [13, 26]
+  k: {t: '$$mdi:apple-keyboard-option$$', h: toggle}
+  l: [artsey]
+- p: [13, 27]
+  k: {t: LGUI, h: toggle}
+  l: [artsey]
+- p: [13, 28]
+  k: {t: '$$mdi:apple-keyboard-control$$', h: toggle}
+  l: [artsey]
+- p: [13, 14, 15, 28]
+  k: {t: '$$mdi:apple-keyboard-shift$$', h: toggle}
+  l: [artsey]
+- p: [16, 25, 26, 27]
+  k: {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+  l: [artsey]
+- p: [15, 16, 25]
+  k: $$mdi:keyboard-esc$$
+  l: [artsey]
+- p: [16, 28]
+  k: {t: '$$mdi:keyboard-return$$', type: enter}
+  l: [artsey]
+- p: [25, 26, 27, 28]
+  k: $$mdi:keyboard-space$$
+  l: [artsey]
+- p: [26, 15, 28]
+  k: {t: artsey_nav, h: '$$mdi:gesture-tap-hold$$'}
+  l: [artsey]
+- p: [14, 27, 16]
+  k: {t: artsey_mouse, h: '$$mdi:gesture-tap-hold$$'}
+  l: [artsey]
+- p: [25, 26, 27]
+  k: M
+  l: [artsey]
+- p: [25, 26, 28]
+  k: P
+  l: [artsey]
+- p: [13, 14, 16]
+  k: Q
+  l: [artsey]
+- p: [13, 15]
+  k: V
+  l: [artsey]
+- p: [13, 16]
+  k: W
+  l: [artsey]
+- p: [13, 14, 15]
+  k: X
+  l: [artsey]
+- p: [13, 14, 15, 16]
+  k: Z
+  l: [artsey]
+- p: [16, 27]
+  k: {t: ',', s: <}
+  l: [artsey]
+- p: [16, 26]
+  k: {t: ., s: '>'}
+  l: [artsey]
+- p: [16, 25]
+  k: {t: /, s: '?'}
+  l: [artsey]
+- p: [14, 15, 16, 25]
+  k: $$mdi:keyboard-tab$$
+  l: [artsey]
+- p: [14, 26]
+  k: '!'
+  l: [artsey]
+- p: [13, 25]
+  k: '?'
+  l: [artsey]
+- p: [15, 27]
+  k: {t: '''', s: '"'}
+  l: [artsey]
+- p: [26, 27]
+  k: {t: '0', s: )}
+  l: [artsey_lower]
+- p: [15, 16]
+  k: {t: '7', s: '&'}
+  l: [artsey_lower]
+- p: [14, 15]
+  k: {t: '8', s: '*'}
+  l: [artsey_lower]
+- p: [27, 28]
+  k: {t: '9', s: (}
+  l: [artsey_lower]
