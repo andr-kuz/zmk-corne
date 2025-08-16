@@ -220,66 +220,77 @@
         compatible = "zmk,combos";
         // ========== LEFT SIDE ==========
         clear: clear {
+            timeout-ms = <200>;
             key-positions = <13 14 15 16 25 26 27 28>;
             bindings = <&sys_reset>;
             layers = <4>;
         };
 
         alt: alt {
+            timeout-ms = <200>;
             key-positions = <13 26>;
             bindings = <&kt LALT>;
             layers = <4>;
         };
 
         gui: gui {
+            timeout-ms = <200>;
             key-positions = <13 27>;
             bindings = <&kt LGUI>;
             layers = <4>;
         };
 
         ctrl: ctrl {
+            timeout-ms = <200>;
             key-positions = <13 28>;
             bindings = <&kt LCTRL>;
             layers = <4>;
         };
 
         shift: shift {
+            timeout-ms = <200>;
             key-positions = <13 14 15 28>;
             bindings = <&kt LSHIFT>;
             layers = <4>;
         };
 
         shift_once: shift_once {
+            timeout-ms = <200>;
             key-positions = <16 25 26 27>;
             bindings = <&sk LSHIFT>;
             layers = <4>;
         };
 
         esc: esc {
+            timeout-ms = <200>;
             key-positions = <15 16 25>;
             bindings = <&kp ESC>;
             layers = <4>;
         };
 
         enter: enter {
+            timeout-ms = <200>;
             key-positions = <16 28>;
             bindings = <&kp ENTER>;
             layers = <4>;
         };
 
         space: space {
+            timeout-ms = <200>;
             key-positions = <25 26 27 28>;
             bindings = <&kp SPACE>;
             layers = <4>;
         };
 
         lock_nav: lock_nav {
+            timeout-ms = <200>;
             key-positions = <26 15 28>;
             bindings = <&sl ARN>;
             layers = <4>;
         };
 
         lock_mouse: lock_mouse {
+            timeout-ms = <200>;
             key-positions = <14 27 16>;
             bindings = <&sl ARM>;
             layers = <4>;
