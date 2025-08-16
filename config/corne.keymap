@@ -178,10 +178,10 @@
 
                 artsey_other_layer {
                     bindings = <
-&bt BT_CLR  &trans     &trans       &bt BT_SEL 1  &bt BT_SEL 0  &trans               &trans   &trans     &trans    &trans   &trans    &trans
-&trans      &trans     &kp C_PREV   &kp C_VOL_UP  &kp C_VOL_DN  &kp C_NEXT           &trans   &trans     &trans    &trans   &trans    &trans
-&trans      &trans     &trans       &kp C_PLAY    &kp C_MUTE    &trans               &trans   &trans     &trans    &trans   &trans    &trans
-                                    &trans        &trans        &trans               &trans   &trans     &trans
+&bt BT_CLR  &trans       &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &trans               &trans   &trans     &trans    &trans   &trans    &trans
+&trans      &kp C_PREV   &kp C_VOL_UP  &kp C_VOL_DN  &kp C_NEXT    &trans               &trans   &trans     &trans    &trans   &trans    &trans
+&trans      &trans       &kp C_PLAY    &kp C_MUTE    &trans        &trans               &trans   &trans     &trans    &trans   &trans    &trans
+                                       &trans        &trans        &trans               &trans   &trans     &trans
                     >;
                 };
 
