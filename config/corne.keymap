@@ -211,91 +211,78 @@ SHIFT CTRL ALT GUI
             key-positions = <13 14 15 16 25 26 27 28>;  // S T R E
             bindings = <&clear_mods>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         si_alt: si_alt {
             key-positions = <13 26>;  // S I
             bindings = <&kt LALT>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         aoiy_gui: aoiy_gui {
             key-positions = <13 27>;  // S Y
             bindings = <&kt LGUI>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         se_ctrl: se_ctrl {
             key-positions = <13 28>;  // S E
             bindings = <&kt LCTRL>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         aoiy_shift: aoiy_shift {
             key-positions = <13 14 15 28>;  // S T R E
             bindings = <&kt LSHIFT>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         stre_shift_once: stre_shift_once {
             key-positions = <16 25 26 27>;  // A O I Y
             bindings = <&sk LSHIFT>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         rao_esc: rao_esc {
             key-positions = <15 16 25>;  // R A O
             bindings = <&kp ESC>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         ae_enter: ae_enter {
             key-positions = <16 28>;  // A E
             bindings = <&kp ENTER>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         oiye_space: oiye_space {
             key-positions = <25 26 27 28>;  // O I Y E
             bindings = <&kp SPACE>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         ri_del: ri_del {
             key-positions = <15 26>;  // R I
             bindings = <&kp DEL>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         re_bspc: re_bspc {
             key-positions = <15 28>;  // R E
             bindings = <&kp BSPC>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         lock_nav: lock_nav {
             key-positions = <26 15 28>;  // I R E
             bindings = <&sl ARN>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         lock_mouse: lock_mouse {
             key-positions = <14 27 16>;  // T Y A
             bindings = <&sl ARM>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         lbktlpar_esc: lbktlpar_esc {
@@ -303,7 +290,6 @@ SHIFT CTRL ALT GUI
             key-positions = <3 4>;  // [ (
             bindings = <&kp ESC>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         oiy_m: oiy_m {
@@ -311,7 +297,6 @@ SHIFT CTRL ALT GUI
             key-positions = <25 26 27>;  // O I Y
             bindings = <&kp m>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         oe_b: oe_b {
@@ -319,7 +304,6 @@ SHIFT CTRL ALT GUI
             key-positions = <25 28>;     // O E
             bindings = <&kp b>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         oi_n: oi_n {
@@ -327,7 +311,6 @@ SHIFT CTRL ALT GUI
             key-positions = <25 26>;     // O I
             bindings = <&kp n>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         ye_c: ye_c {
@@ -335,7 +318,6 @@ SHIFT CTRL ALT GUI
             key-positions = <27 28>;     // Y E
             bindings = <&kp c>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         oie_p: oie_p {
@@ -343,7 +325,6 @@ SHIFT CTRL ALT GUI
             key-positions = <25 26 28>;  // O I E
             bindings = <&kp p>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         tra_d: tra_d {
@@ -351,7 +332,6 @@ SHIFT CTRL ALT GUI
             key-positions = <14 15 16>;  // T R A
             bindings = <&kp d>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         sta_q: sta_q {
@@ -359,7 +339,6 @@ SHIFT CTRL ALT GUI
             key-positions = <13 14 16>;  // S T A
             bindings = <&kp q>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         ra_f: ra_f {
@@ -367,7 +346,6 @@ SHIFT CTRL ALT GUI
             key-positions = <15 16>;     // R A
             bindings = <&kp f>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         iy_u: iy_u {
@@ -375,7 +353,6 @@ SHIFT CTRL ALT GUI
             key-positions = <26 27>;     // I Y
             bindings = <&kp u>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         tr_g: tr_g {
@@ -383,7 +360,6 @@ SHIFT CTRL ALT GUI
             key-positions = <14 15>;     // T R
             bindings = <&kp g>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         sr_v: sr_v {
@@ -391,7 +367,6 @@ SHIFT CTRL ALT GUI
             key-positions = <13 15>;     // S R
             bindings = <&kp v>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         sa_w: sa_w {
@@ -399,7 +374,6 @@ SHIFT CTRL ALT GUI
             key-positions = <13 16>;     // S A
             bindings = <&kp w>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         st_j: st_j {
@@ -407,7 +381,6 @@ SHIFT CTRL ALT GUI
             key-positions = <13 14>;     // S T
             bindings = <&kp j>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         str_x: str_x {
@@ -415,7 +388,6 @@ SHIFT CTRL ALT GUI
             key-positions = <13 14 15>;  // S T R
             bindings = <&kp x>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         stra_z: stra_z {
@@ -423,7 +395,6 @@ SHIFT CTRL ALT GUI
             key-positions = <13 14 15 16>;  // S T R A
             bindings = <&kp z>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
 
         iye_l: iye_l {
@@ -431,7 +402,6 @@ SHIFT CTRL ALT GUI
             key-positions = <26 27 28>;  // I Y E
             bindings = <&kp x>;
             layers = <&artsey_layer>;
-            require-pairs = true;
         };
     };
 }; 
