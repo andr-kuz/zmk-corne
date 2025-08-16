@@ -186,10 +186,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - B
-  - {t: L, h: artsey_lower}
+  - {t: H, h: artsey_lower}
+  - L
   - K
-  - J
-  - {t: H, h: artsey_brackets}
+  - {t: J, h: artsey_brackets}
   - G
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
