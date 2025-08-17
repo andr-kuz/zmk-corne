@@ -166,73 +166,74 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: right, h: toggle}
+  - {t: left, h: toggle}
   - {type: held}
   - {type: held}
   - {type: held alternate}
   - {type: held}
-  - {t: right, h: toggle}
-  right:
-  - C
-  - I
-  - N
-  - T
-  - R
+  - {t: left, h: toggle}
+  left:
   - M
+  - R
+  - T
+  - N
+  - I
+  - C
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - H
-  - {t: J, h: right_brackets}
-  - K
-  - L
-  - {t: E, h: right_lower}
   - U
+  - {t: E, h: left_lower}
+  - L
+  - K
+  - {t: J, h: left_brackets}
+  - H
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - O
-  - {t: F, h: right_special}
-  - D
-  - S
-  - {t: A, h: right_other}
   - W
+  - {t: A, h: left_other}
+  - S
+  - D
+  - {t: F, h: left_special}
+  - O
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: G, h: raise}
+  - P
   - {t: Y, h: lower}
+  - {t: G, h: raise}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  right_lower:
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  left_lower:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: ;, s: ':'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '"'
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  - {t: '3', s: '#'}
+  - {t: '2', s: '@'}
+  - {t: '1', s: '!'}
+  - '"'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -240,10 +241,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: \, s: '|'}
-  - {t: '4', s: $}
-  - {t: '5', s: '%'}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '6', s: ^}
+  - {t: '5', s: '%'}
+  - {t: '4', s: $}
+  - {t: \, s: '|'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -256,14 +258,12 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  left_mouse:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  right_mouse:
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:mouse-left-click-outline$$
-  - $$mdi:mouse-scroll-wheel$$
   - $$mdi:mouse-right-click-outline$$
+  - $$mdi:mouse-scroll-wheel$$
+  - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -271,10 +271,12 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$', type: held}
-  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$', type: held}
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$', type: held}
+  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -283,10 +285,23 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:pan-right$$
-  - $$mdi:pan-down$$
-  - {t: '$$mdi:pan-up$$', type: held}
   - $$mdi:pan-left$$
+  - {t: '$$mdi:pan-up$$', type: held}
+  - $$mdi:pan-down$$
+  - $$mdi:pan-right$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  left_nav:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -301,23 +316,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  right_nav:
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:arrow-right-bold$$
-  - $$mdi:arrow-down-bold$$
-  - {t: '$$mdi:arrow-up-bold$$', type: held}
   - $$mdi:arrow-left-bold$$
+  - {t: '$$mdi:arrow-up-bold$$', type: held}
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -326,10 +328,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - END
-  - {t: PG DN, type: held}
-  - PG UP
   - {t: HOME, type: held}
+  - PG UP
+  - {t: PG DN, type: held}
+  - END
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -342,26 +344,24 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  right_other:
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  left_other:
   - $$mdi:bluetooth-off$$
   - {t: '$$mdi:transfer$$', type: trans}
+  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:skip-next$$
-  - $$mdi:volume-low$$
-  - $$mdi:volume-high$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:skip-previous$$
+  - $$mdi:volume-high$$
+  - $$mdi:volume-low$$
+  - $$mdi:skip-next$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -370,10 +370,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:volume-off$$
+  - {type: held}
   - PLAY
-  - {type: held}
+  - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -387,13 +386,13 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  right_special:
   - {t: '$$mdi:transfer$$', type: trans}
-  - '*'
-  - ^
-  - '%'
-  - $
+  left_special:
   - '&'
+  - $
+  - '%'
+  - ^
+  - '*'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -401,10 +400,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '''', s: '"'}
-  - {t: '`', s: '~'}
-  - _
+  - {t: '$$mdi:transfer$$', type: trans}
   - +
+  - _
+  - {t: '`', s: '~'}
+  - {t: '''', s: '"'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -413,10 +413,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
-  - '@'
-  - {t: '-', s: _}
   - {t: '=', s: +}
+  - {t: '-', s: _}
+  - '@'
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -430,7 +430,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  right_brackets:
+  left_brackets:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -443,24 +443,24 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - '{'
+  - {t: '[', s: '{'}
+  - (
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - (
-  - {t: '[', s: '{'}
-  - '{'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - )
-  - {t: ']', s: '}'}
   - '}'
+  - {t: ']', s: '}'}
+  - )
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -474,90 +474,90 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [14, 13]
+- p: [15, 16]
   k: V
-  l: [right]
-- p: [16, 15]
+  l: [left]
+- p: [13, 14]
   k: Q
-  l: [right]
-- p: [16, 15, 14]
+  l: [left]
+- p: [13, 14, 15]
   k: X
-  l: [right]
-- p: [16, 15, 14, 13]
+  l: [left]
+- p: [13, 14, 15, 16]
   k: Z
-  l: [right]
-- p: [28, 27, 26]
+  l: [left]
+- p: [25, 26, 27]
   k: {t: '$$mdi:backspace$$', type: backspace}
-  l: [right]
-- p: [28, 27, 25]
+  l: [left]
+- p: [25, 26, 28]
   k: $$mdi:backspace-reverse-outline$$
-  l: [right]
-- p: [16, 27]
-  k: {t: '$$mdi:apple-keyboard-option$$', h: toggle}
-  l: [right]
-- p: [16, 26]
-  k: {t: LGUI, h: toggle}
-  l: [right]
-- p: [16, 25]
-  k: {t: '$$mdi:apple-keyboard-control$$', h: toggle}
-  l: [right]
-- p: [16, 15, 14, 25]
-  k: {t: '$$mdi:apple-keyboard-shift$$', h: toggle}
-  l: [right]
-- p: [13, 28, 27, 26]
-  k: {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
-  l: [right]
-- p: [16, 15, 14, 13, 28, 27, 26, 25]
-  k: {t: '$$mdi:backup-restore$$', type: bootloader}
-  l: [right]
-- p: [14, 13, 28]
-  k: $$mdi:keyboard-esc$$
-  l: [right]
-- p: [13, 25]
-  k: {t: '$$mdi:keyboard-return$$', type: enter}
-  l: [right]
-- p: [28, 27, 26, 25]
-  k: $$mdi:keyboard-space$$
-  l: [right]
-- p: [27, 14, 25]
-  k: {t: right_nav, h: '$$mdi:gesture-tap-hold$$'}
-  l: [right]
-- p: [15, 26, 13]
-  k: {t: right_mouse, h: '$$mdi:gesture-tap-hold$$'}
-  l: [right]
+  l: [left]
 - p: [13, 26]
-  k: {t: ',', s: <}
-  l: [right]
+  k: {t: '$$mdi:apple-keyboard-option$$', h: toggle}
+  l: [left]
 - p: [13, 27]
-  k: {t: ., s: '>'}
-  l: [right]
+  k: {t: LGUI, h: toggle}
+  l: [left]
 - p: [13, 28]
-  k: {t: /, s: '?'}
-  l: [right]
-- p: [15, 14, 13, 28]
-  k: $$mdi:keyboard-tab$$
-  l: [right]
-- p: [15, 27]
-  k: '!'
-  l: [right]
+  k: {t: '$$mdi:apple-keyboard-control$$', h: toggle}
+  l: [left]
+- p: [13, 14, 15, 28]
+  k: {t: '$$mdi:apple-keyboard-shift$$', h: toggle}
+  l: [left]
+- p: [16, 25, 26, 27]
+  k: {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
+  l: [left]
+- p: [13, 14, 15, 16, 25, 26, 27, 28]
+  k: {t: '$$mdi:backup-restore$$', type: bootloader}
+  l: [left]
+- p: [15, 16, 25]
+  k: $$mdi:keyboard-esc$$
+  l: [left]
 - p: [16, 28]
-  k: '?'
-  l: [right]
+  k: {t: '$$mdi:keyboard-return$$', type: enter}
+  l: [left]
+- p: [25, 26, 27, 28]
+  k: $$mdi:keyboard-space$$
+  l: [left]
+- p: [26, 15, 28]
+  k: {t: left_nav, h: '$$mdi:gesture-tap-hold$$'}
+  l: [left]
+- p: [14, 27, 16]
+  k: {t: left_mouse, h: '$$mdi:gesture-tap-hold$$'}
+  l: [left]
+- p: [16, 27]
+  k: {t: ',', s: <}
+  l: [left]
+- p: [16, 26]
+  k: {t: ., s: '>'}
+  l: [left]
+- p: [16, 25]
+  k: {t: /, s: '?'}
+  l: [left]
+- p: [14, 15, 16, 25]
+  k: $$mdi:keyboard-tab$$
+  l: [left]
 - p: [14, 26]
+  k: '!'
+  l: [left]
+- p: [13, 25]
+  k: '?'
+  l: [left]
+- p: [15, 27]
   k: {t: '''', s: '"'}
-  l: [right]
-- p: [16, 13]
+  l: [left]
+- p: [13, 16]
   k: {t: ;, s: ':'}
-  l: [right]
-- p: [27, 26]
+  l: [left]
+- p: [26, 27]
   k: {t: '0', s: )}
-  l: [right_lower]
-- p: [14, 13]
+  l: [left_lower]
+- p: [15, 16]
   k: {t: '7', s: '&'}
-  l: [right_lower]
-- p: [15, 14]
+  l: [left_lower]
+- p: [14, 15]
   k: {t: '8', s: '*'}
-  l: [right_lower]
-- p: [26, 25]
+  l: [left_lower]
+- p: [27, 28]
   k: {t: '9', s: (}
-  l: [right_lower]
+  l: [left_lower]
