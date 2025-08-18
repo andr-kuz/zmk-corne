@@ -186,10 +186,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - U
-  - {t: '&kt_on E', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: '&kt_on L', h: LGUI}
-  - {t: '&kt_on K', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '&kt_on J', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: E, h: '&kt_on LALT'}
+  - {t: L, h: '&kt_on LGUI'}
+  - {t: K, h: '&kt_on LCTRL'}
+  - {t: J, h: '&kt_on LSHIFT'}
   - H
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
