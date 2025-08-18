@@ -186,10 +186,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - U
-  - E
-  - L
-  - K
-  - {t: J, h: left_brackets}
+  - {t: '&kt_on E', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '&kt_on L', h: LGUI}
+  - {t: '&kt_on K', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '&kt_on J', h: '$$mdi:apple-keyboard-shift$$'}
   - H
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -199,7 +199,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - W
   - {t: A, h: left_other}
-  - S
+  - {t: S, h: left_brackets}
   - D
   - {t: F, h: left_special}
   - O
@@ -447,7 +447,7 @@ layers:
   - '{'
   - {t: '[', s: '{'}
   - (
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -457,7 +457,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - '}'
-  - {t: ']', s: '}'}
+  - {t: ']', s: '}', type: held}
   - )
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
