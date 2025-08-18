@@ -57,7 +57,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
-            bindings = <&kp>, <&kt_on>;
+            bindings = <&kt_on>, <&kp>;
         };
 
         gui_space: gui_space {
