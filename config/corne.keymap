@@ -232,11 +232,6 @@
 // 0       1          2          3      4          5
 &kp C      &kp I      &kp N      &kp T  &kp R      &kp M         &trans &trans &trans &trans &trans &trans
 // 12      13         14         15     16         17
-&kp U  &tap_kt LALT E &tap_kt LGUI L  &tap_kt LCTRL K &tap_kt LSHIFT J  &kp H           &trans &trans &trans &trans &trans &trans
-&kp U  &tap_kt LALT E &tap_kt LGUI L  &tap_kt LCTRL K &tap_kt LSHIFT J  &kp H           &trans &trans &trans &trans &trans &trans
-&kp U  &tap_kt LALT E &tap_kt LGUI L  &tap_kt LCTRL K &tap_kt LSHIFT J  &kp H           &trans &trans &trans &trans &trans &trans
-&kp U  &tap_kt LALT E &tap_kt LGUI L  &tap_kt LCTRL K &tap_kt LSHIFT J  &kp H           &trans &trans &trans &trans &trans &trans
-
 &kp U      &tap_kt LSHIFT J  &tap_kt LCTRL K      &tap_kt LGUI L  &tap_kt LALT E      &kp H         &trans &trans &trans &trans &trans &trans
 // 24      25         26         27     28         29
 &kp O      &lt ARS F  &kp D      &lt ARB S  &lt ARO A  &kp W         &trans &trans &trans &trans &trans &trans
@@ -448,6 +443,14 @@
             layers = <4>;
         };
 
+        bslash: bslash {
+            timeout-ms = <200>;
+            key-positions = <13 25>;
+            bindings = <&kp BSLH>;
+            layers = <4>;
+        };
+
+
         excl: excl {
             timeout-ms = <200>;
             key-positions = <16 28>;
@@ -457,7 +460,7 @@
 
         quest: quest {
             timeout-ms = <200>;
-            key-positions = <13 25>;
+            key-positions = <16 25>;
             bindings = <&kp QMARK>;
             layers = <4>;
         };
@@ -574,6 +577,13 @@
             layers = <4>;
         };
 
+        bslash: bslash {
+            timeout-ms = <200>;
+            key-positions = <16 28>;
+            bindings = <&kp BSLH>;
+            layers = <4>;
+        };
+
         excl: excl {
             timeout-ms = <200>;
             key-positions = <13 25>;
@@ -583,7 +593,7 @@
 
         quest: quest {
             timeout-ms = <200>;
-            key-positions = <16 28>;
+            key-positions = <13 28>;
             bindings = <&kp QMARK>;
             layers = <4>;
         };
