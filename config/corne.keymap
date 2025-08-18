@@ -44,6 +44,21 @@
 */
 / {
     behaviors {
+        kt_on: key_toggle_on_only {
+            compatible = "zmk,behavior-key-toggle";
+            #binding-cells = <1>;
+            display-name = "Key Toggle On";
+            toggle-mode = "on";
+        };
+
+        tap_kt: tap_kt {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            bindings = <&kp>, <&kt_on>;
+        };
 
         gui_space: gui_space {
             compatible = "zmk,behavior-macro";
@@ -149,9 +164,9 @@
 // 0   1          2        3          4          5
 &kp M  &kp R      &kp T    &kp N      &kp I      &kp C           &trans &trans &trans &trans &trans &trans
 // 12  13         14       15         16         17
-&kp U  &kp E      &kp L    &kp K      &lt ARB J  &kp H           &trans &trans &trans &trans &trans &trans
-// 24  25         26       27         28         29
-&kp W  &lt ARO A  &kp S    &kp D      &lt ARS F  &kp O           &trans &trans &trans &trans &trans &trans
+&kp U  &tap_kt LALT E &tap_kt LGUI L  &tap_kt LCTRL K &tap_kt LSHIFT J  &kp H           &trans &trans &trans &trans &trans &trans
+// 24  25         26         27         28         29
+&kp W  &lt ARO A  &lt ARB S  &kp D      &lt ARS F  &kp O           &trans &trans &trans &trans &trans &trans
 //                         36         37         38
                            &lt ARM P  &lt ARL Y  &lt ARN G       &trans &trans &trans
                     >;
@@ -217,9 +232,14 @@
 // 0       1          2          3      4          5
 &kp C      &kp I      &kp N      &kp T  &kp R      &kp M         &trans &trans &trans &trans &trans &trans
 // 12      13         14         15     16         17
-&kp H      &lt ARB J  &kp K      &kp L  &kp E      &kp U         &trans &trans &trans &trans &trans &trans
+&kp U  &tap_kt LALT E &tap_kt LGUI L  &tap_kt LCTRL K &tap_kt LSHIFT J  &kp H           &trans &trans &trans &trans &trans &trans
+&kp U  &tap_kt LALT E &tap_kt LGUI L  &tap_kt LCTRL K &tap_kt LSHIFT J  &kp H           &trans &trans &trans &trans &trans &trans
+&kp U  &tap_kt LALT E &tap_kt LGUI L  &tap_kt LCTRL K &tap_kt LSHIFT J  &kp H           &trans &trans &trans &trans &trans &trans
+&kp U  &tap_kt LALT E &tap_kt LGUI L  &tap_kt LCTRL K &tap_kt LSHIFT J  &kp H           &trans &trans &trans &trans &trans &trans
+
+&kp U      &tap_kt LSHIFT J  &tap_kt LCTRL K      &tap_kt LGUI L  &tap_kt LALT E      &kp H         &trans &trans &trans &trans &trans &trans
 // 24      25         26         27     28         29
-&kp O      &lt ARS F  &kp D      &kp S  &lt ARO A  &kp W         &trans &trans &trans &trans &trans &trans
+&kp O      &lt ARS F  &kp D      &lt ARB S  &lt ARO A  &kp W         &trans &trans &trans &trans &trans &trans
 // 36      37         38
 &lt ARN G  &lt ARL Y  &kp ARM P                                  &trans &trans &trans
                     >;
