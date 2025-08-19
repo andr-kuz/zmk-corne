@@ -142,14 +142,14 @@
                 #ifndef CONFIG_ZMK_SPLIT_RIGHT_SIDE
                 left_layer {
                     bindings = <
-// 0   1          2        3          4          5
-&kp M  &kp R      &kp T    &kp N      &kp I      &kp C                                           &trans &trans &trans &trans &trans &trans
-// 12  13         14       15         16         17
-&kp U  &tap_kt LALT E      &tap_kt LGUI L  &tap_kt LCTRL K &tap_kt LSHIFT J  &tp_ctrl_spc 0 H    &trans &trans &trans &trans &trans &trans
-// 24  25         26         27         28         29
-&kp W  &lt ARB A  &kp S      &kp D      &lt ARS F  &lt ARO O                                     &trans &trans &trans &trans &trans &trans
-//                         36         37         38
-                           &lt ARM P  &lt ARL Y  &lt ARN G                                       &trans &trans &trans
+// 0   1               2               3                4                 5
+&kp M  &kp R           &kp T           &kp N            &kp I             &kp C                                           &trans &trans &trans &trans &trans &trans
+// 12  13              14              15               16                17
+&kp U  &tap_kt LALT E  &tap_kt LGUI L  &tap_kt LCTRL K  &tap_kt LSHIFT J  &tp_ctrl_spc 0 H    &trans &trans &trans &trans &trans &trans
+// 24  25              26              27               28                29
+&kp W  &lt ARB A       &kp S           &kp D            &lt ARS F         &lt ARO O                                     &trans &trans &trans &trans &trans &trans
+//                                     36               37                38
+                                       &lt ARM P        &lt ARL Y         &lt ARN G                                       &trans &trans &trans
                     >;
                 };
 
@@ -355,6 +355,13 @@
             timeout-ms = <300>;
             key-positions = <24 25>;
             bindings = <&kp Z>;
+            layers = <ART>;
+        };
+
+        b: b {
+            timeout-ms = <300>;
+            key-positions = <16 17>;
+            bindings = <&kp B>;
             layers = <ART>;
         };
 
