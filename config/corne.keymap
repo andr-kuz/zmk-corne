@@ -31,8 +31,6 @@
 #define ARB 10
 
 &sl { release-after-ms = <2000>; };
-&lt { quick-tap-ms = <200>; };
-&mt { quick-tap-ms = <200>; };
 
 /* 
                     bindings = <
@@ -53,42 +51,32 @@
             bindings = <&kt>, <&kp>;
         };
 
-        gui_space: gui_space {
+        ctrl_spc: ctrl_spc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &kp LGUI>
+                <&macro_press &kp LCTRL>
                 , <&macro_tap &kp SPACE>
-                , <&macro_release &kp LGUI>
+                , <&macro_release &kp LCTRL>
             ;
         };
 
-        gui_space_layer: gui_space_layer {
+        ctrl_spc_mo: ctrl_spc_mo {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
-            bindings = <&mo>, <&gui_space>;
+            bindings = <&mo>, <&ctrl_spc>;
         };
 
-        ctrl_space: ctrl_space {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press &kp RCTRL>
-                , <&macro_tap &kp SPACE>
-                , <&macro_release &kp RCTRL>
-            ;
-        };
-
-        ctrl_space_layer: ctrl_space_layer {
+        tp_ctrl_spc: tp_ctrl_spc {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
-            bindings = <&mo>, <&ctrl_space>;
+            bindings = <&kp>, <&ctrl_spc>;
         };
 
         hm: homerow_mods {
@@ -117,7 +105,7 @@
 &kp ESC    &kp Q       &kp W       &kp E        &kp R                    &kp T                 &kp Y           &kp U           &kp I         &kp O       &kp P          &kp LBKT
 &kp TAB    &hm LALT A  &hm LGUI S  &hm LCTRL D  &hm LSHIFT F             &kp G                 &kp H           &hm RSHIFT J    &hm RCTRL K   &hm LGUI L  &hm RALT SEMI  &kp SQT
 &kp GRAVE  &kp Z       &kp X       &kp C        &kp V                    &kp B                 &kp N           &kp M           &kp COMMA     &kp DOT     &kp FSLH       &kp RBKT 
-                                   &kp K_CMENU  &gui_space_layer LWR 0   &lt RSE SPACE         &lt RSE ENTER   &lt LWR BSPC    &kp DEL 
+                                   &kp K_CMENU  &ctrl_spc_mo LWR 0       &lt RSE SPACE         &lt RSE ENTER   &lt LWR BSPC    &kp DEL 
                         >;
                 };
 
@@ -155,13 +143,13 @@
                 left_layer {
                     bindings = <
 // 0   1          2        3          4          5
-&kp M  &kp R      &kp T    &kp N      &kp I      &kp C           &trans &trans &trans &trans &trans &trans
+&kp M  &kp R      &kp T    &kp N      &kp I      &kp C                                           &trans &trans &trans &trans &trans &trans
 // 12  13         14       15         16         17
-&kp U  &tap_kt LALT E &tap_kt LGUI L  &tap_kt LCTRL K &tap_kt LSHIFT J  &kp H           &trans &trans &trans &trans &trans &trans
+&kp U  &tap_kt LALT E      &tap_kt LGUI L  &tap_kt LCTRL K &tap_kt LSHIFT J  &tp_ctrl_spc H 0    &trans &trans &trans &trans &trans &trans
 // 24  25         26         27         28         29
-&kp W  &lt ARO A  &lt ARB S  &kp D      &lt ARS F  &kp O           &trans &trans &trans &trans &trans &trans
+&kp W  &lt ARB A  &kp S      &kp D      &lt ARS F  &lt ARO O                                     &trans &trans &trans &trans &trans &trans
 //                         36         37         38
-                           &lt ARM P  &lt ARL Y  &lt ARN G       &trans &trans &trans
+                           &lt ARM P  &lt ARL Y  &lt ARN G                                       &trans &trans &trans
                     >;
                 };
 
@@ -176,47 +164,47 @@
 
                 left_mouse_layer {
                     bindings = <
-&trans  &trans  &mkp RCLK       &mkp MCLK     &mkp LCLK       &trans                   &trans &trans &trans &trans &trans &trans
-&trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_RIGHT          &trans &trans &trans &trans &trans &trans
-&trans  &trans  &msc SCRL_LEFT  &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_RIGHT          &trans &trans &trans &trans &trans &trans
-                                &trans        &trans          &trans                   &trans &trans &trans
+&trans  &trans  &mkp RCLK        &mkp MCLK     &mkp LCLK       &trans                   &trans &trans &trans &trans &trans &trans
+&trans  &trans  &mmv MOVE_RIGHT  &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_LEFT           &trans &trans &trans &trans &trans &trans
+&trans  &trans  &msc SCRL_RIGHT  &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_LEFT           &trans &trans &trans &trans &trans &trans
+                                 &trans        &trans          &trans                   &trans &trans &trans
                     >;
                 };
 
                 left_nav_layer {
                     bindings = <
-&trans  &trans   &trans    &trans     &trans     &trans        &trans &trans &trans &trans &trans &trans
-&trans  &trans   &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT     &trans &trans &trans &trans &trans &trans
-&trans  &trans   &kp HOME  &kp PG_UP  &kp PG_DN  &kp END       &trans &trans &trans &trans &trans &trans
-                           &trans     &trans     &trans        &trans &trans &trans
+&trans  &trans   &mkp MB5   &trans     &trans     &mkp MB4      &trans &trans &trans &trans &trans &trans
+&trans  &trans   &kp RIGHT  &kp UP     &kp DOWN   &kp LEFT      &trans &trans &trans &trans &trans &trans
+&trans  &trans   &kp END    &kp PG_UP  &kp PG_DN  &kp HOME      &trans &trans &trans &trans &trans &trans
+                            &trans     &trans     &trans        &trans &trans &trans
                     >;
 
                 };
 
                 left_other_layer {
                     bindings = <
-&bt BT_CLR  &trans       &trans        &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0     &trans &trans &trans &trans &trans &trans
-&trans      &kp C_PLAY   &kp C_PREV    &kp C_VOL_UP  &kp C_VOL_DN  &kp C_NEXT       &trans &trans &trans &trans &trans &trans
-&tog ART    &trans       &trans        &trans        &kp C_MUTE    &trans           &trans &trans &trans &trans &trans &trans
-                         &trans        &trans        &trans                         &trans &trans &trans
+&trans      &trans       &trans           &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0     &trans &trans &trans &trans &trans &trans
+&trans      &kp C_PLAY   &kp C_NEXT       &kp C_VOL_UP  &kp C_VOL_DN  &kp C_PREV       &trans &trans &trans &trans &trans &trans
+&trans      &trans       &trans           &trans        &kp C_MUTE    &trans           &trans &trans &trans &trans &trans &trans
+                         &studio_unlock   &bt BT_CLR    &tog ART                       &trans &trans &trans
                     >;
                 };
 
                 left_special_layer {
                     bindings = <
 &trans  &trans     &trans     &trans     &trans     &trans         &trans &trans &trans &trans &trans &trans
-&trans  &kp AT     &kp DLLR   &kp STAR   &trans     &trans         &trans &trans &trans &trans &trans &trans
-&trans  &kp GRAVE  &kp MINUS  &kp EQUAL  &trans     &trans         &trans &trans &trans &trans &trans &trans 
-                              &trans     &kp CARET  &kp AT         &trans &trans &trans
+&trans  &kp CARET  &kp DLLR   &kp AT     &trans     &trans         &trans &trans &trans &trans &trans &trans
+&trans  &kp STAR   &kp MINUS  &kp EQUAL  &trans     &trans         &trans &trans &trans &trans &trans &trans 
+                              &trans     &trans     &trans         &trans &trans &trans
                     >;
                 };
 
                 left_brackets_layer {
                     bindings = <
-&trans &trans    &trans     &trans    &trans  &trans      &trans &trans &trans &trans &trans &trans
-&trans &kp LBRC  &kp LBKT   &kp LPAR  &trans  &trans      &trans &trans &trans &trans &trans &trans
-&trans &kp RBRC  &kp RBKT   &kp RPAR  &trans  &trans      &trans &trans &trans &trans &trans &trans
-                            &trans    &kp LT  &kp GT      &trans &trans &trans
+&trans &trans  &trans    &trans    &trans     &trans      &trans &trans &trans &trans &trans &trans
+&trans &trans  &kp LBRC  &kp LBKT  &kp LPAR   &kt SQT     &trans &trans &trans &trans &trans &trans
+&trans &trans  &kp RBRC  &kp RBKT  &kp RPAR   &kt DQT     &trans &trans &trans &trans &trans &trans
+                         &kp GT    &kp GRAVE  &kp LT      &trans &trans &trans
                     >;
                 };
                 #else
@@ -293,313 +281,299 @@
         compatible = "zmk,combos";
 
         x: x {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <26 27>;
             bindings = <&kp X>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         esc: esc {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <14 15>;
             bindings = <&kp ESC>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         colon: colon {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <13 16>;
             bindings = <&kp COLON>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         tab: tab {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <25 28>;
             bindings = <&kp TAB>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         del: del {
-            timeout-ms = <200>;
+            timeout-ms = <400>;
             key-positions = <1 2 3 4>;
             bindings = <&kp DEL>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         space: space {
-            timeout-ms = <300>;
+            timeout-ms = <400>;
             key-positions = <25 26 27 28>;
             bindings = <&kp SPACE>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         bspc: bspc {
-            timeout-ms = <300>;
+            timeout-ms = <400>;
             key-positions = <13 14 15 16>;
             bindings = <&kp BSPC>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         clear: clear {
-            timeout-ms = <400>;
+            timeout-ms = <800>;
             key-positions = <13 14 15 16 25 26 27 28>;
             bindings = <&sys_reset>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         #ifndef CONFIG_ZMK_SPLIT_RIGHT_SIDE
         v: v {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <27 28>;
             bindings = <&kp V>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         q: q {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <13 14>;
             bindings = <&kp Q>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         z: z {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <24 25>;
             bindings = <&kp Z>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         alt: alt {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <13 26>;
             bindings = <&kt LALT>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         gui: gui {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <13 27>;
             bindings = <&kt LGUI>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         ctrl: ctrl {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <13 28>;
             bindings = <&kt LCTRL>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         shift: shift {
-            timeout-ms = <200>;
+            timeout-ms = <400>;
             key-positions = <13 14 15 28>;
             bindings = <&kt LSHIFT>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         shift_once: shift_once {
-            timeout-ms = <200>;
+            timeout-ms = <400>;
             key-positions = <16 25 26 27>;
             bindings = <&sk LSHIFT>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         enter: enter {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <15 28>;
             bindings = <&kp ENTER>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         comma: comma {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <16 27>;
             bindings = <&kp COMMA>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         dot: dot {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <16 26>;
             bindings = <&kp DOT>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         slash: slash {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <16 25>;
             bindings = <&kp FSLH>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         bslash: bslash {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <13 25>;
             bindings = <&kp BSLH>;
-            layers = <4>;
+            layers = <ART>;
         };
 
 
         excl: excl {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <16 28>;
             bindings = <&kp EXCL>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         quest: quest {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <16 25>;
             bindings = <&kp QMARK>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         quote: quote {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <14 26>;
             bindings = <&kp SQT>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         semi: semi {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <15 27>;
             bindings = <&kp SEMI>;
-            layers = <4>;
+            layers = <ART>;
         };
         #else
         v: v {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <25 26>;
             bindings = <&kp V>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         q: q {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <15 16>;
             bindings = <&kp Q>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         z: z {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <28 29>;
             bindings = <&kp Z>;
-            layers = <4>;
-        };
-
-        del: del {
-            timeout-ms = <200>;
-            key-positions = <28 27 25>;
-            bindings = <&kp DEL>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         alt: alt {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <16 27>;
             bindings = <&kt LALT>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         gui: gui {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <16 26>;
             bindings = <&kt LGUI>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         ctrl: ctrl {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <16 25>;
             bindings = <&kt LCTRL>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         shift: shift {
-            timeout-ms = <200>;
+            timeout-ms = <400>;
             key-positions = <16 15 14 25>;
             bindings = <&kt LSHIFT>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         shift_once: shift_once {
-            timeout-ms = <200>;
+            timeout-ms = <400>;
             key-positions = <13 28 27 26>;
             bindings = <&sk LSHIFT>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         enter: enter {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <14 25>;
             bindings = <&kp ENTER>;
-            layers = <4>;
-        };
-
-        space: space {
-            timeout-ms = <200>;
-            key-positions = <28 27 26 25>;
-            bindings = <&kp SPACE>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         comma: comma {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <13 26>;
             bindings = <&kp COMMA>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         dot: dot {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <13 27>;
             bindings = <&kp DOT>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         slash: slash {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <13 28>;
             bindings = <&kp FSLH>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         bslash: bslash {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <16 28>;
             bindings = <&kp BSLH>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         excl: excl {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <13 25>;
             bindings = <&kp EXCL>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         quest: quest {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <13 28>;
             bindings = <&kp QMARK>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         quote: quote {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <15 27>;
             bindings = <&kp SQT>;
-            layers = <4>;
+            layers = <ART>;
         };
 
         semi: semi {
-            timeout-ms = <200>;
+            timeout-ms = <300>;
             key-positions = <14 26>;
             bindings = <&kp SEMI>;
-            layers = <4>;
+            layers = <ART>;
         };
         #endif
     };
