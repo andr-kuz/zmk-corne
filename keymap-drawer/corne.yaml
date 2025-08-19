@@ -190,7 +190,7 @@ layers:
   - {t: L, h: LGUI}
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '&ctrl_spc H', h: '0'}
+  - {t: H, h: '&ctrl_spc'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
