@@ -173,7 +173,7 @@ layers:
   - {type: held}
   - {t: left, h: toggle}
   left:
-  - M
+  - C
   - R
   - T
   - N
