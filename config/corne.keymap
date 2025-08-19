@@ -44,20 +44,13 @@
 */
 / {
     behaviors {
-        kt_on: key_toggle_on_only {
-            compatible = "zmk,behavior-key-toggle";
-            #binding-cells = <1>;
-            display-name = "Key Toggle On";
-            toggle-mode = "on";
-        };
-
         tap_kt: tap_kt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
-            bindings = <&kt_on>, <&kp>;
+            bindings = <&kt>, <&kp>;
         };
 
         gui_space: gui_space {
