@@ -76,7 +76,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
-            bindings = <&kp>, <&ctrl_spc>;
+            bindings = <&ctrl_spc>, <&kp>;
         };
 
         hm: homerow_mods {
