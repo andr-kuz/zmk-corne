@@ -155,7 +155,7 @@
                 left_layer {
                     bindings = <
 // 0   1          2        3          4          5
-&kp M  &kp R      &kp T    &kp N      &kp I      &kp C           &trans &trans &trans &trans &trans &trans
+&kp C  &kp R      &kp T    &kp N      &kp I      &kp C           &trans &trans &trans &trans &trans &trans
 // 12  13         14       15         16         17
 &kp U  &tap_kt LALT E &tap_kt LGUI L  &tap_kt LCTRL K &tap_kt LSHIFT J  &kp H           &trans &trans &trans &trans &trans &trans
 // 24  25         26         27         28         29
@@ -223,7 +223,7 @@
                 right_layer {
                     bindings = <
 // 0       1          2          3      4          5
-&kp C      &kp I      &kp N      &kp T  &kp R      &kp M         &trans &trans &trans &trans &trans &trans
+&kp M      &kp I      &kp N      &kp T  &kp R      &kp M         &trans &trans &trans &trans &trans &trans
 // 12      13         14         15     16         17
 &kp U      &tap_kt LSHIFT J  &tap_kt LCTRL K      &tap_kt LGUI L  &tap_kt LALT E      &kp H         &trans &trans &trans &trans &trans &trans
 // 24      25         26         27     28         29
