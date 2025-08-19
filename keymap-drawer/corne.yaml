@@ -507,6 +507,9 @@ combos:
 - p: [24, 25]
   k: Z
   l: [left]
+- p: [16, 17]
+  k: B
+  l: [left]
 - p: [13, 26]
   k: {t: '$$mdi:apple-keyboard-option$$', h: toggle}
   l: [left]
