@@ -31,6 +31,7 @@
 #define ARB 10
 
 &sl { release-after-ms = <2000>; };
+&sl { release-after-ms = <2000>; };
 
 /* 
                     bindings = <
@@ -42,13 +43,13 @@
 */
 / {
     behaviors {
-        tap_kt: tap_kt {
+        tap_sc: tap_sc {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
-            bindings = <&kt>, <&kp>;
+            bindings = <&sk>, <&kp>;
         };
 
         ctrl_spc: ctrl_spc {
@@ -145,7 +146,7 @@
 // 0   1               2               3                4                 5
 &kp M  &kp R           &kp T           &kp N            &kp I             &kp C                &trans &trans &trans &trans &trans &trans
 // 12  13              14              15               16                17
-&kp U  &tap_kt LALT E  &tap_kt LGUI L  &tap_kt LCTRL K  &tap_kt LSHIFT J  &tp_ctrl_spc 0 H     &trans &trans &trans &trans &trans &trans
+&kp U  &tap_sc LALT E  &tap_sc LGUI L  &tap_sc LCTRL K  &tap_sc LSHIFT J  &tp_ctrl_spc 0 H     &trans &trans &trans &trans &trans &trans
 // 24  25              26              27               28                29
 &kp W  &lt ARB A       &kp S           &kp D            &lt ARS F         &lt ARO O            &trans &trans &trans &trans &trans &trans
 //                                     36               37                38
@@ -310,29 +311,22 @@
 
         del: del {
             timeout-ms = <400>;
-            key-positions = <1 2 3 4>;
+            key-positions = <12 13 14>;
             bindings = <&kp DEL>;
             layers = <ART>;
         };
 
         space: space {
             timeout-ms = <400>;
-            key-positions = <25 26 27 28>;
+            key-positions = <27 28>;
             bindings = <&kp SPACE>;
             layers = <ART>;
         };
 
         bspc: bspc {
             timeout-ms = <400>;
-            key-positions = <13 14 15 16>;
+            key-positions = <13 14>;
             bindings = <&kp BSPC>;
-            layers = <ART>;
-        };
-
-        clear: clear {
-            timeout-ms = <800>;
-            key-positions = <13 14 15 16 25 26 27 28>;
-            bindings = <&sys_reset>;
             layers = <ART>;
         };
 
@@ -346,7 +340,7 @@
 
         q: q {
             timeout-ms = <300>;
-            key-positions = <13 14>;
+            key-positions = <1 2>;
             bindings = <&kp Q>;
             layers = <ART>;
         };
@@ -362,41 +356,6 @@
             timeout-ms = <300>;
             key-positions = <16 17>;
             bindings = <&kp B>;
-            layers = <ART>;
-        };
-
-        alt: alt {
-            timeout-ms = <300>;
-            key-positions = <13 26>;
-            bindings = <&kt LALT>;
-            layers = <ART>;
-        };
-
-        gui: gui {
-            timeout-ms = <300>;
-            key-positions = <13 27>;
-            bindings = <&kt LGUI>;
-            layers = <ART>;
-        };
-
-        ctrl: ctrl {
-            timeout-ms = <300>;
-            key-positions = <13 28>;
-            bindings = <&kt LCTRL>;
-            layers = <ART>;
-        };
-
-        shift: shift {
-            timeout-ms = <400>;
-            key-positions = <13 14 15 28>;
-            bindings = <&kt LSHIFT>;
-            layers = <ART>;
-        };
-
-        shift_once: shift_once {
-            timeout-ms = <400>;
-            key-positions = <16 25 26 27>;
-            bindings = <&sk LSHIFT>;
             layers = <ART>;
         };
 
@@ -482,41 +441,6 @@
             timeout-ms = <300>;
             key-positions = <28 29>;
             bindings = <&kp Z>;
-            layers = <ART>;
-        };
-
-        alt: alt {
-            timeout-ms = <300>;
-            key-positions = <16 27>;
-            bindings = <&kt LALT>;
-            layers = <ART>;
-        };
-
-        gui: gui {
-            timeout-ms = <300>;
-            key-positions = <16 26>;
-            bindings = <&kt LGUI>;
-            layers = <ART>;
-        };
-
-        ctrl: ctrl {
-            timeout-ms = <300>;
-            key-positions = <16 25>;
-            bindings = <&kt LCTRL>;
-            layers = <ART>;
-        };
-
-        shift: shift {
-            timeout-ms = <400>;
-            key-positions = <16 15 14 25>;
-            bindings = <&kt LSHIFT>;
-            layers = <ART>;
-        };
-
-        shift_once: shift_once {
-            timeout-ms = <400>;
-            key-positions = <13 28 27 26>;
-            bindings = <&sk LSHIFT>;
             layers = <ART>;
         };
 
