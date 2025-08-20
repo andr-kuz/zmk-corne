@@ -486,10 +486,10 @@ combos:
 - p: [25, 28]
   k: $$mdi:keyboard-tab$$
   l: [left]
-- p: [12, 13, 14]
+- p: [13, 14, 15]
   k: $$mdi:backspace-reverse-outline$$
   l: [left]
-- p: [27, 28]
+- p: [25, 26]
   k: $$mdi:keyboard-space$$
   l: [left]
 - p: [13, 14]
