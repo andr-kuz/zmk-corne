@@ -486,22 +486,19 @@ combos:
 - p: [25, 28]
   k: $$mdi:keyboard-tab$$
   l: [left]
-- p: [1, 2, 3, 4]
+- p: [12, 13, 14]
   k: $$mdi:backspace-reverse-outline$$
   l: [left]
-- p: [25, 26, 27, 28]
+- p: [27, 28]
   k: $$mdi:keyboard-space$$
   l: [left]
-- p: [13, 14, 15, 16]
+- p: [13, 14]
   k: {t: '$$mdi:backspace$$', type: backspace}
-  l: [left]
-- p: [13, 14, 15, 16, 25, 26, 27, 28]
-  k: {t: '$$mdi:backup-restore$$', type: bootloader}
   l: [left]
 - p: [27, 28]
   k: V
   l: [left]
-- p: [13, 14]
+- p: [1, 2]
   k: Q
   l: [left]
 - p: [24, 25]
@@ -509,21 +506,6 @@ combos:
   l: [left]
 - p: [16, 17]
   k: B
-  l: [left]
-- p: [13, 26]
-  k: {t: '$$mdi:apple-keyboard-option$$', h: toggle}
-  l: [left]
-- p: [13, 27]
-  k: {t: LGUI, h: toggle}
-  l: [left]
-- p: [13, 28]
-  k: {t: '$$mdi:apple-keyboard-control$$', h: toggle}
-  l: [left]
-- p: [13, 14, 15, 28]
-  k: {t: '$$mdi:apple-keyboard-shift$$', h: toggle}
-  l: [left]
-- p: [16, 25, 26, 27]
-  k: {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$'}
   l: [left]
 - p: [15, 28]
   k: {t: '$$mdi:keyboard-return$$', type: enter}

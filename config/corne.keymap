@@ -220,7 +220,6 @@
 
                 right_lower_layer {
                     bindings = <
-                    bindings = <
 &trans    &trans     &trans    &trans   &trans   &trans               &trans   &trans     &trans    &trans   &trans    &trans
 &trans    &trans     &trans    &trans   &trans   &trans               &trans   &trans     &trans    &trans   &trans    &trans
 &trans    &trans     &trans    &trans   &trans   &trans               &trans   &trans     &trans    &trans   &trans    &trans
