@@ -203,8 +203,8 @@
                 left_brackets_layer {
                     bindings = <
 &trans &trans  &trans    &trans    &trans     &trans      &trans &trans &trans &trans &trans &trans
-&trans &trans  &kp LBRC  &kp LBKT  &kp LPAR   &kt SQT     &trans &trans &trans &trans &trans &trans
-&trans &trans  &kp RBRC  &kp RBKT  &kp RPAR   &kt DQT     &trans &trans &trans &trans &trans &trans
+&trans &trans  &kp LBRC  &kp LBKT  &kp LPAR   &kp SQT     &trans &trans &trans &trans &trans &trans
+&trans &trans  &kp RBRC  &kp RBKT  &kp RPAR   &kp DQT     &trans &trans &trans &trans &trans &trans
                          &kp GT    &kp GRAVE  &kp LT      &trans &trans &trans
                     >;
                 };
