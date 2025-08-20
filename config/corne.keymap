@@ -310,14 +310,14 @@
 
         del: del {
             timeout-ms = <400>;
-            key-positions = <12 13 14>;
+            key-positions = <13 14 15>;
             bindings = <&kp DEL>;
             layers = <ART>;
         };
 
         space: space {
             timeout-ms = <400>;
-            key-positions = <27 28>;
+            key-positions = <25 26>;
             bindings = <&kp SPACE>;
             layers = <ART>;
         };
