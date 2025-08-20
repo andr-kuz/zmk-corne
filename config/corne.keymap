@@ -31,7 +31,7 @@
 #define ARB 10
 
 &sl { release-after-ms = <2000>; };
-&sl { release-after-ms = <2000>; };
+&sk { release-after-ms = <2000>; };
 
 /* 
                     bindings = <
@@ -302,7 +302,7 @@
         };
 
         tab: tab {
-            timeout-ms = <300>;
+            timeout-ms = <200>;
             key-positions = <25 28>;
             bindings = <&kp TAB>;
             layers = <ART>;
@@ -359,7 +359,7 @@
         };
 
         enter: enter {
-            timeout-ms = <300>;
+            timeout-ms = <200>;
             key-positions = <15 28>;
             bindings = <&kp ENTER>;
             layers = <ART>;
@@ -444,7 +444,7 @@
         };
 
         enter: enter {
-            timeout-ms = <300>;
+            timeout-ms = <200>;
             key-positions = <14 25>;
             bindings = <&kp ENTER>;
             layers = <ART>;
