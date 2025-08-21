@@ -136,156 +136,156 @@
 &studio_unlock  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4         &trans      &trans        &trans        &trans      &kp C_PLAY  &trans    
 &trans          &trans        &trans        &trans        &trans        &trans               &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT  &trans      &trans    
 &bt BT_CLR      &trans        &trans        &trans        &trans        &trans               &trans      &kp C_MUTE    &trans        &trans      &trans      &trans
-                                            &tog ART      &trans        &trans               &trans      &trans        &tog ART   
+                                            &trans        &trans        &trans               &trans      &trans        &trans     
                         >;
                 };
          };
 };
 
-/
-{
-    combos {
-        compatible = "zmk,combos";
-
-        x: x {
-            timeout-ms = <300>;
-            key-positions = <26 27>;
-            bindings = <&kp X>;
-            layers = <ART>;
-        };
-
-        esc: esc {
-            timeout-ms = <300>;
-            key-positions = <14 15>;
-            bindings = <&kp ESC>;
-            layers = <ART>;
-        };
-
-        colon: colon {
-            timeout-ms = <300>;
-            key-positions = <13 16>;
-            bindings = <&kp COLON>;
-            layers = <ART>;
-        };
-
-        tab: tab {
-            timeout-ms = <200>;
-            key-positions = <16 17>;
-            bindings = <&kp TAB>;
-            layers = <ART>;
-        };
-
-        del: del {
-            timeout-ms = <400>;
-            key-positions = <25 26 27>;
-            bindings = <&kp DEL>;
-            layers = <ART>;
-        };
-
-        space: space {
-            timeout-ms = <200>;
-            key-positions = <13 14>;
-            bindings = <&kp SPACE>;
-            layers = <ART>;
-        };
-
-        bspc: bspc {
-            timeout-ms = <200>;
-            key-positions = <25 26>;
-            bindings = <&kp BSPC>;
-            layers = <ART>;
-        };
-
-        v: v {
-            timeout-ms = <300>;
-            key-positions = <27 28>;
-            bindings = <&kp V>;
-            layers = <ART>;
-        };
-
-        q: q {
-            timeout-ms = <300>;
-            key-positions = <1 2>;
-            bindings = <&kp Q>;
-            layers = <ART>;
-        };
-
-        z: z {
-            timeout-ms = <300>;
-            key-positions = <24 25>;
-            bindings = <&kp Z>;
-            layers = <ART>;
-        };
-
-        b: b {
-            timeout-ms = <300>;
-            key-positions = <15 16>;
-            bindings = <&kp B>;
-            layers = <ART>;
-        };
-
-        enter: enter {
-            timeout-ms = <200>;
-            key-positions = <15 28>;
-            bindings = <&kp ENTER>;
-            layers = <ART>;
-        };
-
-        comma: comma {
-            timeout-ms = <300>;
-            key-positions = <16 27>;
-            bindings = <&kp COMMA>;
-            layers = <ART>;
-        };
-
-        dot: dot {
-            timeout-ms = <300>;
-            key-positions = <16 26>;
-            bindings = <&kp DOT>;
-            layers = <ART>;
-        };
-
-        slash: slash {
-            timeout-ms = <300>;
-            key-positions = <16 25>;
-            bindings = <&kp FSLH>;
-            layers = <ART>;
-        };
-
-        bslash: bslash {
-            timeout-ms = <300>;
-            key-positions = <13 25>;
-            bindings = <&kp BSLH>;
-            layers = <ART>;
-        };
-
-
-        excl: excl {
-            timeout-ms = <300>;
-            key-positions = <16 28>;
-            bindings = <&kp EXCL>;
-            layers = <ART>;
-        };
-
-        quest: quest {
-            timeout-ms = <300>;
-            key-positions = <13 28>;
-            bindings = <&kp QMARK>;
-            layers = <ART>;
-        };
-
-        quote: quote {
-            timeout-ms = <300>;
-            key-positions = <14 26>;
-            bindings = <&kp SQT>;
-            layers = <ART>;
-        };
-
-        semi: semi {
-            timeout-ms = <300>;
-            key-positions = <15 27>;
-            bindings = <&kp SEMI>;
-            layers = <ART>;
-        };
-    };
-}; 
+/* / */
+/* { */
+/*     combos { */
+/*         compatible = "zmk,combos"; */
+/**/
+/*         x: x { */
+/*             timeout-ms = <300>; */
+/*             key-positions = <26 27>; */
+/*             bindings = <&kp X>; */
+/*             layers = <ART>; */
+/*         }; */
+/**/
+/*         esc: esc { */
+/*             timeout-ms = <300>; */
+/*             key-positions = <14 15>; */
+/*             bindings = <&kp ESC>; */
+/*             layers = <ART>; */
+/*         }; */
+/**/
+/*         colon: colon { */
+/*             timeout-ms = <300>; */
+/*             key-positions = <13 16>; */
+/*             bindings = <&kp COLON>; */
+/*             layers = <ART>; */
+/*         }; */
+/**/
+/*         tab: tab { */
+/*             timeout-ms = <200>; */
+/*             key-positions = <16 17>; */
+/*             bindings = <&kp TAB>; */
+/*             layers = <ART>; */
+/*         }; */
+/**/
+/*         del: del { */
+/*             timeout-ms = <400>; */
+/*             key-positions = <25 26 27>; */
+/*             bindings = <&kp DEL>; */
+/*             layers = <ART>; */
+/*         }; */
+/**/
+/*         space: space { */
+/*             timeout-ms = <200>; */
+/*             key-positions = <13 14>; */
+/*             bindings = <&kp SPACE>; */
+/*             layers = <ART>; */
+/*         }; */
+/**/
+/*         bspc: bspc { */
+/*             timeout-ms = <200>; */
+/*             key-positions = <25 26>; */
+/*             bindings = <&kp BSPC>; */
+/*             layers = <ART>; */
+/*         }; */
+/**/
+/*         v: v { */
+/*             timeout-ms = <300>; */
+/*             key-positions = <27 28>; */
+/*             bindings = <&kp V>; */
+/*             layers = <ART>; */
+/*         }; */
+/**/
+/*         q: q { */
+/*             timeout-ms = <300>; */
+/*             key-positions = <1 2>; */
+/*             bindings = <&kp Q>; */
+/*             layers = <ART>; */
+/*         }; */
+/**/
+/*         z: z { */
+/*             timeout-ms = <300>; */
+/*             key-positions = <24 25>; */
+/*             bindings = <&kp Z>; */
+/*             layers = <ART>; */
+/*         }; */
+/**/
+/*         b: b { */
+/*             timeout-ms = <300>; */
+/*             key-positions = <15 16>; */
+/*             bindings = <&kp B>; */
+/*             layers = <ART>; */
+/*         }; */
+/**/
+/*         enter: enter { */
+/*             timeout-ms = <200>; */
+/*             key-positions = <15 28>; */
+/*             bindings = <&kp ENTER>; */
+/*             layers = <ART>; */
+/*         }; */
+/**/
+/*         comma: comma { */
+/*             timeout-ms = <300>; */
+/*             key-positions = <16 27>; */
+/*             bindings = <&kp COMMA>; */
+/*             layers = <ART>; */
+/*         }; */
+/**/
+/*         dot: dot { */
+/*             timeout-ms = <300>; */
+/*             key-positions = <16 26>; */
+/*             bindings = <&kp DOT>; */
+/*             layers = <ART>; */
+/*         }; */
+/**/
+/*         slash: slash { */
+/*             timeout-ms = <300>; */
+/*             key-positions = <16 25>; */
+/*             bindings = <&kp FSLH>; */
+/*             layers = <ART>; */
+/*         }; */
+/**/
+/*         bslash: bslash { */
+/*             timeout-ms = <300>; */
+/*             key-positions = <13 25>; */
+/*             bindings = <&kp BSLH>; */
+/*             layers = <ART>; */
+/*         }; */
+/**/
+/**/
+/*         excl: excl { */
+/*             timeout-ms = <300>; */
+/*             key-positions = <16 28>; */
+/*             bindings = <&kp EXCL>; */
+/*             layers = <ART>; */
+/*         }; */
+/**/
+/*         quest: quest { */
+/*             timeout-ms = <300>; */
+/*             key-positions = <13 28>; */
+/*             bindings = <&kp QMARK>; */
+/*             layers = <ART>; */
+/*         }; */
+/**/
+/*         quote: quote { */
+/*             timeout-ms = <300>; */
+/*             key-positions = <14 26>; */
+/*             bindings = <&kp SQT>; */
+/*             layers = <ART>; */
+/*         }; */
+/**/
+/*         semi: semi { */
+/*             timeout-ms = <300>; */
+/*             key-positions = <15 27>; */
+/*             bindings = <&kp SEMI>; */
+/*             layers = <ART>; */
+/*         }; */
+/*     }; */
+/* };  */
