@@ -448,7 +448,7 @@ layers:
   - '{'
   - {t: '[', s: '{'}
   - (
-  - {t: '''', h: toggle, s: '"'}
+  - {t: '''', s: '"'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -460,7 +460,7 @@ layers:
   - '}'
   - {t: ']', s: '}'}
   - )
-  - {t: '"', h: toggle}
+  - '"'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
