@@ -40,9 +40,9 @@ layers:
   - CMENU
   - {t: '&ctrl_spc', h: lower}
   - {t: '$$mdi:keyboard-space$$', h: raise}
-  - {t: '$$mdi:keyboard-return$$', h: raise}
-  - {t: '$$mdi:backspace$$', h: lower}
-  - $$mdi:backspace-reverse-outline$$
+  - raise
+  - lower
+  - {t: '$$mdi:transfer$$', type: trans}
   lower:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '1', s: '!'}
