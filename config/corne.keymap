@@ -155,6 +155,8 @@
             bindings = <&kp ENTER>;
         };
 
+    };
+};
 /**/
 /**/
 /*         colon: colon { */
@@ -261,5 +263,3 @@
 /*             bindings = <&kp SEMI>; */
 /*             layers = <DEF>; */
 /*         }; */
-/*     }; */
-/* };  */
