@@ -87,9 +87,9 @@
 
                 default_layer {
                         bindings = <
-&kp ESC    &kp Q       &kp W       &kp E        &kp R                 &kp T                      &kp Y           &kp U           &kp I         &kp O       &kp P          &kp LBKT
+&kp ESC    &kp Q       &kp W       &kp E        &kp R                 &kp T                      &kp Y           &kp U           &kp I         &kp O       &kp P          &kp LPAR
 &kp TAB    &ts LALT A  &ts LGUI S  &ts LCTRL D  &ts LSHIFT F          &kp G                      &kp H           &ts LSHIFT J    &ts RCTRL K   &ts LGUI L  &ts RALT SEMI  &kp SQT
-&kp GRAVE  &kp Z       &kp X       &kp C        &kp V                 &kp B                      &kp N           &kp M           &kp COMMA     &kp DOT     &kp FSLH       &kp RBKT 
+&kp GRAVE  &kp Z       &kp X       &kp C        &kp V                 &kp B                      &kp N           &kp M           &kp COMMA     &kp DOT     &kp FSLH       &kp RPAR 
                                    &kp K_CMENU  &ctrl_spc_mo LWR 0    &lt RSE SPACE              &sk RSE         &sk LWR         &trans  
                         >;
                 };
@@ -97,10 +97,10 @@
 
                 lower_layer {
                         bindings = <
-&trans     &kp N4      &kp N3      &kp N2       &kp N1        &kp N0                &kp N5          &kp N6          &kp N7        &kp N8           &kp N9         &trans   
+&trans     &kp N4      &kp N3      &kp N2       &kp N1        &kp N0                &kp N5          &kp N6          &kp N7        &kp N8           &kp N9         &kp LBKT 
 &trans     &trans      &mkp RCLK   &mkp MCLK    &mkp LCLK     &trans                &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp MINUS      &kp EQUAL          
-&trans     &trans      &trans      &trans       &trans        &trans                &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp BSLH       &trans   
-                                   &trans       &trans        &trans                &trans      &trans        &trans
+&trans     &trans      &trans      &trans       &trans        &trans                &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp BSLH       &kp RBKT 
+                                   &trans       &trans        &trans                &trans          &trans          &trans
                         >;
                 };
   
@@ -157,109 +157,3 @@
 
     };
 };
-/**/
-/**/
-/*         colon: colon { */
-/*             timeout-ms = <300>; */
-/*             key-positions = <13 16>; */
-/*             bindings = <&kp COLON>; */
-/*             layers = <DEF>; */
-/*         }; */
-/**/
-/*         tab: tab { */
-/*             timeout-ms = <200>; */
-/*             key-positions = <16 17>; */
-/*             bindings = <&kp TAB>; */
-/*             layers = <DEF>; */
-/*         }; */
-/*         space: space { */
-/*             timeout-ms = <200>; */
-/*             key-positions = <13 14>; */
-/*             bindings = <&kp SPACE>; */
-/*             layers = <DEF>; */
-/*         }; */
-/**/
-/*         v: v { */
-/*             timeout-ms = <300>; */
-/*             key-positions = <27 28>; */
-/*             bindings = <&kp V>; */
-/*             layers = <DEF>; */
-/*         }; */
-/**/
-/*         q: q { */
-/*             timeout-ms = <300>; */
-/*             key-positions = <1 2>; */
-/*             bindings = <&kp Q>; */
-/*             layers = <DEF>; */
-/*         }; */
-/**/
-/*         z: z { */
-/*             timeout-ms = <300>; */
-/*             key-positions = <24 25>; */
-/*             bindings = <&kp Z>; */
-/*             layers = <DEF>; */
-/*         }; */
-/**/
-/*         b: b { */
-/*             timeout-ms = <300>; */
-/*             key-positions = <15 16>; */
-/*             bindings = <&kp B>; */
-/*             layers = <DEF>; */
-/*         }; */
-/**/
-/*         comma: comma { */
-/*             timeout-ms = <300>; */
-/*             key-positions = <16 27>; */
-/*             bindings = <&kp COMMA>; */
-/*             layers = <DEF>; */
-/*         }; */
-/**/
-/*         dot: dot { */
-/*             timeout-ms = <300>; */
-/*             key-positions = <16 26>; */
-/*             bindings = <&kp DOT>; */
-/*             layers = <DEF>; */
-/*         }; */
-/**/
-/*         slash: slash { */
-/*             timeout-ms = <300>; */
-/*             key-positions = <16 25>; */
-/*             bindings = <&kp FSLH>; */
-/*             layers = <DEF>; */
-/*         }; */
-/**/
-/*         bslash: bslash { */
-/*             timeout-ms = <300>; */
-/*             key-positions = <13 25>; */
-/*             bindings = <&kp BSLH>; */
-/*             layers = <DEF>; */
-/*         }; */
-/**/
-/**/
-/*         excl: excl { */
-/*             timeout-ms = <300>; */
-/*             key-positions = <16 28>; */
-/*             bindings = <&kp EXCL>; */
-/*             layers = <DEF>; */
-/*         }; */
-/**/
-/*         quest: quest { */
-/*             timeout-ms = <300>; */
-/*             key-positions = <13 28>; */
-/*             bindings = <&kp QMARK>; */
-/*             layers = <DEF>; */
-/*         }; */
-/**/
-/*         quote: quote { */
-/*             timeout-ms = <300>; */
-/*             key-positions = <14 26>; */
-/*             bindings = <&kp SQT>; */
-/*             layers = <DEF>; */
-/*         }; */
-/**/
-/*         semi: semi { */
-/*             timeout-ms = <300>; */
-/*             key-positions = <15 27>; */
-/*             bindings = <&kp SEMI>; */
-/*             layers = <DEF>; */
-/*         }; */
