@@ -21,7 +21,11 @@
 #define DEF 0
 #define LWR 1
 #define RSE 2
-#define ADJ 3
+#define MOU 3
+#define NAV 4
+#define RSE 5
+#define ADJ 6
+#define GAM 7
 
 &sl { release-after-ms = <5000>; };
 &sk { release-after-ms = <5000>; };
@@ -49,28 +53,19 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press &kp LCTRL>
-                , <&macro_tap &kp SPACE>
-                , <&macro_release &kp LCTRL>
+                <&macro_press &kp LCTRL>,
+                <&macro_tap &kp SPACE>,
+                <&macro_release &kp LCTRL>
             ;
         };
 
-        ctrl_spc_mo: ctrl_spc_mo {
+        ctrl_sps_sl: ctrl_sps_sl {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
-            bindings = <&mo>, <&ctrl_spc>;
-        };
-
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+            bindings = <&sl>, <&ctrl_spc>;
         };
 
         mmv {
@@ -87,73 +82,104 @@
 
                 default_layer {
                         bindings = <
-&kp ESC    &kp Q       &kp W       &kp E        &kp R                 &kp T                      &kp Y           &kp U           &kp I         &kp O       &kp P          &kp LPAR
-&kp TAB    &ts LALT A  &ts LGUI S  &ts LCTRL D  &ts LSHIFT F          &kp G                      &kp H           &ts LSHIFT J    &ts RCTRL K   &ts LGUI L  &ts RALT SEMI  &kp SQT
-&kp GRAVE  &kp Z       &kp X       &kp C        &kp V                 &kp B                      &kp N           &kp M           &kp COMMA     &kp DOT     &kp FSLH       &kp RPAR 
-                                   &kp K_CMENU  &ctrl_spc_mo LWR 0    &lt RSE SPACE              &sk RSE         &sk LWR         &trans  
+&kp ESC    &kp Q       &kp W       &kp E        &kp R                 &kp T                      &kp Y           &kp U           &kp I         &kp O       &kp P          &kp LBKT
+&kp TAB    &ts LALT A  &ts LGUI S  &ts LCTRL D  &ts LSHIFT F          &kp G                      &kp H           &ts LSHIFT J    &ts RCTRL K   &ts LGUI L  &ts RALT SEMI  &kp DQT 
+&kp GRAVE  &kp Z       &kp X       &kp C        &kp V                 &kp B                      &kp N           &kp M           &kp COMMA     &kp DOT     &kp FSLH       &kp RBKT 
+                                   &caps_word   &ctrl_sps_sl LWR 0    &lt RSE SPACE              &sl RSE         &sl LWR         &trans  
                         >;
                 };
 
 
                 lower_layer {
                         bindings = <
-&trans     &kp N4      &kp N3      &kp N2       &kp N1        &kp N0                &kp N5          &kp N6          &kp N7        &kp N8           &kp N9         &kp LBKT 
-&trans     &trans      &mkp RCLK   &mkp MCLK    &mkp LCLK     &trans                &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp MINUS      &kp EQUAL          
-&trans     &trans      &trans      &trans       &trans        &trans                &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp BSLH       &kp RBKT 
-                                   &trans       &trans        &trans                &trans          &trans          &trans
+&trans     &trans      &trans    &trans   &trans     &trans               &trans     &trans     &trans    &trans   &trans      &trans   
+&trans     &kp N4      &kp N3    &kp N2   &kp N1     &kp N0               &kp N9     &kp N5     &kp N6    &kp N7   &kp N8      &trans   
+&kp F11    &kp F4      &kp F3    &kp F2   &kp F1     &kp F10              &kp F9     &kp F5     &kp F6    &kp F7   &kp F8      &kp F12 
+                                 &trans   &mo MOU    &mo ADJ              &mo ADJ    &mo MOU    &trans
                         >;
+                };
+
+
+                raise_layer {
+                        bindings = <
+&kp LPAR   &trans      &trans    &trans   &kp UNDER  &kp MINUS            &kp PLUS   &kp EQUAL  &trans     &trans    &trans      &kp LEFT_BRACKET
+&trans     &kp DOLLAR  &kp HASH  &kp AT   &kp EXCL   &kp COMMA            &kp PERIOD &kp PRCNT  &kp CARET  &kp AMPS  &kp STAR    &kp DOUBLE_QUOTES
+&kp RPAR   &trans      &trans    &trans   &kp QMARK  &trans               &trans     &trans     &trans     &trans    &kp BSLH    &kp RIGHT_BRACKET
+                                 &trans   &mo ADJ    &mo NAV              &mo NAV    &mo ADJ    &trans
+                        >;
+                };
+
+
+                mouse_layer {
+                        bindings = <
+&trans     &trans      &trans      &trans       &trans        &trans                &trans          &trans          &trans        &trans           &trans       &trans 
+&trans     &trans      &mkp RCLK   &mkp MCLK    &mkp LCLK     &trans                &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans       &trans
+&trans     &trans      &trans      &trans       &trans        &trans                &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans       &trans
+                                   &trans       &trans        &trans                &trans          &trans          &trans
+                    >;
+
+                };
+
+
+                navigation_layer {
+                        bindings = <
+&trans      &trans     &trans  &trans   &trans     &trans                   &trans           &trans           &trans         &trans          &trans    &trans  
+&trans      &kp HOME   &trans  &trans   &trans     &kp END                  &kp LEFT         &kp DOWN         &kp UP         &kp RIGHT       &trans    &trans 
+&trans      &kp PG_UP  &trans  &trans   &trans     &kp PG_DN                &trans           &trans           &trans         &trans          &trans    &trans   
+                               &trans   &trans     &trans                   &trans           &trans           &trans
+                    >;
+
                 };
   
-
-                 raise_layer {
-                        bindings = <
-&trans      &kp F4     &kp F3  &kp F2   &kp F1     &kp F10                  &kp F5           &kp F6           &kp F7         &kp F8            &kp F9    &trans  
-&trans      &kp HOME   &trans  &trans   &trans     &kp END                  &kp LEFT         &kp DOWN         &kp UP         &kp RIGHT         &kp F11   &kp F12
-&trans      &kp PG_UP  &trans  &trans   &trans     &kp PG_DN                &msc SCRL_LEFT   &msc SCRL_DOWN   &msc SCRL_UP   &msc SCRL_RIGHT   &trans    &trans   
-                               &trans   &sk ADJ    &trans                   &trans           &sk ADJ          &trans
-                        >;
-                };
-
 
                 adjust_layer {
                         bindings = <
 &bt BT_CLR      &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0         &trans      &trans          &trans        &trans      &kp C_PLAY  &studio_unlock
 &trans          &trans        &trans        &trans        &trans        &trans               &kp C_PREV  &kp C_VOL_DN    &kp C_VOL_UP  &kp C_NEXT  &trans      &trans    
-&trans          &trans        &trans        &trans        &trans        &trans               &trans      &kp C_MUTE      &trans        &trans      &trans      &trans
+&trans          &trans        &trans        &trans        &trans        &trans               &trans      &kp C_MUTE      &trans        &trans      &trans      &to GAM
                                             &trans        &trans        &trans               &trans      &trans          &trans
                         >;
                 };
+
+                gaming_layer {
+                    bindings = <
+&kp ESC   &kp Q      &kp W     &kp E     &kp R      &kp T                &trans   &trans     &trans    &trans   &trans    &trans
+&kp TAB   &kp A      &kp S     &kp D     &kp F      &kp G                &trans   &trans     &trans    &trans   &trans    &trans
+&kp GRAVE &kp Z      &kp X     &kp C     &kp V      &kp B                &trans   &trans     &trans    &trans   &trans    &trans
+                               &ts LALT  &ts LCTRL  &ts LSHIFT SPACE     &trans   &trans     &trans
+                    >;
+                };
+
          };
 };
 
-/
-{
-    combos {
-        compatible = "zmk,combos";
-    
-        esc: esc {
-            timeout-ms = <250>;
-            key-positions = <19 22>;
-            bindings = <&kp ESC>;
-        };
-
-        bspc: bspc {
-            timeout-ms = <250>;
-            key-positions = <14 32>;
-            bindings = <&kp BSPC>;
-        };
-
-        del: del {
-            timeout-ms = <300>;
-            key-positions = <14 33>;
-            bindings = <&kp DEL>;
-        };
-
-        enter: enter {
-            timeout-ms = <250>;
-            key-positions = <15 31>;
-            bindings = <&kp ENTER>;
-        };
-
-    };
-};
+/* / { */
+/*     combos { */
+/*         compatible = "zmk,combos"; */
+/**/
+/*         esc: esc { */
+/*             timeout-ms = <250>; */
+/*             key-positions = <19 22>; */
+/*             bindings = <&kp ESC>; */
+/*         }; */
+/**/
+/*         bspc: bspc { */
+/*             timeout-ms = <250>; */
+/*             key-positions = <14 32>; */
+/*             bindings = <&kp BSPC>; */
+/*         }; */
+/**/
+/*         del: del { */
+/*             timeout-ms = <300>; */
+/*             key-positions = <14 33>; */
+/*             bindings = <&kp DEL>; */
+/*         }; */
+/**/
+/*         enter: enter { */
+/*             timeout-ms = <250>; */
+/*             key-positions = <15 31>; */
+/*             bindings = <&kp ENTER>; */
+/*         }; */
+/**/
+/*     }; */
+/* }; */
