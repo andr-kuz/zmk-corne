@@ -23,7 +23,6 @@
 #define RSE 2
 #define MOU 3
 #define NAV 4
-#define RSE 5
 #define ADJ 6
 #define GAM 7
 
