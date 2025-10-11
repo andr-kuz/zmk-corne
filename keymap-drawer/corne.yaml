@@ -40,8 +40,8 @@ layers:
   - $$mdi:alpha-w-box$$
   - {t: '&ctrl_spc', h: lower}
   - {t: '$$mdi:keyboard-space$$', h: raise}
-  - {t: raise, h: '$$mdi:gesture-tap-hold$$'}
-  - {t: lower, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:keyboard-return$$', h: raise}
+  - {t: '$$mdi:backspace$$', h: lower}
   - {t: '$$mdi:transfer$$', type: trans}
   lower:
   - {t: '$$mdi:transfer$$', type: trans}
