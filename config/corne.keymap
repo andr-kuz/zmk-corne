@@ -145,7 +145,7 @@
 &kp ESC   &kp Q      &kp W     &kp E     &kp R      &kp T                &trans   &trans     &trans    &trans   &trans    &trans
 &kp TAB   &kp A      &kp S     &kp D     &kp F      &kp G                &trans   &trans     &trans    &trans   &trans    &trans
 &kp GRAVE &kp Z      &kp X     &kp C     &kp V      &kp B                &trans   &trans     &trans    &trans   &trans    &trans
-                               &ts LALT  &ts LCTRL  &ts LSHIFT SPACE     &trans   &trans     &trans
+                               &kp LALT  &kp LCTRL  &ts LSHIFT SPACE     &trans   &trans     &trans
                     >;
                 };
 
