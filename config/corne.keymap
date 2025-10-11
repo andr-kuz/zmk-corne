@@ -23,8 +23,8 @@
 #define RSE 2
 #define MOU 3
 #define NAV 4
-#define ADJ 6
-#define GAM 7
+#define ADJ 5
+#define GAM 6
 
 &sl { release-after-ms = <5000>; };
 &sk { release-after-ms = <5000>; };
@@ -145,7 +145,7 @@
 &kp ESC   &kp Q      &kp W     &kp E     &kp R      &kp T                &trans   &trans     &trans    &trans   &trans    &trans
 &kp TAB   &kp A      &kp S     &kp D     &kp F      &kp G                &trans   &trans     &trans    &trans   &trans    &trans
 &kp GRAVE &kp Z      &kp X     &kp C     &kp V      &kp B                &trans   &trans     &trans    &trans   &trans    &trans
-                               &kp LALT  &kp LCTRL  &ts LSHIFT SPACE     &trans   &trans     &trans
+                               &kp LALT  &kp LCTRL  &ts LSHIFT SPACE     &sl RSE  &trans     &trans
                     >;
                 };
 
