@@ -19,19 +19,21 @@
 #define U_MS_R &mmv MOVE_RIGHT
 
 #define DEF 0
-#define LWR 1
-#define RSE 2
+#define NUM 1
+#define FUN 2
 #define MOU 3
-#define NAV 4
-#define ADJ 5
-#define GAM 6
-#define GAN 7
-#define GAF 8
+#define ADJ 4
+#define GAM 5
+#define GAN 6
+#define GAF 7
 
+#define TAP_TERM 170
+
+&caps_word { continue-list = <UNDERSCORE MINUS>; };
 &sl { release-after-ms = <5000>; };
 &sk { release-after-ms = <5000>; };
 &lt {
-    tapping-term-ms = <230>;
+    tapping-term-ms = <TAP_TERM>;
     flavor = "tap-preferred";
 };
 
@@ -50,9 +52,9 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <250>;
+            tapping-term-ms = <TAP_TERM>;
             quick-tap-ms = <0>;
-            bindings = <&sk>, <&kp>;
+            bindings = <&kp>, <&kp>;
         };
 
         ctrl_spc: ctrl_spc {
@@ -69,7 +71,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <TAP_TERM>;
             quick-tap-ms = <0>;
             bindings = <&sl>, <&ctrl_spc>;
         };
@@ -77,7 +79,7 @@
         mmv {
             acceleration-exponent = <1>;
             time-to-max-speed-ms = <900>;
-            delay-ms = <0>;
+            delay-ms = <1>;
         };
     };
 };
@@ -91,21 +93,21 @@
 &kp ESC    &kp Q       &kp W       &kp E        &kp R                 &kp T                      &kp Y           &kp U           &kp I         &kp O       &kp P          &kp LBKT
 &kp TAB    &ts LALT A  &ts LGUI S  &ts LCTRL D  &ts LSHIFT F          &kp G                      &kp H           &ts LSHIFT J    &ts RCTRL K   &ts LGUI L  &ts RALT SEMI  &kp DQT 
 &kp GRAVE  &kp Z       &kp X       &kp C        &kp V                 &kp B                      &kp N           &kp M           &kp COMMA     &kp DOT     &kp FSLH       &kp RBKT 
-                                   &caps_word   &ctrl_sps_sl LWR 0    &lt RSE SPACE              &lt NAV ENTER   &lt LWR BSPC    &kp DELETE
+                                   &caps_word   &ctrl_sps_sl FUN 0    &lt NUM SPACE              &kt ENTER       &lt MOU BSPC    &kp DELETE
                         >;
                 };
 
 
-                lower_layer {
+                number_layer {
                         bindings = <
 &kp LPAR   &kp DOLLAR  &kp HASH  &kp AT   &kp EXCL   &kp COMMA            &kp PERIOD &kp PRCNT  &kp CARET  &kp AMPS   &kp STAR  &kp LEFT_BRACKET
 &trans     &kp N4      &kp N3    &kp N2   &kp N1     &kp N0               &kp N9     &kp N5     &kp N6     &kp N7     &kp N8    &kp DOUBLE_QUOTES
 &kp RPAR   &trans      &trans    &trans   &kp QMARK  &trans               &kp PLUS   &kp MINUS  &kp UNDER  &kp EQUAL  &kp BSLH  &kp RIGHT_BRACKET
-                                 &trans   &mo MOU    &mo ADJ              &mo ADJ    &mo MOU    &trans
+                                 &trans   &trans     &trans               &trans     &trans     &trans
                         >;
                 };
 
-                raise_layer {
+                function_layer {
                         bindings = <
 &trans     &trans      &trans    &trans   &trans     &trans               &trans     &trans     &trans     &trans    &trans      &trans
 &kp F9     &kp F4      &kp F3    &kp F2   &kp F1     &kp F10              &kp F11    &kp F5     &kp F6     &kp F7    &kp F8      &kp F12 
@@ -117,25 +119,14 @@
 
                 mouse_layer {
                         bindings = <
-&trans     &trans      &trans      &trans       &trans        &trans                &trans          &trans          &trans        &trans           &trans       &trans 
-&trans     &trans      &mkp RCLK   &mkp MCLK    &mkp LCLK     &trans                &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans       &trans
+&trans     &kp PG_UP   &trans      &trans       &trans        &kp PG_DN             &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans       &trans
+&trans     &kp HOME    &mkp RCLK   &mkp MCLK    &mkp LCLK     &kp END               &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT        &trans       &trans
 &trans     &trans      &trans      &trans       &trans        &trans                &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans       &trans
                                    &trans       &trans        &trans                &trans          &trans          &trans
                     >;
 
                 };
 
-
-                navigation_layer {
-                        bindings = <
-&trans      &trans     &trans  &trans   &trans     &trans                   &trans           &trans           &trans         &trans          &trans    &trans  
-&trans      &kp HOME   &trans  &trans   &trans     &kp END                  &kp LEFT         &kp DOWN         &kp UP         &kp RIGHT       &trans    &trans 
-&trans      &kp PG_UP  &trans  &trans   &trans     &kp PG_DN                &trans           &trans           &trans         &trans          &trans    &trans   
-                               &trans   &trans     &trans                   &trans           &trans           &trans
-                    >;
-
-                };
-  
 
                 adjust_layer {
                         bindings = <
@@ -151,7 +142,7 @@
 &ts ESC TAB  &kp Q      &kp W     &kp E     &kp R      &kp T                &trans   &trans     &trans    &trans   &trans    &trans
 &sk LSHIFT   &kp A      &kp S     &kp D     &kp F      &kp G                &trans   &trans     &trans    &trans   &trans    &trans
 &sk LCTRL    &kp Z      &kp X     &kp C     &kp V      &kp B                &trans   &trans     &trans    &trans   &trans    &trans
-                                  &kp LALT  &lt GAF 0  &lt GAN SPACE        &mo RSE  &mo LWR    &trans
+                                  &kp LALT  &mo GAF    &lt GAN SPACE        &mo NUM  &mo FUN    &trans
                     >;
                 };
 
