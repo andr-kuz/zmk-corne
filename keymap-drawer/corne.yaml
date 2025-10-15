@@ -40,7 +40,7 @@ layers:
   - $$mdi:alpha-w-box$$
   - {t: '&ctrl_spc', h: function}
   - {t: '$$mdi:keyboard-space$$', h: number}
-  - {t: '$$mdi:keyboard-return$$', h: toggle}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:backspace$$', h: mouse}
   - $$mdi:backspace-reverse-outline$$
   number:
@@ -74,8 +74,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '?'
   - {t: '$$mdi:transfer$$', type: trans}
-  - +
   - {t: '-', s: _}
+  - +
   - _
   - {t: '=', s: +}
   - {t: \, s: '|'}
