@@ -101,8 +101,8 @@
 
                 number_layer {
                         bindings = <
-&kp LPAR   &kp DOLLAR  &kp HASH  &kp AT   &kp EXCL   &kp COMMA            &kp PERIOD &kp PRCNT  &kp CARET  &kp AMPS   &kp STAR  &kp LEFT_BRACKET
-&trans     &kp N4      &kp N3    &kp N2   &kp N1     &kp N0               &kp N9     &kp N5     &kp N6     &kp N7     &kp N8    &kp DOUBLE_QUOTES
+&kp LPAR   &kp EXCL    &kp AT    &kp HASH &kp DOLLAR &kp COMMA            &kp PERIOD &kp PRCNT  &kp CARET  &kp AMPS   &kp STAR  &kp LEFT_BRACKET
+&trans     &kp N1      &kp N2    &kp N3   &kp N4     &kp N0               &kp N9     &kp N5     &kp N6     &kp N7     &kp N8    &kp DOUBLE_QUOTES
 &kp RPAR   &trans      &trans    &trans   &kp QMARK  &trans               &kp MINUS  &kp PLUS   &kp UNDER  &kp EQUAL  &kp BSLH  &kp RIGHT_BRACKET
                                  &trans   &trans     &trans               &trans     &trans     &trans
                         >;
