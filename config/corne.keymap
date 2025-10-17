@@ -86,16 +86,21 @@
 / {
         keymap {
                 compatible = "zmk,keymap";
+default_layer {
+    bindings = <
+// Left side
+&kp Q &kp W &kp E &kp R &kp T
+&kp A &kp S &kp D &kp F &kp G  
+&kp Z &kp X &kp C &kp V &kp B
+&kp ESC &kp TAB &kp LCTRL &kp LSHIFT
 
-                default_layer {
-                        bindings = <
-&kp ESC    &kp Q       &kp W       &kp E        &kp R                 &kp T                      &kp Y           &kp U           &kp I         &kp O       &kp P          &kp LBKT
-&kp TAB    &ts LALT A  &ts LGUI S  &ts LCTRL D  &ts LSHIFT F          &kp G                      &kp H           &ts LSHIFT J    &ts RCTRL K   &ts LGUI L  &ts RALT SEMI  &kp DQT 
-&kp GRAVE  &kp Z       &kp X       &kp C        &kp V                 &kp B                      &kp N           &kp M           &kp COMMA     &kp DOT     &kp FSLH       &kp RBKT 
-                                   &caps_word   &ctrl_spc_lt FUN 0    &lt NUM SPACE              &lt MOU ENTER   &lt NAV BSPC    &kp DELETE
-                        >;
-                };
-
+// Right side  
+&kp Y &kp U &kp I &kp O &kp P
+&kp H &kp J &kp K &kp L &kp SEMI
+&kp N &kp M &kp COMMA &kp DOT &kp FSLH
+&kp BSPC &kp ENTER &kp SPACE &kp DELETE
+    >;
+};
 
                 number_layer {
                         bindings = <
