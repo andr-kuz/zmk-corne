@@ -28,13 +28,11 @@
 #define GAN 7
 #define GAF 8
 
-#define TAP_TERM 170
-
 &caps_word { continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>; };
 &sl { release-after-ms = <5000>; };
 &sk { release-after-ms = <5000>; };
 &lt {
-    tapping-term-ms = <TAP_TERM>;
+    tapping-term-ms = <170>;
     flavor = "tap-preferred";
 };
 
@@ -53,7 +51,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <TAP_TERM>;
+            tapping-term-ms = <170>;
             quick-tap-ms = <0>;
             bindings = <&kp>, <&kp>;
         };
@@ -72,7 +70,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <TAP_TERM>;
+            tapping-term-ms = <170>;
             quick-tap-ms = <0>;
             bindings = <&sl>, <&ctrl_spc>;
         };
