@@ -37,11 +37,11 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: ']', s: '}'}
-  - $$mdi:alpha-w-box$$
+  - '&lt CAPS'
   - {t: '&ctrl_spc', h: '&lt 4'}
   - {t: '$$mdi:keyboard-space$$', h: number}
-  - {t: '$$mdi:keyboard-return$$', h: mouse}
-  - {t: '$$mdi:backspace$$', h: navigation}
+  - {t: '$$mdi:keyboard-return$$', h: navigation}
+  - {t: '$$mdi:backspace$$', h: mouse}
   - $$mdi:backspace-reverse-outline$$
   number:
   - (
@@ -81,7 +81,7 @@ layers:
   - {t: \, s: '|'}
   - {t: ']', s: '}'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - adjust
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -126,8 +126,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   navigation:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -169,8 +169,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   function:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -185,17 +185,17 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - F9
-  - F4
-  - F3
-  - F2
   - F1
-  - F10
-  - F11
+  - F2
+  - F3
+  - F4
   - F5
   - F6
   - F7
   - F8
+  - F9
+  - F10
+  - F11
   - F12
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -210,10 +210,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - adjust
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - adjust
   - {t: '$$mdi:transfer$$', type: trans}
   adjust:
   - $$mdi:bluetooth-off$$
@@ -240,7 +240,7 @@ layers:
   - $$mdi:skip-next$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: gaming, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -251,12 +251,12 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: gaming, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   gaming:
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:keyboard-esc$$'}
@@ -296,7 +296,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:apple-keyboard-option$$
-  - gaming_functional
+  - {t: '$$mdi:apple-keyboard-control$$', h: gaming_functional}
   - {t: '$$mdi:keyboard-space$$', h: gaming_number}
   - number
   - function
@@ -339,7 +339,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - adjust
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -383,7 +383,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - adjust
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
