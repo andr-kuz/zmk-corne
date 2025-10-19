@@ -14,16 +14,16 @@ layers:
   - P
   - {t: '[', s: '{'}
   - $$mdi:keyboard-tab$$
-  - {t: '$$mdi:apple-keyboard-option$$', h: A}
-  - {t: LGUI, h: S}
-  - {t: '$$mdi:apple-keyboard-control$$', h: D}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: F}
+  - {t: A, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: S, h: LGUI}
+  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
   - G
   - H
-  - {t: '$$mdi:apple-keyboard-shift$$', h: J}
-  - {t: '$$mdi:apple-keyboard-control$$', h: K}
-  - {t: LGUI, h: L}
-  - {t: '$$mdi:apple-keyboard-option$$', h: ;}
+  - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: K, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: L, h: LGUI}
+  - {t: ;, h: '$$mdi:apple-keyboard-option$$', s: ':'}
   - '"'
   - {t: '`', s: '~'}
   - Z
@@ -259,7 +259,7 @@ layers:
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   gaming:
-  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:keyboard-tab$$'}
+  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:keyboard-esc$$'}
   - Q
   - W
   - E
