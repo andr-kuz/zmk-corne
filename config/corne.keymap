@@ -32,9 +32,9 @@
 &sl { release-after-ms = <5000>; };
 &sk { release-after-ms = <5000>; };
 &lt {
-    tapping-term-ms = <500>;
+    tapping-term-ms = <230>;
     quick-tap-ms = <0>;
-    flavor = "hold-preferred";
+    flavor = "postional-hold-tap";
     global-quick-tap-ms = <150>;
 };
 
@@ -52,8 +52,8 @@
         ts: ts {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <500>;
+            flavor = "positional-hold-tap";
+            tapping-term-ms = <230>;
             quick-tap-ms = <120>;
             bindings = <&kp>, <&kp>;
             global-quick-tap-ms = <150>;
