@@ -60,7 +60,7 @@
         glt: glt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
+            flavor = "tap-preferred";
             tapping-term-ms = <230>;
             quick-tap-ms = <150>;
             bindings = <&mo>, <&kp>;
@@ -171,7 +171,7 @@
 &gts ESC TAB &kp Q      &kp W     &kp E     &kp R           &kp T                &trans   &trans     &trans    &trans   &trans    &trans
 &kp LSHIFT   &kp A      &kp S     &kp D     &kp F           &kp G                &trans   &trans     &trans    &trans   &trans    &trans
 &kp LCTRL    &kp Z      &kp X     &kp C     &kp V           &kp B                &trans   &trans     &trans    &trans   &trans    &trans
-                                  &kp LALT  &glt GAF LCTRL  &glt GAN SPACE       &mo NUM  &mo FUN    &trans
+                                  &kp LALT  &glt LCTRL GAF  &glt SPACE GAN       &mo NUM  &mo FUN    &trans
                     >;
                 };
 
