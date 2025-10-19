@@ -27,13 +27,14 @@
 #define GAM 6
 #define GAN 7
 #define GAF 8
+#define GAJ 9
 
 &caps_word { continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>; };
 &sl { release-after-ms = <5000>; };
 &sk { release-after-ms = <5000>; };
 &lt {
     tapping-term-ms = <230>;
-    quick-tap-ms = <0>;
+    quick-tap-ms = <150>;
     flavor = "hold-preferred";
 };
 
@@ -53,26 +54,17 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <230>;
-            quick-tap-ms = <120>;
+            quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
 
-        glt: glt {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <230>;
-            quick-tap-ms = <0>;
-            bindings = <&mo>, <&kp>;
-        };
-
-        gts: gts {
+        alt: alt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <0>;
-            quick-tap-ms = <200>;
-            bindings = <&kp>, <&kp>;
+            tapping-term-ms = <230>;
+            quick-tap-ms = <0>;
+            bindings = <&mo>, <&kp>;
         };
 
         ctrl_spc: ctrl_spc {
@@ -110,7 +102,7 @@
 &kp ESC    &kp Q       &kp W       &kp E        &kp R                 &kp T                      &kp Y           &kp U           &kp I         &kp O       &kp P          &kp LBKT
 &kp TAB    &ts LALT A  &ts LGUI S  &ts LCTRL D  &ts LSHIFT F          &kp G                      &kp H           &ts LSHIFT J    &ts RCTRL K   &ts LGUI L  &ts RALT SEMI  &kp DQT
 &kp GRAVE  &kp Z       &kp X       &kp C        &kp V                 &kp B                      &kp N           &kp M           &kp COMMA     &kp DOT     &kp FSLH       &kp RBKT 
-                                   &kp CAPS     &ctrl_spc_lt FUN 0    &lt NUM SPACE              &lt NAV ENTER   &lt MOU BSPC    &kp DELETE
+                                   &kp CAPS     &ctrl_spc_lt FUN 0    &lt NUM SPACE              &alt NAV ENTER  &lt MOU BSPC    &kp DELETE
                         >;
                 };
 
@@ -168,19 +160,19 @@
 
                 gaming_layer {
                     bindings = <
-&gts TAB ESC &kp Q      &kp W     &kp E     &kp R           &kp T                &trans   &trans     &trans    &trans   &trans    &trans
-&kp LSHIFT   &kp A      &kp S     &kp D     &kp F           &kp G                &trans   &trans     &trans    &trans   &trans    &trans
-&kp LCTRL    &kp Z      &kp X     &kp C     &kp V           &kp B                &trans   &trans     &trans    &trans   &trans    &trans
-                                  &kp LALT  &glt GAF LCTRL  &glt GAN SPACE       &mo NUM  &mo FUN    &trans
+&kp TAB      &kp Q      &kp W     &kp E     &kp R      &kp T                &trans   &trans     &trans    &trans   &trans    &trans
+&kp LSHIFT   &kp A      &kp S     &kp D     &kp F      &kp G                &trans   &trans     &trans    &trans   &trans    &trans
+&kp LCTRL    &kp Z      &kp X     &kp C     &kp V      &kp B                &trans   &trans     &trans    &trans   &trans    &tog GAM
+                                  &mp GAF   &mo GAN    &kp SPACE            &mo NUM  &mo FUN    &trans
                     >;
                 };
 
                 gaming_number {
                     bindings = <
-&trans    &kp N1     &kp N2    &kp N3   &kp N4   &kp N5               &trans   &trans     &trans    &trans   &trans    &trans
+&kp ESC   &kp N1     &kp N2    &kp N3   &kp N4   &kp N5               &trans   &trans     &trans    &trans   &trans    &trans
 &trans    &kp N6     &kp N7    &kp N8   &kp N9   &kp N0               &trans   &trans     &trans    &trans   &trans    &trans
-&tog GAM  &trans     &trans    &trans   &trans   &trans               &trans   &trans     &trans    &trans   &trans    &trans
-                               &trans   &trans   &trans               &trans   &trans     &trans
+&trans    &trans     &trans    &trans   &trans   &trans               &trans   &trans     &trans    &trans   &trans    &trans
+                               &mo GAJ  &trans   &trans               &trans   &trans     &trans
                     >;
                 };
 
@@ -188,7 +180,16 @@
                     bindings = <
 &trans    &kp F1     &kp F2    &kp F3   &kp F4   &kp F5               &trans   &trans     &trans    &trans   &trans    &trans
 &trans    &kp F6     &kp F7    &kp F8   &kp F9   &kp F10              &trans   &trans     &trans    &trans   &trans    &trans
-&tog GAM  &trans     &trans    &trans   &kp F11  &kp F12              &trans   &trans     &trans    &trans   &trans    &trans
+&trans    &kp F11    &kp F12   &trans   &trans   &trans               &trans   &trans     &trans    &trans   &trans    &trans
+                               &trans   &mo GAJ  &trans               &trans   &trans     &trans
+                    >;
+                };
+
+                gaming_adjust {
+                    bindings = <
+&trans    &trans     &trans    &trans   &trans   &trans               &trans   &trans     &trans    &trans   &trans    &trans
+&trans    &trans     &trans    &trans   &trans   &trans               &trans   &trans     &trans    &trans   &trans    &trans
+&tog GAM  &trans     &trans    &trans   &trans   &trans               &trans   &trans     &trans    &trans   &trans    &trans
                                &trans   &trans   &trans               &trans   &trans     &trans
                     >;
                 };
