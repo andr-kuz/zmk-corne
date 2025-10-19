@@ -60,8 +60,8 @@
         glt: glt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <300>;
+            flavor = "balanced";
+            tapping-term-ms = <230>;
             quick-tap-ms = <150>;
             bindings = <&mo>, <&kp>;
         };
@@ -69,9 +69,9 @@
         gts: gts {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <350>;
-            quick-tap-ms = <120>;
+            flavor = "balanced";
+            tapping-term-ms = <230>;
+            quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
 
@@ -179,7 +179,7 @@
                     bindings = <
 &trans    &kp N1     &kp N2    &kp N3   &kp N4   &kp N5               &trans   &trans     &trans    &trans   &trans    &trans
 &trans    &kp N6     &kp N7    &kp N8   &kp N9   &kp N0               &trans   &trans     &trans    &trans   &trans    &trans
-&trans    &trans     &trans    &trans   &trans   &trans               &trans   &trans     &trans    &trans   &trans    &trans
+&tog GAM  &trans     &trans    &trans   &trans   &trans               &trans   &trans     &trans    &trans   &trans    &trans
                                &trans   &trans   &trans               &trans   &trans     &trans
                     >;
                 };
