@@ -34,8 +34,7 @@
 &lt {
     tapping-term-ms = <230>;
     quick-tap-ms = <0>;
-    flavor = "postional-hold-tap";
-    global-quick-tap-ms = <150>;
+    flavor = "hold-preferred";
 };
 
 
@@ -52,11 +51,25 @@
         ts: ts {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "positional-hold-tap";
+            flavor = "tap-preferred";
             tapping-term-ms = <230>;
             quick-tap-ms = <120>;
             bindings = <&kp>, <&kp>;
-            global-quick-tap-ms = <150>;
+        };
+
+        glt: glt {
+            tapping-term-ms = <350>;
+            quick-tap-ms = <0>;
+            flavor = "hold-preferred";
+        };
+
+        gts: gts {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <350>;
+            quick-tap-ms = <120>;
+            bindings = <&kp>, <&kp>;
         };
 
         ctrl_spc: ctrl_spc {
@@ -152,10 +165,10 @@
 
                 gaming_layer {
                     bindings = <
-&ts ESC TAB  &kp Q      &kp W     &kp E     &kp R           &kp T                &trans   &trans     &trans    &trans   &trans    &trans
+&gts ESC TAB &kp Q      &kp W     &kp E     &kp R           &kp T                &trans   &trans     &trans    &trans   &trans    &trans
 &kp LSHIFT   &kp A      &kp S     &kp D     &kp F           &kp G                &trans   &trans     &trans    &trans   &trans    &trans
 &kp LCTRL    &kp Z      &kp X     &kp C     &kp V           &kp B                &trans   &trans     &trans    &trans   &trans    &trans
-                                  &kp LALT  &lt GAF LCTRL   &lt GAN SPACE        &mo NUM  &mo FUN    &trans
+                                  &kp LALT  &glt GAF LCTRL  &glt GAN SPACE       &mo NUM  &mo FUN    &trans
                     >;
                 };
 
