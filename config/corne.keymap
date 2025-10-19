@@ -66,7 +66,7 @@
             ;
         };
 
-        ctrl_spc_lt: ctrl_sps_sl {
+        ctrl_spc_lt: ctrl_sps_lt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
