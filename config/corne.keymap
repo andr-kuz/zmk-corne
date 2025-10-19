@@ -33,6 +33,7 @@
 &sk { release-after-ms = <5000>; };
 &lt {
     tapping-term-ms = <230>;
+    quick-tap-ms = <0>;
     flavor = "hold-preferred";
 };
 
@@ -52,7 +53,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <250>;
-            quick-tap-ms = <100>;
+            quick-tap-ms = <120>;
             bindings = <&kp>, <&kp>;
         };
 
@@ -142,7 +143,7 @@
                         bindings = <
 &bt BT_CLR      &trans        &trans        &trans        &trans        &trans               &trans      &trans          &trans        &trans      &kp C_PLAY  &studio_unlock
 &trans          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4         &kp C_PREV  &kp C_VOL_DN    &kp C_VOL_UP  &kp C_NEXT  &trans      &trans    
-&to GAM         &trans        &trans        &trans        &trans        &trans               &trans      &kp C_MUTE      &trans        &trans      &trans      &trans  
+&tog GAM        &trans        &trans        &trans        &trans        &trans               &trans      &kp C_MUTE      &trans        &trans      &trans      &trans  
                                             &trans        &trans        &trans               &trans      &trans          &trans
                         >;
                 };
@@ -169,7 +170,7 @@
                     bindings = <
 &trans    &kp F1     &kp F2    &kp F3   &kp F4   &kp F5               &trans   &trans     &trans    &trans   &trans    &trans
 &trans    &kp F6     &kp F7    &kp F8   &kp F9   &kp F10              &trans   &trans     &trans    &trans   &trans    &trans
-&to GAM   &trans     &trans    &trans   &kp F11  &kp F12              &trans   &trans     &trans    &trans   &trans    &trans
+&tog GAM  &trans     &trans    &trans   &kp F11  &kp F12              &trans   &trans     &trans    &trans   &trans    &trans
                                &trans   &trans   &trans               &trans   &trans     &trans
                     >;
                 };
