@@ -91,7 +91,7 @@
 &kp ESC    &kp Q       &kp W       &kp E        &kp R                 &kp T                      &kp Y           &kp U           &kp I         &kp O       &kp P          &kp LBKT
 &kp TAB    &ts LALT A  &ts LGUI S  &ts LCTRL D  &ts LSHIFT F          &kp G                      &kp H           &ts LSHIFT J    &ts RCTRL K   &ts LGUI L  &ts RALT SEMI  &kp DQT 
 &kp GRAVE  &kp Z       &kp X       &kp C        &kp V                 &kp B                      &kp N           &kp M           &kp COMMA     &kp DOT     &kp FSLH       &kp RBKT 
-                                   &lt CAPS     &ctrl_spc_lt FUN 0    &lt NUM SPACE              &lt NAV ENTER   &lt MOU BSPC    &kp DELETE
+                                   &kp CAPS     &ctrl_spc_lt FUN 0    &lt NUM SPACE              &lt NAV ENTER   &lt MOU BSPC    &kp DELETE
                         >;
                 };
 
