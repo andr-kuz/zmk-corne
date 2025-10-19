@@ -69,9 +69,9 @@
         gts: gts {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <230>;
-            quick-tap-ms = <150>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <0>;
+            quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
         };
 
