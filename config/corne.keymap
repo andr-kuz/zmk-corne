@@ -35,10 +35,6 @@
     tapping-term-ms = <230>;
     flavor = "hold-preferred";
 };
-&mt {
-    quick-tap-ms = <150>;
-    flavor = "hold-preferred";
-};
 
 
 /* 
@@ -51,6 +47,15 @@
 */
 / {
     behaviors {
+        ts: ts {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <250>;
+            quick-tap-ms = <100>;
+            bindings = <&kp>, <&kp>;
+        };
+
         ctrl_spc: ctrl_spc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -84,7 +89,7 @@
                 default_layer {
                         bindings = <
 &kp ESC    &kp Q       &kp W       &kp E        &kp R                 &kp T                      &kp Y           &kp U           &kp I         &kp O       &kp P          &kp LBKT
-&kp TAB    &mt A LALT  &mt S LGUI  &mt D LCTRL  &mt F LSHIFT          &kp G                      &kp H           &mt J LSHIFT    &mt K RCTRL   &mt L LGUI  &mt SEMI RALT  &kp DQT 
+&kp TAB    &ts LALT A  &ts LGUI S  &ts LCTRL D  &ts LSHIFT F          &kp G                      &kp H           &ts LSHIFT J    &ts RCTRL K   &ts LGUI L  &ts RALT SEMI  &kp DQT
 &kp GRAVE  &kp Z       &kp X       &kp C        &kp V                 &kp B                      &kp N           &kp M           &kp COMMA     &kp DOT     &kp FSLH       &kp RBKT 
                                    &kp CAPS     &ctrl_spc_lt FUN 0    &lt NUM SPACE              &lt NAV ENTER   &lt MOU BSPC    &kp DELETE
                         >;
@@ -144,7 +149,7 @@
 
                 gaming_layer {
                     bindings = <
-&mt TAB ESC  &kp Q      &kp W     &kp E     &kp R           &kp T                &trans   &trans     &trans    &trans   &trans    &trans
+&ts ESC TAB  &kp Q      &kp W     &kp E     &kp R           &kp T                &trans   &trans     &trans    &trans   &trans    &trans
 &kp LSHIFT   &kp A      &kp S     &kp D     &kp F           &kp G                &trans   &trans     &trans    &trans   &trans    &trans
 &kp LCTRL    &kp Z      &kp X     &kp C     &kp V           &kp B                &trans   &trans     &trans    &trans   &trans    &trans
                                   &kp LALT  &lt GAF LCTRL   &lt GAN SPACE        &mo NUM  &mo FUN    &trans
