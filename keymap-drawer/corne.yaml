@@ -24,7 +24,7 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - {t: L, h: LGUI}
   - {t: ;, h: '$$mdi:apple-keyboard-option$$', s: ':'}
-  - '"'
+  - {t: '''', s: '"'}
   - {t: '`', s: '~'}
   - Z
   - X
