@@ -112,7 +112,7 @@
 &kp LPAR   &kp EXCL    &kp AT    &kp HASH &kp DOLLAR &kp COMMA            &kp PERIOD &kp PRCNT  &kp CARET  &kp AMPS   &kp STAR  &kp LEFT_BRACKET
 &lt_gt     &kp N1      &kp N2    &kp N3   &kp N4     &kp N0               &kp N9     &kp N5     &kp N6     &kp N7     &kp N8    &kp DOUBLE_QUOTES
 &kp RPAR   &kp QMARK   &kp FSLH  &kp PIPE &trans     &trans               &kp MINUS  &kp PLUS   &kp UNDER  &kp EQUAL  &kp BSLH  &kp RIGHT_BRACKET
-                                 &trans   &mo ADJ    &trans               &kp PERIOD &mo ADJ    &trans
+                                 &trans   &mo ADJ    &trans               &trans     &mo ADJ    &trans
                         >;
                 };
 
