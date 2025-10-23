@@ -1,7 +1,8 @@
 // <>
-lt_gt: lt-gt {
+#include "keys.h"
+
+lt_gt: lt_gt {
   compatible = "zmk,behavior-mod-morph";
-  label = "LT_GT";
   #binding-cells = <0>;
   bindings = <&kp LT>, <&kp GT>;
   mods = <(MOD_LSFT|MOD_RSFT)>;

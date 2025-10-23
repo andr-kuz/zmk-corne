@@ -83,7 +83,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - adjust
   - {type: held}
-  - .
+  - {t: '$$mdi:transfer$$', type: trans}
   - adjust
   - {t: '$$mdi:transfer$$', type: trans}
   mouse:
