@@ -1,6 +1,4 @@
 // <>
-#include "keys.h"
-
 lt_gt: lt_gt {
   compatible = "zmk,behavior-mod-morph";
   #binding-cells = <0>;
