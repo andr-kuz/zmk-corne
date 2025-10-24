@@ -56,7 +56,7 @@
     behaviors {
         #include "behaviors_mod_morph.dtsi"
         #include "extra_keys.h"
-        mmv: mmv {
+        mmv {
             acceleration-exponent = <1>;
             time-to-max-speed-ms = <900>;
             delay-ms = <0>;
@@ -84,8 +84,9 @@
             compatible = "zmk,behavior-macro-one-param";
             label = "CHANGE LAYOUT MACRO";
             #binding-cells = <1>;
-            bindings =
-                <&mo>,
+            bindings = 
+                <&macro_param_1to1>,
+                <&mo MACRO_PLACEHOLDER>,
                 <&kp ENGLISH_LAYOUT>,
                 <&macro_pause_for_release>,
                 <&kp LAST_LAYOUT>
@@ -106,7 +107,10 @@
             compatible = "zmk,behavior-macro-one-param";
             label = "NEXT LAYOUT MACRO LAYER";
             #binding-cells = <1>;
-            bindings = <&to>, <&kp NEXT_LAYOUT>;
+            bindings = 
+                <&macro_param_1to1>,
+                <&to MACRO_PLACEHOLDER>,
+                <&kp NEXT_LAYOUT>;
         };
 
         html: html {
@@ -138,7 +142,7 @@
                                 bindings = <
 &trans    &trans     &trans    &trans   &trans         &trans               &trans   &trans     &trans    &trans   &trans    &trans
 &trans    &trans     &trans    &trans   &trans         &trans               &trans   &trans     &trans    &trans   &trans    &trans
-&trans    &trans     &trans    &trans   &trans         &trans               &trans   &trans     &trans    &trans   &trans    &trans
+&kp TILDE &trans     &trans    &trans   &trans         &trans               &trans   &trans     &trans    &trans   &trans    &trans
                                &trans   &html FUN DEF  &hclm NUM SPACE      &trans   &trans     &trans
                     >;
 
