@@ -4,12 +4,13 @@ jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
   draw:
+      needs: build
       uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
       permissions:
         contents: write
       with:
-        commit_message: "[Draw] ${{ github.event.head_commit.message }}"
-        amend_commit: false
+        commit_message: "${{ github.event.head_commit.message }}"
+        amend_commit: True
         install_branch: "main"
         keymap_patterns: "config/*.keymap"
         json_path: "config"
