@@ -19,15 +19,16 @@
 #define U_MS_R &mmv MOVE_RIGHT
 
 #define DEF 0
-#define NUM 1
-#define MOU 2
-#define NAV 3
-#define FUN 4
-#define ADJ 5
-#define GAM 6
-#define GAN 7
-#define GAF 8
-#define GAJ 9
+#define RUS 1
+#define NUM 2
+#define MOU 3
+#define NAV 4
+#define FUN 5
+#define ADJ 6
+#define GAM 7
+#define GAN 8
+#define GAF 9
+#define GAJ 10
 
 &caps_word { continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>; };
 &sl { release-after-ms = <5000>; };
@@ -40,12 +41,16 @@
 
 
 /* 
+
+            untitled_layer {
                     bindings = <
 &trans    &trans     &trans    &trans   &trans   &trans               &trans   &trans     &trans    &trans   &trans    &trans
 &trans    &trans     &trans    &trans   &trans   &trans               &trans   &trans     &trans    &trans   &trans    &trans
 &trans    &trans     &trans    &trans   &trans   &trans               &trans   &trans     &trans    &trans   &trans    &trans
                                &trans   &trans   &trans               &trans   &trans     &trans
                     >;
+            };
+
 */
 / {
     behaviors {
@@ -73,8 +78,9 @@
             label = "LAYER_EXIT_COMBO";
             #binding-cells = <1>;
             bindings = <&mo>;
-            on-entry = <&kp CAPS>;
-            on-exit = <&kp CAPS>;
+            //on-entry = <&kp LC(AT)>;
+            on-entry = <&ctrl_spc DEF>;
+            on-exit = <&ctrl_spc RUS>;
         };
 
         slt: slt {
@@ -88,15 +94,16 @@
 
         ctrl_spc: ctrl_spc {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <1>;
             bindings =
+                <&to>,
                 <&macro_press &kp LCTRL>,
                 <&macro_tap &kp SPACE>,
                 <&macro_release &kp LCTRL>
             ;
         };
 
-        c_spc_mo: ctrl_spc_lt {
+        c_spc_mo: ctrl_spc_mo {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -118,11 +125,21 @@
                 compatible = "zmk,keymap";
                 default_layer {
                         bindings = <
-&kp ESC    &kp Q       &kp W       &kp E        &kp R            &kp T              &kp Y           &kp U         &kp I        &kp O       &kp P          &kp LBKT
-&kp TAB    &ts LALT A  &ts LGUI S  &ts LCTRL D  &ts LSHIFT F     &kp G              &kp H           &ts RSHIFT J  &ts RCTRL K  &ts RGUI L  &ts RALT SEMI  &kp SQT
-&kp GRAVE  &kp Z       &kp X       &kp C        &kp V            &kp B              &kp N           &kp M         &kp COMMA    &kp DOT     &kp FSLH       &kp RBKT 
-                                   &kp CAPS     &c_spc_mo FUN 0  &lt NUM SPACE      &alt NAV ENTER  &lt MOU BSPC  &kp DELETE
+&kp ESC    &kp Q       &kp W       &kp E        &kp R              &kp T              &kp Y           &kp U         &kp I        &kp O       &kp P          &kp LBKT
+&kp TAB    &ts LALT A  &ts LGUI S  &ts LCTRL D  &ts LSHIFT F       &kp G              &kp H           &ts RSHIFT J  &ts RCTRL K  &ts RGUI L  &ts RALT SEMI  &kp SQT
+&kp GRAVE  &kp Z       &kp X       &kp C        &kp V              &kp B              &kp N           &kp M         &kp COMMA    &kp DOT     &kp FSLH       &kp RBKT 
+                                   &caps_word   &c_spc_mo FUN RUS  &lt NUM SPACE      &alt NAV ENTER  &lt MOU BSPC  &kp DELETE
                         >;
+                };
+
+                russian_dummy {
+                                bindings = <
+&trans    &trans     &trans    &trans   &trans              &trans               &trans   &trans     &trans    &trans   &trans    &trans
+&trans    &trans     &trans    &trans   &trans              &trans               &trans   &trans     &trans    &trans   &trans    &trans
+&trans    &trans     &trans    &trans   &trans              &trans               &trans   &trans     &trans    &trans   &trans    &trans
+                               &trans   &c_spc_mo FUN DEF   &slt NUM SPACE       &trans   &trans     &trans
+                    >;
+
                 };
 
                 number_layer {
