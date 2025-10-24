@@ -514,9 +514,13 @@ rect.held, rect.combo.held {
 <g transform="translate(286, 213) rotate(15.0)" class="key keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
+<<<<<<< HEAD
 <text x="0" y="-4" class="key tap">
 <tspan x="0" dy="-0.9em" style="font-size: 67%">&amp;ctrl_spc</tspan><tspan x="0" dy="1.2em" style="font-size: 67%">1</tspan>
 </text>
+=======
+<text x="0" y="-4" class="key tap"><tspan style="font-size: 60%">&amp;ctrl_spc…</tspan></text>
+>>>>>>> a225268ae19519445b3b1d65d846fe3effdadeb0
 <a href="#function">
 <text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 75%">function</tspan></text>
 </a></g>
@@ -554,8 +558,13 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
+<<<<<<< HEAD
 <g transform="translate(40, 331)" class="layer-russian_dummy">
 <text x="0" y="28" class="label" id="russian_dummy">russian_dummy:</text>
+=======
+<g transform="translate(40, 331)" class="layer-non_english">
+<text x="0" y="28" class="label" id="non_english">non_english:</text>
+>>>>>>> a225268ae19519445b3b1d65d846fe3effdadeb0
 <g transform="translate(0, 56)">
 <g transform="translate(28, 49)" class="key trans keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
@@ -745,7 +754,11 @@ rect.held, rect.combo.held {
 <g transform="translate(286, 213) rotate(15.0)" class="key keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
+<<<<<<< HEAD
 <text x="0" y="-4" class="key tap"><tspan style="font-size: 67%">&amp;ctrl_spc</tspan></text>
+=======
+<text x="0" y="-4" class="key tap"><tspan style="font-size: 60%">&amp;ctrl_spc…</tspan></text>
+>>>>>>> a225268ae19519445b3b1d65d846fe3effdadeb0
 <a href="#function">
 <text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 75%">function</tspan></text>
 </a></g>
