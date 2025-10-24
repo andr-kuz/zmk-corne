@@ -101,35 +101,27 @@
             ;
         };
 
-        kp_space: behavior_key_press_space {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SPACE>;
-        };
-
-        hclm: hclm {
+        lten: lten {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_SPACE_CHANGE_LAYOUT";
+            label = "HOLD_TAP_SPACE_EN_LAYOUT";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <250>;
             quick-tap-ms = <0>;
             bindings = 
-                <&change_layout_hold &kp_space>
+                <&en_layout_hold &kp>
             ;
         };
 
-        change_layout_hold: change_layout_hold {
+        en_layout_hold: en_layout_hold {
             compatible = "zmk,behavior-macro-one-param";
-            label = "CHANGE_LAYOUT_HOLD";
+            label = "ENGLISH_LAYOUT_HOLD";
             #binding-cells = <1>;
-            bindings = 
-                <&kp ENGLISH_LAYOUT>,
-                <&macro_param_1to1>,
-                <&mo MACRO_PLACEHOLDER>,
-                <&macro_pause_for_release>,
-                <&macro_release &kp LAST_LAYOUT>
-            ;
+            bindings 
+                = <&macro_param_1to1 &to MACRO_PLACEHOLDER &kp ENGLISH_LAYOUT>
+                , <&macro_pause_for_release>
+                , <&to NON &kp LAST_LAYOUT>
+                ;
         };
     };
 };
@@ -152,7 +144,7 @@
 &trans    &trans     &trans    &trans   &trans         &trans               &trans   &trans     &trans    &trans   &trans    &trans
 &trans    &trans     &trans    &trans   &trans         &trans               &trans   &trans     &trans    &trans   &trans    &trans
 &kp TILDE &trans     &trans    &trans   &trans         &trans               &trans   &trans     &trans    &trans   &trans    &trans
-                               &trans   &html FUN DEF  &hclm NUM SPACE      &trans   &trans     &trans
+                               &trans   &html FUN DEF  &lten NUM SPACE      &trans   &trans     &trans
                     >;
 
                 };
