@@ -8,8 +8,8 @@ jobs:
       permissions:
         contents: write
       with:
-        commit_message: "[Draw] ${{ github.event.head_commit.message }}"
-        amend_commit: false
+        commit_message: "${{ github.event.head_commit.message }}"
+        amend_commit: True
         install_branch: "main"
         keymap_patterns: "config/*.keymap"
         json_path: "config"
