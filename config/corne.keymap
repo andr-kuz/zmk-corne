@@ -96,7 +96,7 @@
             #binding-cells = <0>;
             bindings =
                 <&to DEF>,
-                <&kp LC(AT)>;
+                <&kp LC(AT)>
             ;
         };
 
