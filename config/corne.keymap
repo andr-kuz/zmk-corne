@@ -37,16 +37,6 @@
     quick-tap-ms = <150>;
     flavor = "tap-preferred";
 };
-&mo {
-    on-entry = <
-        &kp LCTRL
-        &kp LSHIFT
-    >;
-    on-exit = <
-        &kp LALT
-        &kp F4
-    >;
-}
 
 
 /* 

@@ -14,16 +14,16 @@ layers:
   - P
   - {t: '[', s: '{'}
   - $$mdi:keyboard-tab$$
-  - {t: A, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: S, h: LGUI}
-  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
+  - '&ts LALT A'
+  - '&ts LGUI S'
+  - '&ts LCTRL D'
+  - '&ts LSHIFT F'
   - G
   - H
-  - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: K, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: L, h: LGUI}
-  - {t: ;, h: '$$mdi:apple-keyboard-option$$', s: ':'}
+  - '&ts LSHIFT J'
+  - '&ts RCTRL K'
+  - '&ts LGUI L'
+  - '&ts RALT SEMI'
   - {t: '''', s: '"'}
   - {t: '`', s: '~'}
   - Z
@@ -37,10 +37,10 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: ']', s: '}'}
-  - $$mdi:alpha-w-box$$
-  - {t: '&ctrl_spc', h: function}
+  - $$mdi:apple-keyboard-caps$$
+  - '&c_spc_mo 4 0'
   - {t: '$$mdi:keyboard-space$$', h: number}
-  - {t: '$$mdi:keyboard-return$$', h: navigation}
+  - '&alt 3 ENTER'
   - {t: '$$mdi:backspace$$', h: mouse}
   - $$mdi:backspace-reverse-outline$$
   number:
@@ -56,7 +56,7 @@ layers:
   - '&'
   - '*'
   - {t: '[', s: '{'}
-  - {t: <, s: '>'}
+  - '&lt_gt'
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
@@ -169,7 +169,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - adjust
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   function:
@@ -210,7 +210,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - adjust
   - {t: '$$mdi:transfer$$', type: trans}
