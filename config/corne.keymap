@@ -80,27 +80,14 @@
             bindings = <&mo>, <&kp>;
         };
 
-        clm: clm {
-            compatible = "zmk,behavior-macro-one-param";
-            label = "CHANGE LAYOUT MACRO";
-            #binding-cells = <1>;
-            bindings = 
-                <&macro_param_1to1>,
-                <&mo MACRO_PLACEHOLDER>,
-                <&kp ENGLISH_LAYOUT>,
-                <&macro_pause_for_release>,
-                <&kp LAST_LAYOUT>
-            ;
-        };
-
-        hclm: hclm {
+        html: html {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD CHANGE LAYOUT MARCO";
+            label = "HOLD TAP MACRO LAYER";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <250>;
             quick-tap-ms = <0>;
-            bindings = <&clm>, <&kp>;
+            bindings = <&mo>, <&next_layout_layer>;
         };
 
         next_layout_layer: next_layout_layer {
@@ -110,17 +97,39 @@
             bindings = 
                 <&macro_param_1to1>,
                 <&to MACRO_PLACEHOLDER>,
-                <&kp NEXT_LAYOUT>;
+                <&kp NEXT_LAYOUT>
+            ;
         };
 
-        html: html {
+        kp_space: behavior_key_press_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>;
+        };
+
+        hclm: hclm {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD TAP MACRO LAYER";
+            label = "HOLD_TAP_SPACE_CHANGE_LAYOUT";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <250>;
             quick-tap-ms = <0>;
-            bindings = <&mo>, <&next_layout_layer>;
+            bindings = 
+                <&change_layout_hold &kp_space>
+            ;
+        };
+
+        change_layout_hold: change_layout_hold {
+            compatible = "zmk,behavior-macro-one-param";
+            label = "CHANGE_LAYOUT_HOLD";
+            #binding-cells = <1>;
+            bindings = 
+                <&kp ENGLISH_LAYOUT>,
+                <&macro_param_1to1>,
+                <&to MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release &to NON &kp LAST_LAYOUT>
+            ;
         };
     };
 };
