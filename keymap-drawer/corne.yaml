@@ -38,7 +38,7 @@ layers:
   - {t: /, s: '?'}
   - {t: ']', s: '}'}
   - $$mdi:alpha-w-box$$
-  - {t: '&ctrl_spc_non', h: function}
+  - {t: '&next_layout_layer 1', h: function}
   - {t: '$$mdi:keyboard-space$$', h: number}
   - {t: '$$mdi:keyboard-return$$', h: navigation}
   - {t: '$$mdi:backspace$$', h: mouse}
@@ -68,6 +68,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - '~'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -80,9 +81,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '&ctrl_spc_def', h: function}
-  - {t: '$$mdi:keyboard-space$$', h: '&layer_exit_combo 2'}
+  - {t: '&next_layout_layer', h: function}
+  - {t: '$$mdi:keyboard-space$$', h: '&clm 2'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
