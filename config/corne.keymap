@@ -203,7 +203,7 @@
 
                 gaming_layer {
                     bindings = <
-&kp TAB      &kp Q      &kp W     &kp E     &kp R      &kp T                &trans   &trans     &trans    &trans   &trans    &trans
+&kp ESC      &kp Q      &kp W     &kp E     &kp R      &kp T                &trans   &trans     &trans    &trans   &trans    &trans
 &kp LSHIFT   &kp A      &kp S     &kp D     &kp F      &kp G                &trans   &trans     &trans    &trans   &trans    &trans
 &kp LCTRL    &kp Z      &kp X     &kp C     &kp V      &kp B                &trans   &trans     &trans    &trans   &trans    &tog GAM
                                   &mo GAF   &mo GAN    &kp SPACE            &mo NUM  &mo FUN    &trans
@@ -212,7 +212,7 @@
 
                 gaming_number {
                     bindings = <
-&kp ESC   &kp N1     &kp N2    &kp N3   &kp N4   &kp N5               &trans   &trans     &trans    &trans   &trans    &trans
+&kp TAB   &kp N1     &kp N2    &kp N3   &kp N4   &kp N5               &trans   &trans     &trans    &trans   &trans    &trans
 &trans    &kp N6     &kp N7    &kp N8   &kp N9   &kp N0               &trans   &trans     &trans    &trans   &trans    &trans
 &trans    &trans     &trans    &trans   &trans   &trans               &trans   &trans     &trans    &trans   &trans    &trans
                                &mo GAJ  &trans   &trans               &trans   &trans     &trans
