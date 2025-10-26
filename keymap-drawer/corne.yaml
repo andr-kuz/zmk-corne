@@ -38,7 +38,7 @@ layers:
   - {t: /, s: '?'}
   - {t: ']', s: '}'}
   - $$mdi:alpha-w-box$$
-  - {t: '&next_layout_layer 1', h: function}
+  - {t: 'Ctl+$$mdi:keyboard-space$$', h: function}
   - {t: '$$mdi:keyboard-space$$', h: number}
   - {t: '$$mdi:keyboard-return$$', h: navigation}
   - {t: '$$mdi:backspace$$', h: mouse}
@@ -81,7 +81,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '&next_layout_layer', h: function}
+  - {t: 'Ctl+$$mdi:keyboard-space$$', h: function}
   - {t: '$$mdi:keyboard-space$$', h: '&en_layout_hold 2'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -302,7 +302,7 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   gaming:
-  - $$mdi:keyboard-tab$$
+  - $$mdi:keyboard-esc$$
   - Q
   - W
   - E
@@ -345,7 +345,7 @@ layers:
   - function
   - {t: '$$mdi:transfer$$', type: trans}
   gaming_number:
-  - $$mdi:keyboard-esc$$
+  - $$mdi:keyboard-tab$$
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
