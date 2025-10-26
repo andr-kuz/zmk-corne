@@ -302,7 +302,7 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   gaming:
-  - $$mdi:keyboard-tab$$
+  - $$mdi:keyboard-esc$$
   - Q
   - W
   - E
@@ -345,7 +345,7 @@ layers:
   - function
   - {t: '$$mdi:transfer$$', type: trans}
   gaming_number:
-  - $$mdi:keyboard-esc$$
+  - $$mdi:keyboard-tab$$
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}

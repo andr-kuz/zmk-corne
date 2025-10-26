@@ -87,18 +87,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <250>;
             quick-tap-ms = <0>;
-            bindings = <&mo>, <&next_layout_layer>;
-        };
-
-        next_layout_layer: next_layout_layer {
-            compatible = "zmk,behavior-macro-one-param";
-            label = "NEXT LAYOUT MACRO LAYER";
-            #binding-cells = <1>;
-            bindings = 
-                <&macro_param_1to1>,
-                <&to MACRO_PLACEHOLDER>,
-                <&kp NEXT_LAYOUT>
-            ;
+            bindings = <&mo>, <&kp>;
         };
 
         lten: lten {
@@ -132,19 +121,19 @@
 
                 default_layer {
                         bindings = <
-&kp ESC    &kp Q       &kp W       &kp E        &kp R           &kp T              &kp Y           &kp U         &kp I        &kp O       &kp P          &kp LBKT
-&kp TAB    &ts LALT A  &ts LGUI S  &ts LCTRL D  &ts LSHIFT F    &kp G              &kp H           &ts RSHIFT J  &ts RCTRL K  &ts RGUI L  &ts RALT SEMI  &kp SQT
-&kp GRAVE  &kp Z       &kp X       &kp C        &kp V           &kp B              &kp N           &kp M         &kp COMMA    &kp DOT     &kp FSLH       &kp RBKT 
-                                   &caps_word   &html FUN NON   &lt NUM SPACE      &alt NAV ENTER  &lt MOU BSPC  &kp DELETE
+&kp ESC    &kp Q       &kp W       &kp E        &kp R                  &kp T              &kp Y           &kp U         &kp I        &kp O       &kp P          &kp LBKT
+&kp TAB    &ts LALT A  &ts LGUI S  &ts LCTRL D  &ts LSHIFT F           &kp G              &kp H           &ts RSHIFT J  &ts RCTRL K  &ts RGUI L  &ts RALT SEMI  &kp SQT
+&kp GRAVE  &kp Z       &kp X       &kp C        &kp V                  &kp B              &kp N           &kp M         &kp COMMA    &kp DOT     &kp FSLH       &kp RBKT 
+                                   &caps_word   &html FUN NEXT_LAYOUT  &lt NUM SPACE      &alt NAV ENTER  &lt MOU BSPC  &kp DELETE
                         >;
                 };
 
                 non_english {
                                 bindings = <
-&trans    &trans     &trans    &trans   &trans         &trans               &trans   &trans     &trans    &trans   &trans    &trans
-&trans    &trans     &trans    &trans   &trans         &trans               &trans   &trans     &trans    &trans   &trans    &trans
-&trans    &trans     &trans    &trans   &trans         &trans               &trans   &trans     &trans    &trans   &trans    &trans
-                               &trans   &html FUN DEF  &lten NUM SPACE      &trans   &trans     &trans
+&trans    &trans     &trans    &trans   &trans                 &trans               &trans   &trans     &trans    &trans   &trans    &trans
+&trans    &trans     &trans    &trans   &trans                 &trans               &trans   &trans     &trans    &trans   &trans    &trans
+&trans    &trans     &trans    &trans   &trans                 &trans               &trans   &trans     &trans    &trans   &trans    &trans
+                               &trans   &html FUN NEXT_LAYOUT  &lten NUM SPACE      &trans   &trans     &trans
                     >;
 
                 };
