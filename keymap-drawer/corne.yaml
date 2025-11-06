@@ -100,20 +100,20 @@ layers:
   - '*'
   - {t: '[', s: '{'}
   - {t: <, s: '>'}
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
-  - {t: '4', s: $}
+  - {t: '1', h: '$$mdi:apple-keyboard-option$$', s: '!'}
+  - {t: '2', h: LGUI, s: '@'}
+  - {t: '3', h: '$$mdi:apple-keyboard-control$$', s: '#'}
+  - {t: '4', h: LSFT, s: $}
   - {t: '0', s: )}
   - {t: '9', s: (}
-  - {t: '5', s: '%'}
-  - {t: '6', s: ^}
-  - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
+  - {t: '5', h: LSFT, s: '%'}
+  - {t: '6', h: '$$mdi:apple-keyboard-control$$', s: ^}
+  - {t: '7', h: LGUI, s: '&'}
+  - {t: '8', h: '$$mdi:apple-keyboard-option$$', s: '*'}
   - '"'
   - )
   - '?'
-  - {t: /, s: '?'}
+  - {t: '`', s: '~'}
   - '|'
   - ':'
   - {t: ;, s: ':'}
@@ -121,7 +121,7 @@ layers:
   - +
   - _
   - {t: '=', s: +}
-  - {t: \, s: '|'}
+  - {t: /, s: \}
   - {t: ']', s: '}'}
   - {t: '$$mdi:transfer$$', type: trans}
   - adjust

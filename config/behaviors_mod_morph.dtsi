@@ -5,3 +5,10 @@ lt_gt: lt_gt {
   bindings = <&kp LT>, <&kp GT>;
   mods = <(MOD_LSFT|MOD_RSFT)>;
 };
+
+fslh_bslh: fslh_bslh {
+  compatible = "zmk,behavior-mod-morph";
+  #binding-cells = <0>;
+  bindings = <&kp FSLH>, <&kp BSLH>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
