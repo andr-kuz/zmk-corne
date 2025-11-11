@@ -186,7 +186,7 @@
                         bindings = <
 &trans      &trans      &trans      &trans          &trans      &trans               &trans     &trans          &trans          &trans          &trans          &trans
 &kp F1      &ts LALT F2 &ts LGUI F3 &ts LCTRL F4    &ts LSFT F5 &kp F6               &kp F7     &ts LSFT F8     &ts LCTRL F9    &ts LGUI F10    &ts LALT F11    &kp F12
-&trans      &trans      &trans      &trans          &trans      &trans               &krans     &trans          &trans          &trans          &trans          &trans
+&trans      &trans      &trans      &trans          &trans      &trans               &trans     &trans          &trans          &trans          &trans          &trans
                                     &trans          &trans      &mo ADJ              &mo ADJ    &trans          &trans
                         >;
                 };

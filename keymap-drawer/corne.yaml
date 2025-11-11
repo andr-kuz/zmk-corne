@@ -229,16 +229,16 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - F1
-  - F2
-  - F3
-  - F4
-  - F5
+  - {t: F2, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: F3, h: LGUI}
+  - {t: F4, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: F5, h: LSFT}
   - F6
   - F7
-  - F8
-  - F9
-  - F10
-  - F11
+  - {t: F8, h: LSFT}
+  - {t: F9, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: F10, h: LGUI}
+  - {t: F11, h: '$$mdi:apple-keyboard-option$$'}
   - F12
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
