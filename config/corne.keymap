@@ -65,7 +65,7 @@
         ts: ts {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
@@ -74,7 +74,7 @@
         alt: alt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
             tapping-term-ms = <250>;
             quick-tap-ms = <0>;
             bindings = <&mo>, <&kp>;
@@ -186,7 +186,7 @@
                         bindings = <
 &trans      &trans      &trans      &trans          &trans      &trans               &trans     &trans          &trans          &trans          &trans          &trans
 &kp F1      &ts LALT F2 &ts LGUI F3 &ts LCTRL F4    &ts LSFT F5 &kp F6               &kp F7     &ts LSFT F8     &ts LCTRL F9    &ts LGUI F10    &ts LALT F11    &kp F12
-&trans      &trans      &trans      &trans          &trans      &trans               &krans     &trans          &trans          &trans          &trans          &trans
+&trans      &trans      &trans      &trans          &trans      &trans               &trans     &trans          &trans          &trans          &trans          &trans
                                     &trans          &trans      &mo ADJ              &mo ADJ    &trans          &trans
                         >;
                 };
