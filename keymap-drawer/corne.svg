@@ -554,8 +554,8 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
-<g transform="translate(40, 331)" class="layer-non_english">
-<text x="0" y="28" class="label" id="non_english">non_english:</text>
+<g transform="translate(40, 331)" class="layer-russian">
+<text x="0" y="28" class="label" id="russian">russian:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 49)" class="key trans keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
