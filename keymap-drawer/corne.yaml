@@ -43,7 +43,7 @@ layers:
   - {t: '$$mdi:keyboard-return$$', h: navigation}
   - {t: '$$mdi:backspace$$', h: mouse}
   - $$mdi:backspace-reverse-outline$$
-  non_english:
+  russian:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
