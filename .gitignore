@@ -1,0 +1,7 @@
+.cache/
+.clangd
+.west/
+build/
+modules/
+zephyr/
+zmk/
