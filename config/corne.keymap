@@ -222,9 +222,9 @@
 
                 gaming_additional {
                     bindings = <
-&kp LBKT  &kp P     &kp O    &kp I      &kp U    &kp Y          &trans  &trans  &trans  &trans  &trans  &trans
+&kp GRAVE &kp P     &kp O    &kp I      &kp U    &kp Y          &trans  &trans  &trans  &trans  &trans  &trans
 &kp SQT   &kp SEMI  &kp L    &kp K      &kp J    &kp H          &trans  &trans  &trans  &trans  &trans  &trans
-&kp LBKT  &kp FSLH  &kp DOT  &kp COMMA  &kp M    &kp N          &trans  &trans  &trans  &trans  &trans  &trans
+&kp RALT  &kp FSLH  &kp DOT  &kp COMMA  &kp M    &kp N          &trans  &trans  &trans  &trans  &trans  &trans
                              &trans     &mo GAJ  &kp ENTER      &trans  &trans  &trans
                     >;
                 };

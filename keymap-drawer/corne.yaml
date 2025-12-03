@@ -388,7 +388,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   gaming_additional:
-  - {t: '[', s: '{'}
+  - {t: '`', s: '~'}
   - P
   - O
   - I
@@ -412,7 +412,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '[', s: '{'}
+  - $$mdi:apple-keyboard-option$$
   - {t: /, s: '?'}
   - {t: ., s: '>'}
   - {t: ',', s: <}
