@@ -67,9 +67,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-            bindings = <&kp>, <&kp>;
+            tapping-term-ms = <200>; quick-tap-ms = <150>; bindings = <&kp>, <&kp>;
         };
 
         alt: alt {
@@ -118,10 +116,10 @@
 
                 russian {
                     bindings = <
-&trans    &lkp Q     &trans    &trans   &trans   &trans             &trans   &trans     &trans    &trans   &trans    &trans
-&trans    &trans     &trans    &trans   &trans   &trans             &trans   &trans     &trans    &trans   &trans    &trans
-&trans    &trans     &trans    &trans   &trans   &trans             &trans   &trans     &trans    &trans   &trans    &trans
-                &trans          &moto FUN DEF    &trans             &trans   &trans     &trans
+&trans      &lkp Q  &lkp W    &lkp E   &lkp R   &lkp T             &lkp Y   &lkp U     &lkp I       &lkp O   &lkp P    &lkp LBKT
+&trans      &lkp A  &lkp S    &lkp D   &lkp F   &lkp G             &lkp H   &lkp J     &lkp K       &lkp L   &lkp SEMI &lkp SQT
+&lkp GRAVE  &lkp Z  &lkp X    &lkp C   &lkp V   &lkp B             &lkp N   &lkp M     &lkp COMMA   &lkp DOT &lkp FSLH &lkp RBKT
+                    &trans          &moto FUN DEF    &trans             &trans   &trans     &trans
                     >;
 
                 };
