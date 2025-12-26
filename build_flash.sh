@@ -30,6 +30,7 @@ build_and_flash() {
     udisksctl unmount -b "$FULL_PATH"
     udisksctl power-off -b "$FULL_PATH"
     echo "Done with $side side"
+    sleep 10
 }
 
 build_and_flash left $archive_path
