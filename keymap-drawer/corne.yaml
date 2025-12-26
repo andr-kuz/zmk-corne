@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: corne}
 layers:
   default:
-  - $$mdi:keyboard-esc$$
+  - {t: ., s: '>'}
   - Q
   - W
   - E
@@ -44,7 +44,7 @@ layers:
   - {t: '$$mdi:backspace$$', h: mouse}
   - $$mdi:backspace-reverse-outline$$
   russian:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: ',', s: <}
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD Q))
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD W))
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD E))
