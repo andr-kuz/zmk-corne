@@ -2,7 +2,7 @@ layout: {zmk_keyboard: corne}
 layers:
   default:
   - $$mdi:keyboard-esc$$
-  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD Q))
+  - W
   - W
   - E
   - R
