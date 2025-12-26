@@ -110,10 +110,8 @@
                 russian {
                     bindings = <
 &trans      &kp RU_II       &kp RU_TS       &kp RU_U        &kp RU_K        &kp RU_E        &kp RU_N    &kp RU_G        &kp RU_SH       &kp RU_SHCH     &kp RU_Z        &kp RU_H
-// &trans      &ts LALT RU_F   &ts LGUI RU_EI  &ts LCTRL RU_V  &ts LSHFT RU_A  &kp RU_P        &kp RU_R    &ts LSHFT RU_O  &ts LCTRL RU_L  &ts LGUI RU_D   &ts LALT RU_ZH  &kp RU_IE
-&trans    &trans     &trans    &trans   &trans   &trans               &trans   &trans     &trans    &trans   &trans    &trans
-// &kp RU_IO   &kp RU_YA       &kp RU_CH       &kp RU_S        &kp RU_M        &kp RU_I        &kp RU_T    &kp RU_SOFT     &kp RU_B        &kp RU_YU       &trans          &kp RU_HARD
-&trans    &trans     &trans    &trans   &trans   &trans               &trans   &trans     &trans    &trans   &trans    &trans
+&trans      &ts LALT RU_F   &ts LGUI RU_EI  &ts LCTRL RU_V  &ts LSHFT RU_A  &kp RU_P        &kp RU_R    &ts LSHFT RU_O  &ts LCTRL RU_L  &ts LGUI RU_D   &ts LALT RU_ZH  &kp RU_IE
+&kp RU_IO   &kp RU_YA       &kp RU_CH       &kp RU_S        &kp RU_M        &kp RU_I        &kp RU_T    &kp RU_SOFT     &kp RU_B        &kp RU_YU       &trans          &kp RU_HARD
                                             &trans          &trans          &trans          &trans      &trans          &trans
                     >;
 
