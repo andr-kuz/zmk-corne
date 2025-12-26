@@ -67,7 +67,9 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>; quick-tap-ms = <150>; bindings = <&kp>, <&kp>;
+            tapping-term-ms = <200>; 
+            quick-tap-ms = <150>; 
+            bindings = <&kp>, <&kp>;
         };
 
         alt: alt {
@@ -88,13 +90,25 @@
             quick-tap-ms = <0>;
             bindings = <&mo>, <&to>;
         };
+
+        lts: lts {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            bindings = <&kp>, <&lkp>;
+        };
         
         lkp: lkp {
             compatible = "zmk,behavior-macro-one-param";
             label = "SWITCH LAYOUT FOR RUSSIAN KEY";
             #binding-cells = <1>;
             bindings
-                = <&macro_tap &kp NEXT_LAYOUT &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp PREV_LAYOUT>
+                = <&macro_tap 
+                &kp NEXT_LAYOUT 
+                &macro_param_1to1 &kp MACRO_PLACEHOLDER 
+                &kp PREV_LAYOUT>
                 ;
         };
         
@@ -106,20 +120,20 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-                        bindings = <
-&kp ESC    &kp Q       &kp W       &kp E        &kp R          &kp T              &kp Y           &kp U         &kp I        &kp O       &kp P          &kp LBKT
-&kp TAB    &ts LALT A  &ts LGUI S  &ts LCTRL D  &ts LSHFT F    &kp G              &kp H           &ts RSHFT J   &ts RCTRL K  &ts RGUI L  &ts RALT SEMI  &kp SQT
-&kp GRAVE  &kp Z       &kp X       &kp C        &kp V          &kp B              &kp N           &kp M         &kp COMMA    &kp DOT     &kp FSLH       &kp RBKT 
-                                   &caps_word   &moto FUN RUS  &alt NUM SPACE     &alt NAV ENTER  &lt MOU BSPC  &kp DELETE
-                        >;
+                    bindings = <
+&kp ESC     &kp Q       &kp W       &kp E        &kp R          &kp T                &kp Y           &kp U         &kp I        &kp O       &kp P          &kp LBKT
+&kp TAB     &ts LALT A  &ts LGUI S  &ts LCTRL D  &ts LSHFT F    &kp G                &kp H           &ts RSHFT J   &ts RCTRL K  &ts RGUI L  &ts RALT SEMI  &kp SQT
+&kp GRAVE   &kp Z       &kp X       &kp C        &kp V          &kp B                &kp N           &kp M         &kp COMMA    &kp DOT     &kp FSLH       &kp RBKT 
+                                    &caps_word   &moto FUN RUS  &alt NUM SPACE       &alt NAV ENTER  &lt MOU BSPC  &kp DELETE
+                    >;
                 };
 
                 russian {
                     bindings = <
-&trans      &lkp Q  &lkp W    &lkp E   &lkp R   &lkp T             &lkp Y   &lkp U     &lkp I       &lkp O   &lkp P    &lkp LBKT
-&trans      &lkp A  &lkp S    &lkp D   &lkp F   &lkp G             &lkp H   &lkp J     &lkp K       &lkp L   &lkp SEMI &lkp SQT
-&lkp GRAVE  &lkp Z  &lkp X    &lkp C   &lkp V   &lkp B             &lkp N   &lkp M     &lkp COMMA   &lkp DOT &lkp FSLH &lkp RBKT
-                    &trans          &moto FUN DEF    &trans             &trans   &trans     &trans
+&trans      &lkp Q      &lkp W      &lkp E          &lkp R          &lkp T          &lkp Y   &lkp U         &lkp I          &lkp O      &lkp P          &lkp LBKT
+&trans      &lts LALT A &lts LGUI S &lts LCTRL D    &lts LSHFT F    &lkp G          &lkp H   &lts RSHFT J   &lts RCTRL K    &lts RGUI L &lts RALT SEMI  &lkp SQT
+&lkp GRAVE  &lkp Z      &lkp X      &lkp C          &lkp V          &lkp B          &lkp N   &lkp M         &lkp COMMA      &lkp DOT    &lkp FSLH       &lkp RBKT
+                                    &trans          &moto FUN DEF   &trans          &trans   &trans         &trans
                     >;
 
                 };
