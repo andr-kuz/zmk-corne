@@ -2,7 +2,7 @@ layout: {zmk_keyboard: corne}
 layers:
   default:
   - $$mdi:keyboard-esc$$
-  - Q
+  - W
   - W
   - E
   - R
