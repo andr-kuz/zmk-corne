@@ -129,6 +129,7 @@
                 };
 
                 russian {
+// todo just rebind FUN so it changes layout if you press it from this layer and you can get rid of `lkp`
                     bindings = <
 &trans      &lkp Q      &lkp W      &lkp E          &lkp R          &lkp T          &lkp Y   &lkp U         &lkp I          &lkp O      &lkp P          &lkp LBKT
 &trans      &lts LALT A &lts LGUI S &lts LCTRL D    &lts LSHFT F    &lkp G          &lkp H   &lts RSHFT J   &lts RCTRL K    &lts RGUI L &lts RALT SEMI  &lkp SQT
@@ -192,9 +193,9 @@
 
                 gaming_layer {
                     bindings = <
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T                &trans	&trans  &trans  &trans  &trans  &trans
-&kp LSHFT  &kp A      &kp S     &kp D     &kp F      &kp G                &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL  &kp Z      &kp X     &kp C     &kp V      &kp B                &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T                &trans  &trans  &trans  &trans  &trans  &trans
+&sk LSHFT  &kp A      &kp S     &kp D     &kp F      &kp G                &trans  &trans  &trans  &trans  &trans  &trans
+&sk LCTRL  &kp Z      &kp X     &kp C     &kp V      &kp B                &trans  &trans  &trans  &trans  &trans  &trans
                                 &mo GAD   &mo GAN    &kp SPACE            &trans  &trans  &trans
                     >;
                 };
@@ -210,9 +211,10 @@
 
                 gaming_additional {
                     bindings = <
+// todo add LGUI and BSPC
 &kp GRAVE &kp P     &kp O    &kp I      &kp U    &kp Y          &trans  &trans  &trans  &trans  &trans  &trans
 &kp SQT   &kp SEMI  &kp L    &kp K      &kp J    &kp H          &trans  &trans  &trans  &trans  &trans  &trans
-&kp RALT  &kp FSLH  &kp DOT  &kp COMMA  &kp M    &kp N          &trans  &trans  &trans  &trans  &trans  &trans
+&sk LALT  &kp FSLH  &kp DOT  &kp COMMA  &kp M    &kp N          &trans  &trans  &trans  &trans  &trans  &trans
                              &trans     &mo GAJ  &kp ENTER      &trans  &trans  &trans
                     >;
                 };
