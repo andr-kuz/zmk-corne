@@ -15,8 +15,7 @@ build_and_flash() {
     
     if [ -n "$archive_path" ]; then
         mkdir -p build/zephyr
-        if [ "$rese"="reset" ]; then
-            echo "---$rese---"
+        if [ "$rese" = "reset" ]; then
             action_name="reset"
             file_name="settings_reset-nice_nano_v2-zmk.uf2"
         fi
@@ -42,7 +41,7 @@ build_and_flash() {
 
     echo "Done with $side side"
 }
-if [ $reset = "reset" ]; then
+if [ "$reset" = "reset" ]; then
     build_and_flash left "$archive_path" reset
     build_and_flash right "$archive_path" reset
 fi
