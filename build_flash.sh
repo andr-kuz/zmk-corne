@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 left=${1:-left}
 right=${2:-right}
