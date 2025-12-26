@@ -5,4 +5,5 @@
 #include <dt-bindings/zmk/modifiers.h>
 #include <dt-bindings/zmk/keys.h>
 
+#define PREV_LAYOUT LC(LS(SPACE))
 #define NEXT_LAYOUT LC(SPACE)

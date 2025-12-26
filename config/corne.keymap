@@ -91,15 +91,12 @@
             bindings = <&mo>, <&to>;
         };
         
-        rkp: rkp {
+        lkp: lkp {
             compatible = "zmk,behavior-macro-one-param";
             label = "SWITCH LAYOUT FOR RUSSIAN KEY";
             #binding-cells = <1>;
             bindings
-                = <&macro_press &kp NEXT_LAYOUT>
-                , <&macro_param_1to1>
-                , <&macro_tap &kp MACRO_PLACEHOLDER>
-                , <&macro_release &kp NEXT_LAYOUT>
+                = <&macro_tap &kp NEXT_LAYOUT &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_release &kp PREV_LAYOUT>
                 ;
         };
         
@@ -121,7 +118,7 @@
 
                 russian {
                     bindings = <
-&trans    &rkp Q     &trans    &trans   &trans   &trans             &trans   &trans     &trans    &trans   &trans    &trans
+&trans    &lkp Q     &trans    &trans   &trans   &trans             &trans   &trans     &trans    &trans   &trans    &trans
 &trans    &trans     &trans    &trans   &trans   &trans             &trans   &trans     &trans    &trans   &trans    &trans
 &trans    &trans     &trans    &trans   &trans   &trans             &trans   &trans     &trans    &trans   &trans    &trans
                 &trans          &moto FUN DEF    &trans             &trans   &trans     &trans
