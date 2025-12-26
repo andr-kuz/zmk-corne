@@ -99,7 +99,7 @@
 
                 default_layer {
                         bindings = <
-&kp ESC    &kp Q       &kp W       &kp E        &kp R          &kp T              &kp Y           &kp U         &kp I        &kp O       &kp P          &kp LBKT
+&kp DOT    &kp Q       &kp W       &kp E        &kp R          &kp T              &kp Y           &kp U         &kp I        &kp O       &kp P          &kp LBKT
 &kp TAB    &ts LALT A  &ts LGUI S  &ts LCTRL D  &ts LSHFT F    &kp G              &kp H           &ts RSHFT J   &ts RCTRL K  &ts RGUI L  &ts RALT SEMI  &kp SQT
 &kp GRAVE  &kp Z       &kp X       &kp C        &kp V          &kp B              &kp N           &kp M         &kp COMMA    &kp DOT     &kp FSLH       &kp RBKT 
                                    &caps_word   &moto FUN RUS  &alt NUM SPACE     &alt NAV ENTER  &lt MOU BSPC  &kp DELETE
@@ -108,7 +108,7 @@
 
                 russian {
                     bindings = <
-&trans      &kp RU_II       &kp RU_TS       &kp RU_U        &kp RU_K        &kp RU_E        &kp RU_N    &kp RU_G        &kp RU_SH       &kp RU_SHCH     &kp RU_Z        &kp RU_H
+&kp COMMA   &kp RU_II       &kp RU_TS       &kp RU_U        &kp RU_K        &kp RU_E        &kp RU_N    &kp RU_G        &kp RU_SH       &kp RU_SHCH     &kp RU_Z        &kp RU_H
 &trans      &ts LALT RU_F   &ts LGUI RU_EI  &ts LCTRL RU_V  &ts LSHFT RU_A  &kp RU_P        &kp RU_R    &ts LSHFT RU_O  &ts LCTRL RU_L  &ts LGUI RU_D   &ts LALT RU_ZH  &kp RU_IE
 &kp RU_IO   &kp RU_YA       &kp RU_CH       &kp RU_S        &kp RU_M        &kp RU_I        &kp RU_T    &kp RU_SOFT     &kp RU_B        &kp RU_YU       &trans          &kp RU_HARD
                                             &trans          &moto FUN DEF   &trans          &trans      &trans          &trans
