@@ -1,16 +1,24 @@
 #!/usr/bin/env bash
 
-left=${1:-left}
-right=${2:-right}
+archive_path=$1
+
 
 FULL_PATH="/dev/disk/by-label/NICENANO"
 
 build_and_flash() {
     local side=$1
-    echo "Building $side side..."
+    local archive_path=$2
     
-    west build -p -b nice_nano_v2 zmk/app -- -DZEPHYR_BASE=$(pwd)/zephyr -DZEPHYR_SDK_INSTALL_DIR=~/zephyr-sdk-0.16.5 -DSHIELD=corne_$side -DZMK_CONFIG=$(pwd)/config
-    mv build/zephyr/zmk.uf2 build/zephyr/corne_$side.uf2
+    if [ -n "$archive_path" ]; then
+        echo "Extracting $side side from $archive_path..."
+        mkdir -p build/zephyr
+        unzip -p "$archive_path" "corne_$side-nice_nano_v2-zmk.uf2" > build/zephyr/corne_$side.uf2
+    else
+
+        echo "Building $side side..."
+        west build -p -b nice_nano_v2 zmk/app -- -DZEPHYR_BASE=$(pwd)/zephyr -DZEPHYR_SDK_INSTALL_DIR=~/zephyr-sdk-0.16.5 -DSHIELD=corne_$side -DZMK_CONFIG=$(pwd)/config
+        mv build/zephyr/zmk.uf2 build/zephyr/corne_$side.uf2
+    fi
     
     echo "Plug in the $side side..."
     while [ ! -L "$FULL_PATH" ]; do
@@ -22,5 +30,5 @@ build_and_flash() {
     echo "Done with $side side"
 }
 
-build_and_flash $left
-build_and_flash $right
+build_and_flash left $archive_path
+build_and_flash right $archive_path
