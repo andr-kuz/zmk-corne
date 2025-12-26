@@ -82,14 +82,14 @@
             bindings = <&mo>, <&kp>;
         };
 
-        momo: momo {
+        moto: moto {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD TAP LAYER LAYER";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <250>;
             quick-tap-ms = <0>;
-            bindings = <&mo>, <&mo>;
+            bindings = <&mo>, <&to>;
         };
     };
 };
@@ -103,7 +103,7 @@
 &kp ESC    &kp Q       &kp W       &kp E        &kp R          &kp T              &kp Y           &kp U         &kp I        &kp O       &kp P          &kp LBKT
 &kp TAB    &ts LALT A  &ts LGUI S  &ts LCTRL D  &ts LSHFT F    &kp G              &kp H           &ts RSHFT J   &ts RCTRL K  &ts RGUI L  &ts RALT SEMI  &kp SQT
 &kp GRAVE  &kp Z       &kp X       &kp C        &kp V          &kp B              &kp N           &kp M         &kp COMMA    &kp DOT     &kp FSLH       &kp RBKT 
-                                   &caps_word   &momo FUN RUS  &alt NUM SPACE     &alt NAV ENTER  &lt MOU BSPC  &kp DELETE
+                                   &caps_word   &moto FUN RUS  &alt NUM SPACE     &alt NAV ENTER  &lt MOU BSPC  &kp DELETE
                         >;
                 };
 
