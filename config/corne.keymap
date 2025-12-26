@@ -98,7 +98,7 @@
             bindings
                 = <&macro_press &kp NEXT_LAYOUT>
                 , <&macro_param_1to1>
-                , <&kp MACRO_PLACEHOLDER>
+                , <&macro_tap &kp MACRO_PLACEHOLDER>
                 , <&macro_release &kp NEXT_LAYOUT>
                 ;
         };
