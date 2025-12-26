@@ -26,10 +26,10 @@ build_and_flash() {
     
     udisksctl mount -b "$FULL_PATH"
     cp "build/zephyr/corne_$side.uf2" "/run/media/valtrois/NICENANO/"
-    udisksctl unmount -b "$FULL_PATH"
-    # udisksctl power-off -b "$FULL_PATH"
+    while [ -L "$FULL_PATH" ]; do
+        sleep 1
+    done
     echo "Done with $side side"
-    sleep 5
 }
 
 build_and_flash left $archive_path
