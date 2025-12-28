@@ -88,30 +88,37 @@
             flavor = "tap-preferred";
             tapping-term-ms = <250>;
             quick-tap-ms = <0>;
-            bindings = <&mo>, <&to>;
+            bindings = <&mo>, <&to_switch_layout_macro>;
         };
 
-        lts: lts {
+        to_switch_layout_macro: to_switch_layout_macro {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings
+                = <&macro_tap &kp NEXT_LAYOUT &macro_param_1to1 &to MACRO_PLACEHOLDER>
+            ;
+        };
+
+        lalt: lalt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-            bindings = <&kp>, <&lkp>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <0>;
+            bindings = <&mo_switch_layout_macro>, <&kp>;
         };
-        
-        lkp: lkp {
+
+        mo_switch_layout_macro: mo_switch_layout_macro {
             compatible = "zmk,behavior-macro-one-param";
-            label = "SWITCH LAYOUT FOR RUSSIAN KEY";
             #binding-cells = <1>;
             bindings
-                = <&macro_tap 
-                &kp NEXT_LAYOUT 
-                &macro_param_1to1 &kp MACRO_PLACEHOLDER 
-                &kp PREV_LAYOUT>
-                ;
+                = <&macro_press &macro_param_1to1 &mo MACRO_PLACEHOLDER>
+                , <&kp NEXT_LAYOUT>
+                , <&macro_pause_for_release>
+                , <&kp PREV_LAYOUT>
+                , <&macro_release &macro_param_1to1 &mo MACRO_PLACEHOLDER>
+            ;
         };
-        
     };
 };
 
@@ -129,16 +136,14 @@
                 };
 
                 russian {
-// todo just rebind FUN so it changes layout if you press it from this layer and you can get rid of `lkp`
                     bindings = <
-&trans      &lkp Q      &lkp W      &lkp E          &lkp R          &lkp T          &lkp Y   &lkp U         &lkp I          &lkp O      &lkp P          &lkp LBKT
-&trans      &lts LALT A &lts LGUI S &lts LCTRL D    &lts LSHFT F    &lkp G          &lkp H   &lts RSHFT J   &lts RCTRL K    &lts RGUI L &lts RALT SEMI  &lkp SQT
-&lkp GRAVE  &lkp Z      &lkp X      &lkp C          &lkp V          &lkp B          &lkp N   &lkp M         &lkp COMMA      &lkp DOT    &lkp FSLH       &lkp RBKT
-                                    &trans          &moto FUN DEF   &trans          &trans   &trans         &trans
+&trans  &trans  &trans  &trans  &trans          &trans              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans              &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &moto FUN DEF   &lalt NUM SPACE     &trans  &trans  &trans
                     >;
 
                 };
-
 		number_layer {
 		    bindings = <
 &kp LPAR    &kp EXCL        &kp AT	    &kp HASH	    &kp DOLLAR      &kp COMMA           &kp PERIOD      &kp PRCNT       &kp CARET	&kp AMPS	&kp STAR        &kp LEFT_BRACKET
