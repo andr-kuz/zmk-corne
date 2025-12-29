@@ -38,51 +38,51 @@ layers:
   - {t: /, s: '?'}
   - {t: ']', s: '}'}
   - $$mdi:alpha-w-box$$
-  - {t: russian, h: function}
+  - {t: '&to_switch_layout_macro 1', h: function}
   - {t: '$$mdi:keyboard-space$$', h: number}
   - {t: '$$mdi:keyboard-return$$', h: navigation}
   - {t: '$$mdi:backspace$$', h: mouse}
   - $$mdi:backspace-reverse-outline$$
   russian:
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&lkp Q'
-  - '&lkp W'
-  - '&lkp E'
-  - '&lkp R'
-  - '&lkp T'
-  - '&lkp Y'
-  - '&lkp U'
-  - '&lkp I'
-  - '&lkp O'
-  - '&lkp P'
-  - '&lkp LBKT'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '&lkp A', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: '&lkp S', h: LGUI}
-  - {t: '&lkp D', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '&lkp F', h: '$$mdi:apple-keyboard-shift$$'}
-  - '&lkp G'
-  - '&lkp H'
-  - {t: '&lkp J', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '&lkp K', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '&lkp L', h: RGUI}
-  - {t: '&lkp SEMI', h: '$$mdi:apple-keyboard-option$$'}
-  - '&lkp SQT'
-  - '&lkp GRAVE'
-  - '&lkp Z'
-  - '&lkp X'
-  - '&lkp C'
-  - '&lkp V'
-  - '&lkp B'
-  - '&lkp N'
-  - '&lkp M'
-  - '&lkp COMMA'
-  - '&lkp DOT'
-  - '&lkp FSLH'
-  - '&lkp RBKT'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: default, h: function}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '&to_switch_layout_macro', h: function}
+  - {t: '$$mdi:keyboard-space$$', h: '&mo_switch_layout_macro 2'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
