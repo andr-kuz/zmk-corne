@@ -245,6 +245,14 @@
             bindings = <&kp ESC>;
         };
 
+        backspace: backspace {
+            timeout-ms = <180>;
+            key-positions = <37 38>;
+            bindings = <&kp BSPC>;
+            layers = <GAM>;
+        };
+
+
 /**/
 /*         bspc: bspc { */
 /*             timeout-ms = <250>; */
