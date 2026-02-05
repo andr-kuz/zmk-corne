@@ -240,13 +240,13 @@
         compatible = "zmk,combos";
 
         esc: esc {
-            timeout-ms = <180>;
-            key-positions = <19 22>;
+            timeout-ms = <120>;
+            key-positions = <19 22>;  // J K
             bindings = <&kp ESC>;
         };
 
         backspace: backspace {
-            timeout-ms = <180>;
+            timeout-ms = <120>;
             key-positions = <37 38>;
             bindings = <&kp BSPC>;
             layers = <GAM>;
