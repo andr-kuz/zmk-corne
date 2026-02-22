@@ -75,7 +75,7 @@
         alt: alt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "hold-preferred";
             tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             bindings = <&mo>, <&kp>;
@@ -85,7 +85,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD FOR SWITCH LAYER TAP FOR CHANGE LAYER";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "hold-preferred";
             tapping-term-ms = <250>;
             quick-tap-ms = <0>;
             bindings = <&mo>, <&to_switch_layout_macro>;
@@ -102,7 +102,7 @@
         lalt: lalt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "hold-preferred";
             tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             bindings = <&mo_switch_layout_macro>, <&kp>;
