@@ -94,8 +94,12 @@
         to_switch_layout_macro: to_switch_layout_macro {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
+            wait-ms = <0>;
+            tap-ms = <10>;
             bindings
-                = <&macro_tap &kp NEXT_LAYOUT &macro_param_1to1 &to MACRO_PLACEHOLDER>
+                = <&macro_tap &kp NEXT_LAYOUT>
+                , <&macro_wait_time 50>
+                , <&macro_tap &macro_param_1to1 &to MACRO_PLACEHOLDER>
             ;
         };
 
@@ -111,11 +115,16 @@
         mo_switch_layout_macro: mo_switch_layout_macro {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
+            wait-ms = <0>;
+            tap-ms = <10>;
             bindings
                 = <&macro_press &macro_param_1to1 &mo MACRO_PLACEHOLDER>
+                , <&macro_wait_time 50>
                 , <&kp NEXT_LAYOUT>
+                , <&macro_wait_time 50>
                 , <&macro_pause_for_release>
-                , <&kp PREV_LAYOUT>
+                , <&kp NEXT_LAYOUT>
+                , <&macro_wait_time 0>
                 , <&macro_release &macro_param_1to1 &mo MACRO_PLACEHOLDER>
             ;
         };
