@@ -225,10 +225,10 @@
 
                 gaming_additional {
                     bindings = <
-&trans  &trans    &trans   &trans   &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &kp LEFT &kp DOWN &kp UP  &kp RIGHT                   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans   &trans   &trans  &trans                      &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans   &mo GAJ &kp ENTER                   &trans  &trans  &trans
+&trans  &trans    &trans   &trans   &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &kp LEFT &kp DOWN &kp UP  &kp RIGHT       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans   &trans   &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans   &mo GAJ &kp ENTER       &trans  &trans  &trans
                     >;
                 };
 
