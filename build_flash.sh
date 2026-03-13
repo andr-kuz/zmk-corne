@@ -29,7 +29,8 @@ build_and_flash() {
     
     echo "Plug in the $side side..."
     while [ ! -L "$FULL_PATH" ]; do
-        sleep 0.5
+        print('Waiting...')
+        sleep 1.5
     done
     udisksctl mount -b "$FULL_PATH"
     cp "build/zephyr/$file_name" "/run/media/valtrois/NICENANO/"
