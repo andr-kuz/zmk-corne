@@ -81,17 +81,17 @@
             bindings = <&mo>, <&kp>;
         };
 
-        moto: moto {
+        motog: motog {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD FOR SWITCH LAYER TAP FOR CHANGE LAYER";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <250>;
             quick-tap-ms = <0>;
-            bindings = <&mo>, <&to_switch_layout_macro>;
+            bindings = <&mo>, <&tog_switch_layout_macro>;
         };
 
-        to_switch_layout_macro: to_switch_layout_macro {
+        tog_switch_layout_macro: tog_switch_layout_macro {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             wait-ms = <0>;
@@ -99,7 +99,7 @@
             bindings
                 = <&macro_tap &kp NEXT_LAYOUT>
                 , <&macro_wait_time 50>
-                , <&macro_tap &macro_param_1to1 &to MACRO_PLACEHOLDER>
+                , <&macro_tap &macro_param_1to1 &tog MACRO_PLACEHOLDER>
             ;
         };
 
@@ -140,7 +140,7 @@
 &kp ESC     &kp Q       &kp W       &kp E        &kp R          &kp T                &kp Y           &kp U         &kp I        &kp O       &kp P          &kp LBKT
 &kp TAB     &ts LALT A  &ts LGUI S  &ts LCTRL D  &ts LSHFT F    &kp G                &kp H           &ts RSHFT J   &ts RCTRL K  &ts RGUI L  &ts RALT SEMI  &kp SQT
 &kp GRAVE   &kp Z       &kp X       &kp C        &kp V          &kp B                &kp N           &kp M         &kp COMMA    &kp DOT     &kp FSLH       &kp RBKT 
-                                    &caps_word   &moto FUN RUS  &alt NUM SPACE       &alt NAV ENTER  &lt MOU BSPC  &kp DELETE
+                                    &caps_word   &motog FUN RUS &alt NUM SPACE       &alt NAV ENTER  &lt MOU BSPC  &kp DELETE
                     >;
                 };
 
@@ -149,7 +149,7 @@
 &trans  &trans  &trans  &trans  &trans          &trans              &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans          &trans              &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans          &trans              &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &moto FUN DEF   &lalt NUM SPACE     &trans  &trans  &trans
+                        &trans  &motog FUN RUS  &lalt NUM SPACE     &trans  &trans  &trans
                     >;
 
                 };
