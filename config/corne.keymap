@@ -154,10 +154,10 @@
                 };
 		number_layer {
 		    bindings = <
-&kp LPAR    &kp EXCL    &kp AT	    &kp HASH	&kp DOLLAR  &kp COMMA       &kp PERIOD  &kp PRCNT   &kp CARET	&kp AMPS    &kp STAR    &kp LEFT_BRACKET
-&lt_gt      &kp N1      &kp N2      &kp N3      &kp N4      &kp N0          &kp N9      &kp N5      &kp N6      &kp N7      &kp N8	&kp DOUBLE_QUOTES
-&kp RPAR    &kp QMARK   &kp GRAVE   &kp PIPE    &kp COLON   &kp SEMI        &kp MINUS   &kp PLUS    &kp UNDER	&kp EQUAL   &fslh_bslh	&kp RIGHT_BRACKET
-				    &trans      &mo ADJ     &trans	    &trans	&mo ADJ	    &trans
+&kp LPAR    &kp EXCL    &kp AT	    &kp HASH	    &kp DOLLAR      &kp COMMA       &kp PERIOD  &kp PRCNT       &kp CARET	&kp AMPS    &kp STAR    &kp LEFT_BRACKET
+&lt_gt      &ts LALT N1 &ts LGUI N2 &ts LCTRL N3    &ts LSHFT N4    &kp N0          &kp N9      &ts RSHFT N5    &ts RCTRL N6    &ts RGUI N7 &ts RALT N8 &kp DOUBLE_QUOTES
+&kp RPAR    &kp QMARK   &kp GRAVE   &kp PIPE        &kp COLON       &kp SEMI        &kp MINUS   &kp PLUS        &kp UNDER	&kp EQUAL   &fslh_bslh	&kp RIGHT_BRACKET
+				    &trans          &mo ADJ         &trans	    &trans	&mo ADJ	        &trans
 		    >;
 		};
 
