@@ -248,7 +248,7 @@
 
         esc: esc {
             timeout-ms = <90>;
-            key-positions = <19 22>;  // J K
+            key-positions = <19 22>;  // J ;
             bindings = <&kp ESC>;
         };
 
