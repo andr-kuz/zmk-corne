@@ -77,7 +77,6 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <150>;
-            quick-tap-ms = <100>;
             bindings = <&mo>, <&kp>;
         };
 
@@ -104,7 +103,6 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <150>;
-            quick-tap-ms = <100>;
             bindings = <&mo_switch_layout_macro>, <&kp>;
         };
 
