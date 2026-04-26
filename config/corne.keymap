@@ -63,6 +63,20 @@
             delay-ms = <0>;
         };
 
+        caps_word_macro: caps_word_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&caps_word>;
+        };
+
+        tts: tts {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&caps_word_macro>;
+        };
+
         ts: ts {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -136,7 +150,7 @@
 &kp ESC     &kp Q       &kp W       &kp E        &kp R          &kp T                &kp Y           &kp U         &kp I        &kp O       &kp P          &kp LBKT
 &kp TAB     &ts LALT A  &ts LGUI S  &ts LCTRL D  &ts LSHFT F    &kp G                &kp H           &ts RSHFT J   &ts RCTRL K  &ts RGUI L  &ts RALT SEMI  &kp SQT
 &kp GRAVE   &kp Z       &kp X       &kp C        &kp V          &kp B                &kp N           &kp M         &kp COMMA    &kp DOT     &kp FSLH       &kp RBKT 
-                                    &caps_word   &motog FUN RUS &alt NUM SPACE       &alt NAV ENTER  &lt MOU BSPC  &kp DELETE
+                                    &tts CAPS 0  &motog FUN RUS &alt NUM SPACE       &alt NAV ENTER  &lt MOU BSPC  &kp DELETE
                     >;
                 };
 
