@@ -9,15 +9,15 @@ FULL_PATH="/dev/disk/by-label/NICENANO"
 build_and_flash() {
     local side=$1
     local archive_path=$2
-    local rese=$3
-    local file_name="corne_$side-nice_nano_v2-zmk.uf2"
+    local reset=$3
+    local file_name="corne_$side.uf2"
     local action_name=$side
     
     if [ -n "$archive_path" ]; then
         mkdir -p build/zephyr
-        if [ "$rese" = "reset" ]; then
+        if [ "$reset" = "reset" ]; then
             action_name="reset"
-            file_name="settings_reset-nice_nano_v2-zmk.uf2"
+            file_name="settings_reset.uf2"
         fi
         echo "Extracting $action_name file from $archive_path"
         unzip -p "$archive_path" "$file_name" > "build/zephyr/$file_name"
@@ -27,7 +27,7 @@ build_and_flash() {
         mv build/zephyr/zmk.uf2 build/zephyr/$file_name
     fi
     
-    echo "Plug in the $side side..."
+    echo "Plug in the ${side^^} side..."
     while [ ! -L "$FULL_PATH" ]; do
         echo "Waiting..."
         sleep 1.5
@@ -40,11 +40,16 @@ build_and_flash() {
         sleep 0.5
     done
 
-    echo "Done with $side side"
+    echo "Done with ${side^^} side"
 }
 if [ "$reset" = "reset" ]; then
+    echo "RESETTING PROCESS STARTED"
+    build_and_flash dongle "$archive_path" reset
     build_and_flash left "$archive_path" reset
     build_and_flash right "$archive_path" reset
+    echo "***"
 fi
+echo "FIRMWARE UPLOAD PROCESS STARTED"
+build_and_flash dongle "$archive_path"
 build_and_flash left "$archive_path"
 build_and_flash right "$archive_path"
