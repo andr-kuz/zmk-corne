@@ -63,7 +63,7 @@
             delay-ms = <0>;
         };
 
-        caps_word_macro: caps_word_macro {
+        cps_word: cps_word {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&caps_word>;
@@ -74,7 +74,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            bindings = <&kp>, <&caps_word_macro>;
+            bindings = <&kp>, <&cps_word>;
         };
 
         ts: ts {
@@ -96,15 +96,15 @@
 
         motog: motog {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD FOR SWITCH LAYER TAP FOR CHANGE LAYER";
+            label = "MOTOG";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <250>;
             quick-tap-ms = <0>;
-            bindings = <&mo>, <&tog_switch_layout_macro>;
+            bindings = <&mo>, <&tog_layout>;
         };
 
-        tog_switch_layout_macro: tog_switch_layout_macro {
+        tog_layout: tog_layout {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings
@@ -117,10 +117,10 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <150>;
-            bindings = <&mo_switch_layout_macro>, <&kp>;
+            bindings = <&mo_layout>, <&kp>;
         };
 
-        mo_switch_layout_macro: mo_switch_layout_macro {
+        mo_layout: mo_layout {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             wait-ms = <10>;
@@ -206,7 +206,7 @@
 
                 adjust_layer {
                         bindings = <
-&bt BT_CLR      &trans        &trans        &trans        &trans        &trans              &trans      &trans          &trans          &trans      &trans  &studio_unlock
+&bt BT_CLR      &trans        &trans        &trans        &trans        &trans              &trans      &trans          &trans          &trans      &trans  &trans
 &trans          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &kp C_PREV  &kp C_VOL_DN    &kp C_VOL_UP    &kp C_NEXT  &trans  &trans    
 &tog GAM        &trans        &trans        &trans        &trans        &trans              &trans      &kp K_PP        &kp C_MUTE      &trans      &trans  &trans  
                                             &trans        &trans        &trans              &trans      &trans          &trans
