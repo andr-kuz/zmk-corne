@@ -44,12 +44,12 @@ build_and_flash() {
 }
 if [ "$reset" = "reset" ]; then
     echo "RESETTING PROCESS STARTED"
-    build_and_flash dongle "$archive_path" reset
     build_and_flash left "$archive_path" reset
     build_and_flash right "$archive_path" reset
+    build_and_flash dongle "$archive_path" reset
     echo "***"
 fi
 echo "FIRMWARE UPLOAD PROCESS STARTED"
-build_and_flash dongle "$archive_path"
 build_and_flash left "$archive_path"
 build_and_flash right "$archive_path"
+build_and_flash dongle "$archive_path"
