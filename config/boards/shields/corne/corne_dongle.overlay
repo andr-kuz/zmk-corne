@@ -5,6 +5,8 @@
 *
 */
 
+#include <behaviors/battery_history_request.dtsi>
+
 /{
     chosen {
         zmk,kscan = &mock_kscan;
