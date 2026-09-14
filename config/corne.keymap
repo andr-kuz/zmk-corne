@@ -150,10 +150,10 @@
 
                 russian {
                     bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &lalt NUM SPACE     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans              &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &motog FUN DEF  &lalt NUM SPACE     &trans  &trans  &trans
                     >;
 
                 };
